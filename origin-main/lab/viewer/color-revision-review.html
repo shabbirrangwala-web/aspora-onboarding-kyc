@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Origin — Color system revision review</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* ── Neutral ── */
+  --n50: #ffffff; --n100: #f3f1f1; --n200: #e6e4e4; --n300: #d0cdcc;
+  --n400: #b4b0af; --n500: #938e8d; --n600: #736d6c; --n700: #554e4d;
+  --n800: #3a3433; --n900: #221b1a; --n950: #16100f; --n975: #100909; --n1000: #090404;
+
+  /* ── Old brand ramps (for comparison) ── */
+  --crimson-50: #fff8f9; --crimson-100: #ffedef; --crimson-200: #ffdadf;
+  --crimson-300: #ffb7c3; --crimson-400: #f190a2; --crimson-500: #d8637e;
+  --crimson-600: #b33056; --crimson-700: #90163f; --crimson-800: #670028;
+  --crimson-900: #3d0014; --crimson-950: #29000b; --crimson-975: #1e0007; --crimson-1000: #130003;
+
+  --lime-50: #f3ffe8; --lime-100: #deffbd; --lime-200: #bffb7c;
+  --lime-300: #afea6a; --lime-400: #8ec54b; --lime-500: #70a031;
+  --lime-600: #547d1a; --lime-700: #3b5b05; --lime-800: #263e00;
+  --lime-900: #132200; --lime-950: #0a1500; --lime-975: #060e00; --lime-1000: #030800;
+
+  --gold-50: #fff9f2; --gold-100: #ffefdb; --gold-200: #ffdfb6;
+  --gold-300: #ffc16b; --gold-400: #faa810; --gold-500: #c18000;
+  --gold-600: #966200; --gold-700: #6d4700; --gold-800: #4b2f00;
+  --gold-900: #2a1900; --gold-950: #1c0e00; --gold-975: #130900; --gold-1000: #0b0400;
+
+  --blue-50: #f8faff; --blue-100: #edf2ff; --blue-200: #dbe4ff;
+  --blue-300: #bbccff; --blue-400: #93adff; --blue-500: #6583ff;
+  --blue-600: #4e68f4; --blue-700: #2e3eb1; --blue-800: #1c277f;
+  --blue-900: #0d134d; --blue-950: #060a35; --blue-975: #040627; --blue-1000: #020319;
+
+  /* ── New functional ramps ── */
+  --red-50: #fff8f7; --red-100: #ffedeb; --red-200: #ffdbd6;
+  --red-300: #ffbab1; --red-400: #ff8b7e; --red-500: #f34c43;
+  --red-600: #dc2626; --red-700: #99000b; --red-800: #6a0005;
+  --red-900: #3e0002; --red-950: #2a0001; --red-975: #1f0000; --red-1000: #140000;
+
+  --green-50: #f0fff2; --green-100: #d4ffda; --green-200: #aefabb;
+  --green-300: #8ce69e; --green-400: #61cb7a; --green-500: #16a34a;
+  --green-600: #008539; --green-700: #006127; --green-800: #004218;
+  --green-900: #00250a; --green-950: #001705; --green-975: #001003; --green-1000: #000901;
+
+  --yellow-50: #fffaee; --yellow-100: #fff0d1; --yellow-200: #ffe1a0;
+  --yellow-300: #fcc537; --yellow-400: #eab308; --yellow-500: #b38800;
+  --yellow-600: #8b6900; --yellow-700: #654b00; --yellow-800: #453200;
+  --yellow-900: #271b00; --yellow-950: #191000; --yellow-975: #110a00; --yellow-1000: #090500;
+
+  /* ── Alpha ── */
+  --wa8: #ffffff14; --wa16: #ffffff29; --wa40: #ffffff66; --wa70: #ffffffb3;
+  --ba8: #00000014; --ba16: #00000029; --ba40: #00000066; --ba70: #000000b3;
+
+  /* ── Page chrome ── */
+  --surface: var(--n50);
+  --text-primary: var(--n1000);
+  --text-secondary: var(--n700);
+  --text-tertiary: var(--n500);
+  --border: var(--n200);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  background: #f5f4f3;
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+}
+.page { max-width: 1200px; margin: 0 auto; padding: 48px 24px; }
+h1 { font-size: 28px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 8px; }
+.subtitle { font-size: 15px; color: var(--text-secondary); margin-bottom: 48px; }
+h2 { font-size: 18px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 20px; padding-top: 40px; border-top: 1px solid var(--border); }
+h2:first-of-type { border-top: none; padding-top: 0; }
+h3 { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.8px; color: var(--text-tertiary); margin-bottom: 12px; margin-top: 24px; }
+
+.section { margin-bottom: 48px; }
+
+/* ── Ramp strips ── */
+.ramp-compare { margin-bottom: 32px; }
+.ramp-label { font-size: 12px; font-weight: 600; margin-bottom: 4px; color: var(--text-secondary); }
+.ramp-label .tag { font-size: 10px; font-weight: 500; color: var(--text-tertiary); margin-left: 6px; }
+.ramp-strip { display: flex; gap: 2px; border-radius: 8px; overflow: hidden; margin-bottom: 2px; }
+.ramp-cell {
+  flex: 1; height: 44px; display: flex; align-items: center; justify-content: center;
+  font-size: 9px; font-weight: 600; cursor: default; position: relative;
+}
+.ramp-cell .hex { opacity: 0; transition: opacity 0.15s; font-size: 8px; }
+.ramp-cell:hover .hex { opacity: 1; }
+.ramp-cell.anchor::after {
+  content: ''; position: absolute; bottom: 3px; left: 50%; transform: translateX(-50%);
+  width: 6px; height: 6px; border-radius: 50%; border: 1.5px solid currentColor;
+}
+.step-labels { display: flex; gap: 2px; margin-bottom: 16px; }
+.step-labels span { flex: 1; text-align: center; font-size: 9px; color: var(--text-tertiary); }
+
+/* ── Semantic pairing cards ── */
+.pairings-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 16px; }
+.pair-card { background: white; border-radius: 12px; border: 1px solid var(--border); overflow: hidden; }
+.pair-card.dark { background: var(--n950); border-color: var(--n800); }
+.pair-card-header { padding: 10px 14px; font-size: 11px; font-weight: 700; border-bottom: 1px solid var(--border); }
+.pair-card.dark .pair-card-header { border-color: var(--n800); color: var(--n100); }
+.pair-swatch {
+  margin: 12px; border-radius: 8px; padding: 16px; display: flex;
+  flex-direction: column; gap: 4px; min-height: 72px; justify-content: center;
+}
+.pair-swatch .label { font-size: 13px; font-weight: 600; }
+.pair-swatch .meta { font-size: 10px; opacity: 0.7; }
+.pair-swatch-light {
+  margin: 0 12px 12px; border-radius: 8px; padding: 12px 16px;
+  display: flex; flex-direction: column; gap: 4px;
+}
+.contrast-badge {
+  display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 6px;
+  border-radius: 4px; background: rgba(0,0,0,0.06);
+}
+.contrast-badge.pass { background: #d4ffda; color: #006127; }
+.contrast-badge.fail { background: #ffedeb; color: #99000b; }
+
+/* ── Buttons ── */
+.btn-row { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
+.btn-row.col { flex-direction: column; max-width: 320px; }
+.mock-btn {
+  padding: 12px 32px; border-radius: 100px; font-family: inherit;
+  font-size: 14px; font-weight: 600; border: none; cursor: default;
+  display: inline-flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden; min-width: 140px;
+}
+.mock-btn .overlay {
+  position: absolute; inset: 0; pointer-events: none;
+}
+
+/* ── Banners ── */
+.mock-banner {
+  display: flex; align-items: center; gap: 10px; padding: 12px 16px;
+  border-radius: 10px; font-size: 13px; font-weight: 500; margin-bottom: 10px;
+}
+
+/* ── Inputs ── */
+.mock-input-group { margin-bottom: 12px; }
+.mock-input {
+  width: 100%; max-width: 360px; padding: 10px 14px; border-radius: 8px;
+  font-family: inherit; font-size: 14px; background: white;
+}
+.mock-helper { font-size: 12px; margin-top: 4px; }
+
+/* ── Token diff table ── */
+.diff-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.diff-table th { text-align: left; padding: 8px 10px; border-bottom: 2px solid var(--border); font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-tertiary); }
+.diff-table td { padding: 6px 10px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+.diff-table .swatch-inline { display: inline-block; width: 16px; height: 16px; border-radius: 4px; border: 1px solid rgba(0,0,0,0.1); vertical-align: middle; margin-right: 6px; }
+.diff-table .group-header { font-weight: 700; background: #f9f8f7; }
+.diff-table .new-tag { font-size: 9px; font-weight: 700; color: #008539; background: #d4ffda; padding: 1px 5px; border-radius: 3px; margin-left: 4px; }
+.diff-table .removed-tag { font-size: 9px; font-weight: 700; color: #99000b; background: #ffedeb; padding: 1px 5px; border-radius: 3px; margin-left: 4px; }
+.diff-table .changed-tag { font-size: 9px; font-weight: 700; color: #8b6900; background: #fff0d1; padding: 1px 5px; border-radius: 3px; margin-left: 4px; }
+
+/* ── Mode toggle ── */
+.mode-toggle {
+  position: fixed; top: 16px; right: 16px; z-index: 100;
+  padding: 8px 16px; border-radius: 8px; border: 1px solid var(--border);
+  background: white; font-family: inherit; font-size: 12px; font-weight: 600;
+  cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.mode-toggle:hover { background: var(--n100); }
+
+/* ── Overlay demo ── */
+.overlay-demo { display: flex; gap: 8px; align-items: center; margin-bottom: 12px; }
+.overlay-demo .step { text-align: center; }
+.overlay-demo .step-label { font-size: 10px; color: var(--text-tertiary); margin-top: 4px; }
+.overlay-swatch {
+  width: 80px; height: 48px; border-radius: 8px; display: flex;
+  align-items: center; justify-content: center; font-size: 9px; font-weight: 600;
+  position: relative; overflow: hidden;
+}
+.overlay-swatch .ov { position: absolute; inset: 0; }
+.overlay-swatch .hex-label { position: relative; z-index: 1; }
+.arrow { color: var(--text-tertiary); font-size: 16px; }
+</style>
+</head>
+<body>
+<div class="page">
+  <h1>Color system revision review</h1>
+  <p class="subtitle">New functional ramps, restructured semantic tokens, overlay interactions, and disabled states. Review before committing token changes.</p>
+  <button class="mode-toggle" onclick="toggleMode()">Toggle dark mode</button>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- SECTION 1: Ramp comparison              -->
+  <!-- ════════════════════════════════════════ -->
+  <div class="section">
+    <h2>1. Ramp comparison — old vs new</h2>
+    <p style="font-size:13px;color:var(--text-secondary);margin-bottom:24px;">Brand ramps (top) stay for decorative use. New functional ramps (bottom) replace them for status semantics. Circles mark brand anchors.</p>
+    <div id="ramp-comparisons"></div>
+  </div>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- SECTION 2: Warning step comparison      -->
+  <!-- ════════════════════════════════════════ -->
+  <div class="section">
+    <h2>2. Warning solid — step comparison</h2>
+    <p style="font-size:13px;color:var(--text-secondary);margin-bottom:24px;">Yellow is intrinsically high-lightness. Compare step 400 (anchor), 500, and 600 for the solid fill.</p>
+    <div id="warning-compare" style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;"></div>
+  </div>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- SECTION 2b: Tuning problem areas        -->
+  <!-- ════════════════════════════════════════ -->
+  <div class="section">
+    <h2>2b. Tuning — dark mode warning, light surfaces, accent solid</h2>
+
+    <h3>Warning solid — dark mode</h3>
+    <p style="font-size:12px;color:var(--text-secondary);margin-bottom:12px;">Current spec: yellow-500 (#b38800). Feels dirty. Options on dark surface:</p>
+    <div id="warn-dark-compare" style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:32px;"></div>
+
+    <h3>Warning light surface — light mode</h3>
+    <p style="font-size:12px;color:var(--text-secondary);margin-bottom:12px;">Current spec: yellow-50. Options for banner backgrounds:</p>
+    <div id="warn-light-surface-compare" style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:32px;"></div>
+
+    <h3>Warning light surface — dark mode</h3>
+    <p style="font-size:12px;color:var(--text-secondary);margin-bottom:12px;">Current spec: yellow-950. Options for banner backgrounds on dark:</p>
+    <div id="warn-dark-surface-compare" style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:32px;"></div>
+
+    <h3>Accent solid — dark mode</h3>
+    <p style="font-size:12px;color:var(--text-secondary);margin-bottom:12px;">Current spec: blue-500 (#6583ff). Feels off. Options on dark surface:</p>
+    <div id="accent-dark-compare" style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:32px;"></div>
+  </div>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- SECTION 3: Semantic pairings            -->
+  <!-- ════════════════════════════════════════ -->
+  <div class="section">
+    <h2>3. Semantic token pairings</h2>
+    <p style="font-size:13px;color:var(--text-secondary);margin-bottom:24px;">Each status/accent group has 5 tokens. Solid + on-solid pair for filled buttons; light + on-light pair for banners/surfaces.</p>
+
+    <h3>Light mode</h3>
+    <div id="pairings-light" class="pairings-grid"></div>
+
+    <h3>Dark mode</h3>
+    <div id="pairings-dark" class="pairings-grid"></div>
+  </div>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- SECTION 4: Component previews           -->
+  <!-- ════════════════════════════════════════ -->
+  <div class="section">
+    <h2>4. Component previews</h2>
+
+    <h3>Buttons — default state</h3>
+    <div class="btn-row" id="buttons-default"></div>
+
+    <h3>Buttons — with overlay states (hover / pressed)</h3>
+    <div id="buttons-states"></div>
+
+    <h3>Banners</h3>
+    <div id="banners" style="max-width:600px;"></div>
+
+    <h3>Input with error state</h3>
+    <div id="inputs" style="max-width:400px;"></div>
+  </div>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- SECTION 4: Overlay preview              -->
+  <!-- ════════════════════════════════════════ -->
+  <div class="section">
+    <h2>5. Overlay interaction math</h2>
+    <p style="font-size:13px;color:var(--text-secondary);margin-bottom:24px;">Semi-transparent overlays applied on top of base fills. Lighten for dark fills, darken for light fills.</p>
+    <div id="overlay-demos"></div>
+  </div>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- SECTION 5: Disabled preview             -->
+  <!-- ════════════════════════════════════════ -->
+  <div class="section">
+    <h2>6. Disabled state</h2>
+    <p style="font-size:13px;color:var(--text-secondary);margin-bottom:24px;">All button variants converge to the same neutral disabled appearance. Fill: neutral-200, text: neutral-400.</p>
+    <div class="btn-row" id="disabled-buttons"></div>
+  </div>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- SECTION 6: Token diff                   -->
+  <!-- ════════════════════════════════════════ -->
+  <div class="section">
+    <h2>7. Full token inventory diff</h2>
+    <div id="token-diff"></div>
+  </div>
+</div>
+
+<script>
+// ── Color data ──
+const STEPS = [50,100,200,300,400,500,600,700,800,900,950,975,1000];
+
+const RAMPS = {
+  crimson: ['#fff8f9','#ffedef','#ffdadf','#ffb7c3','#f190a2','#d8637e','#b33056','#90163f','#670028','#3d0014','#29000b','#1e0007','#130003'],
+  red:     ['#fff8f7','#ffedeb','#ffdbd6','#ffbab1','#ff8b7e','#f34c43','#dc2626','#99000b','#6a0005','#3e0002','#2a0001','#1f0000','#140000'],
+  lime:    ['#f3ffe8','#deffbd','#bffb7c','#afea6a','#8ec54b','#70a031','#547d1a','#3b5b05','#263e00','#132200','#0a1500','#060e00','#030800'],
+  green:   ['#f0fff2','#d4ffda','#aefabb','#8ce69e','#61cb7a','#16a34a','#008539','#006127','#004218','#00250a','#001705','#001003','#000901'],
+  gold:    ['#fff9f2','#ffefdb','#ffdfb6','#ffc16b','#faa810','#c18000','#966200','#6d4700','#4b2f00','#2a1900','#1c0e00','#130900','#0b0400'],
+  yellow:  ['#fffaee','#fff0d1','#ffe1a0','#fcc537','#eab308','#b38800','#8b6900','#654b00','#453200','#271b00','#191000','#110a00','#090500'],
+  blue:    ['#f8faff','#edf2ff','#dbe4ff','#bbccff','#93adff','#6583ff','#4e68f4','#2e3eb1','#1c277f','#0d134d','#060a35','#040627','#020319'],
+  neutral: ['#ffffff','#f3f1f1','#e6e4e4','#d0cdcc','#b4b0af','#938e8d','#736d6c','#554e4d','#3a3433','#221b1a','#16100f','#100909','#090404'],
+};
+
+// Reference ramp from external system (10 steps mapped to our 13-step grid)
+const RAMPS_REF = {
+  yellowRef: ['#fdf2dc','#fbe5b6','#ffd688','#f6bc2f','#d79900','#b97502','#9f6402','#845201','#6b4100','#392300','#392300','#392300','#392300'],
+};
+
+const ANCHORS = {
+  crimson: 6, red: 6, lime: 3, green: 5, gold: 4, yellow: 4, blue: 6
+};
+
+// ── Semantic mappings (proposed) ──
+const SEMANTIC_LIGHT = {
+  error:   { solid: ['red',600], light: ['red',50], onSolid: ['neutral',50],   onLight: ['red',700],    border: ['red',600] },
+  success: { solid: ['green',600], light: ['green',50], onSolid: ['neutral',50], onLight: ['green',700],  border: ['green',600] },
+  warning: { solid: ['yellow',300], light: ['yellow',100], onSolid: ['neutral',1000], onLight: ['yellow',700], border: ['yellow',400] },
+  accent:  { solid: ['blue',600], light: ['blue',50], onSolid: ['neutral',50],  onLight: ['blue',700],   border: ['blue',600] },
+};
+
+const SEMANTIC_DARK = {
+  error:   { solid: ['red',500], light: ['red',950], onSolid: ['neutral',50],   onLight: ['red',300],    border: ['red',700] },
+  success: { solid: ['green',500], light: ['green',950], onSolid: ['neutral',50], onLight: ['green',300],  border: ['green',700] },
+  warning: { solid: ['yellow',400], light: ['yellow',950], onSolid: ['neutral',1000], onLight: ['yellow',300], border: ['yellow',700] },
+  accent:  { solid: ['blue',600], light: ['blue',950], onSolid: ['neutral',50],  onLight: ['blue',300],   border: ['blue',700] },
+};
+
+function hex(ramp, step) {
+  const idx = STEPS.indexOf(step);
+  return RAMPS[ramp]?.[idx] ?? '#ff00ff';
+}
+
+// ── Contrast ratio ──
+function luminance(hexColor) {
+  const r = parseInt(hexColor.slice(1,3),16)/255;
+  const g = parseInt(hexColor.slice(3,5),16)/255;
+  const b = parseInt(hexColor.slice(5,7),16)/255;
+  const toLinear = c => c <= 0.03928 ? c/12.92 : Math.pow((c+0.055)/1.055, 2.4);
+  return 0.2126*toLinear(r) + 0.7152*toLinear(g) + 0.0722*toLinear(b);
+}
+
+function contrastRatio(hex1, hex2) {
+  const l1 = luminance(hex1), l2 = luminance(hex2);
+  const lighter = Math.max(l1,l2), darker = Math.min(l1,l2);
+  return (lighter + 0.05) / (darker + 0.05);
+}
+
+function isDark(hexColor) { return luminance(hexColor) < 0.18; }
+
+// ── Composite overlay ──
+function composite(baseHex, overlayHex) {
+  const br = parseInt(baseHex.slice(1,3),16)/255;
+  const bg = parseInt(baseHex.slice(3,5),16)/255;
+  const bb = parseInt(baseHex.slice(5,7),16)/255;
+  const or = parseInt(overlayHex.slice(1,3),16)/255;
+  const og = parseInt(overlayHex.slice(3,5),16)/255;
+  const ob = parseInt(overlayHex.slice(5,7),16)/255;
+  const oa = parseInt(overlayHex.slice(7,9),16)/255;
+  const rr = Math.round((or*oa + br*(1-oa))*255).toString(16).padStart(2,'0');
+  const rg = Math.round((og*oa + bg*(1-oa))*255).toString(16).padStart(2,'0');
+  const rb = Math.round((ob*oa + bb*(1-oa))*255).toString(16).padStart(2,'0');
+  return `#${rr}${rg}${rb}`;
+}
+
+// ════════════════════════════════════════
+// SECTION 1: Ramp comparisons
+// ════════════════════════════════════════
+function buildRampComparisons() {
+  const container = document.getElementById('ramp-comparisons');
+  const pairs = [
+    { old: 'crimson', new: 'red', label: 'Error' },
+    { old: 'lime', new: 'green', label: 'Success' },
+    { old: 'gold', new: 'yellow', label: 'Warning', ref: 'yellowRef', refLabel: 'reference system (warmer hue)' },
+  ];
+
+  for (const pair of pairs) {
+    const div = document.createElement('div');
+    div.className = 'ramp-compare';
+    let refRow = '';
+    if (pair.ref) {
+      refRow = `
+        <div class="ramp-label" style="margin-top:4px;">&nbsp;<span class="tag">${pair.refLabel}</span></div>
+        <div class="ramp-strip">${STEPS.map((s,i) => {
+          const c = RAMPS_REF[pair.ref]?.[i] ?? '#ccc';
+          const dark = isDark(c);
+          return `<div class="ramp-cell" style="background:${c};color:${dark?'rgba(255,255,255,0.5)':'rgba(0,0,0,0.3)'}"><span class="hex">${c}</span></div>`;
+        }).join('')}</div>`;
+    }
+    div.innerHTML = `
+      <div class="ramp-label">${pair.label} <span class="tag">${pair.old} (brand)</span></div>
+      <div class="ramp-strip">${STEPS.map((s,i) => {
+        const c = RAMPS[pair.old][i];
+        const dark = isDark(c);
+        const anchor = ANCHORS[pair.old] === i;
+        return `<div class="ramp-cell ${anchor?'anchor':''}" style="background:${c};color:${dark?'rgba(255,255,255,0.5)':'rgba(0,0,0,0.3)'}"><span class="hex">${c}</span></div>`;
+      }).join('')}</div>
+      <div class="ramp-label" style="margin-top:4px;">&nbsp;<span class="tag">${pair.new} (proposed)</span></div>
+      <div class="ramp-strip">${STEPS.map((s,i) => {
+        const c = RAMPS[pair.new][i];
+        const dark = isDark(c);
+        const anchor = ANCHORS[pair.new] === i;
+        return `<div class="ramp-cell ${anchor?'anchor':''}" style="background:${c};color:${dark?'rgba(255,255,255,0.5)':'rgba(0,0,0,0.3)'}"><span class="hex">${c}</span></div>`;
+      }).join('')}</div>
+      ${refRow}
+      <div class="step-labels">${STEPS.map(s => `<span>${s}</span>`).join('')}</div>
+    `;
+    container.appendChild(div);
+  }
+
+  // Blue (no change)
+  const blueDiv = document.createElement('div');
+  blueDiv.className = 'ramp-compare';
+  blueDiv.innerHTML = `
+    <div class="ramp-label">Accent <span class="tag">blue (unchanged)</span></div>
+    <div class="ramp-strip">${STEPS.map((s,i) => {
+      const c = RAMPS.blue[i];
+      const dark = isDark(c);
+      const anchor = ANCHORS.blue === i;
+      return `<div class="ramp-cell ${anchor?'anchor':''}" style="background:${c};color:${dark?'rgba(255,255,255,0.5)':'rgba(0,0,0,0.3)'}"><span class="hex">${c}</span></div>`;
+    }).join('')}</div>
+    <div class="step-labels">${STEPS.map(s => `<span>${s}</span>`).join('')}</div>
+  `;
+  container.appendChild(blueDiv);
+}
+
+// ════════════════════════════════════════
+// SECTION 2: Warning step comparison
+// ════════════════════════════════════════
+function buildWarningCompare() {
+  const container = document.getElementById('warning-compare');
+  const options = [
+    { label: 'Current (gold)', solid: ['gold',500], onSolid: ['neutral',1000], light: ['gold',100], onLight: ['gold',600], border: ['gold',300], ramp: 'gold' },
+    { label: 'Proposed: yellow-300', solid: ['yellow',300], onSolid: ['neutral',1000], light: ['yellow',50], onLight: ['yellow',700], border: ['yellow',400], ramp: 'yellow' },
+    { label: 'Alt: yellow-400', solid: ['yellow',400], onSolid: ['neutral',1000], light: ['yellow',50], onLight: ['yellow',700], border: ['yellow',500], ramp: 'yellow' },
+  ];
+
+  for (const opt of options) {
+    const solidHex = hex(...opt.solid);
+    const onSolidHex = hex(...opt.onSolid);
+    const lightHex = hex(...opt.light);
+    const onLightHex = hex(...opt.onLight);
+    const borderHex = hex(...opt.border);
+
+    const solidCR = contrastRatio(solidHex, onSolidHex).toFixed(1);
+    const solidPass = parseFloat(solidCR) >= 3.0;
+    const lightCR = contrastRatio(lightHex, onLightHex).toFixed(1);
+    const lightPass = parseFloat(lightCR) >= 4.5;
+
+    const hoverOv = isDark(solidHex) ? '#ffffff14' : '#00000014';
+    const pressOv = isDark(solidHex) ? '#ffffff29' : '#00000029';
+    const hoverComp = composite(solidHex, hoverOv);
+    const pressComp = composite(solidHex, pressOv);
+
+    container.innerHTML += `
+      <div class="pair-card">
+        <div class="pair-card-header">${opt.label}</div>
+        <div class="pair-swatch" style="background:${solidHex};color:${onSolidHex};">
+          <div class="label">Warning button</div>
+          <div class="meta">${opt.solid[0]}-${opt.solid[1]} · ${solidHex}</div>
+          <span class="contrast-badge ${solidPass?'pass':'fail'}">${solidCR}:1</span>
+        </div>
+        <div style="margin:0 12px 8px;display:flex;gap:6px;">
+          <div style="flex:1;height:40px;border-radius:6px;background:${solidHex};display:flex;align-items:center;justify-content:center;font-size:10px;color:${onSolidHex};font-weight:600;">Default</div>
+          <div style="flex:1;height:40px;border-radius:6px;background:${hoverComp};display:flex;align-items:center;justify-content:center;font-size:10px;color:${onSolidHex};font-weight:600;">Hover</div>
+          <div style="flex:1;height:40px;border-radius:6px;background:${pressComp};display:flex;align-items:center;justify-content:center;font-size:10px;color:${onSolidHex};font-weight:600;">Pressed</div>
+        </div>
+        <div class="pair-swatch-light" style="background:${lightHex};color:${onLightHex};border:1.5px solid ${borderHex};">
+          <div class="label" style="font-size:13px;font-weight:600;">Warning banner</div>
+          <div class="meta" style="font-size:10px;opacity:0.7;">${opt.light[0]}-${opt.light[1]} + ${opt.onLight[0]}-${opt.onLight[1]}</div>
+          <span class="contrast-badge ${lightPass?'pass':'fail'}">${lightCR}:1</span>
+        </div>
+      </div>
+    `;
+  }
+}
+
+// ════════════════════════════════════════
+// SECTION 2b: Tuning problem areas
+// ════════════════════════════════════════
+function buildTuning() {
+  const darkSurface = hex('neutral', 950);
+
+  // ── Warning solid dark mode ──
+  {
+    const container = document.getElementById('warn-dark-compare');
+    const opts = [
+      { label: 'yellow-300 (match light)', step: 300 },
+      { label: 'yellow-400 (anchor)', step: 400 },
+      { label: 'yellow-500 (current spec)', step: 500 },
+    ];
+    for (const opt of opts) {
+      const bg = hex('yellow', opt.step);
+      const fg = hex('neutral', 1000);
+      const cr = contrastRatio(bg, fg).toFixed(1);
+      container.innerHTML += `
+        <div class="pair-card dark">
+          <div class="pair-card-header">${opt.label}</div>
+          <div class="pair-swatch" style="background:${bg};color:${fg};">
+            <div class="label">Warning</div>
+            <div class="meta">${bg}</div>
+            <span class="contrast-badge ${parseFloat(cr)>=3?'pass':'fail'}">${cr}:1</span>
+          </div>
+        </div>`;
+    }
+  }
+
+  // ── Warning light surface — light mode ──
+  {
+    const container = document.getElementById('warn-light-surface-compare');
+    const opts = [
+      { label: 'yellow-50 (current)', bg: 50, text: 700, border: 400 },
+      { label: 'yellow-100 (warmer)', bg: 100, text: 700, border: 400 },
+      { label: 'yellow-200 (stronger)', bg: 200, text: 800, border: 500 },
+    ];
+    for (const opt of opts) {
+      const bgHex = hex('yellow', opt.bg);
+      const fgHex = hex('yellow', opt.text);
+      const bdHex = hex('yellow', opt.border);
+      const cr = contrastRatio(bgHex, fgHex).toFixed(1);
+      container.innerHTML += `
+        <div class="pair-card">
+          <div class="pair-card-header">${opt.label}</div>
+          <div class="pair-swatch-light" style="background:${bgHex};color:${fgHex};border:1.5px solid ${bdHex};margin:12px;min-height:72px;display:flex;flex-direction:column;gap:4px;justify-content:center;">
+            <div style="font-size:13px;font-weight:600;">Your subscription expires in 3 days.</div>
+            <div style="font-size:10px;opacity:0.7;">yellow-${opt.bg} + yellow-${opt.text}</div>
+            <span class="contrast-badge ${parseFloat(cr)>=4.5?'pass':'fail'}">${cr}:1</span>
+          </div>
+        </div>`;
+    }
+  }
+
+  // ── Warning light surface — dark mode ──
+  {
+    const container = document.getElementById('warn-dark-surface-compare');
+    const opts = [
+      { label: 'yellow-950 (current)', bg: 950, text: 300, border: 700 },
+      { label: 'yellow-900', bg: 900, text: 300, border: 700 },
+      { label: 'yellow-800 (stronger)', bg: 800, text: 200, border: 600 },
+    ];
+    for (const opt of opts) {
+      const bgHex = hex('yellow', opt.bg);
+      const fgHex = hex('yellow', opt.text);
+      const bdHex = hex('yellow', opt.border);
+      const cr = contrastRatio(bgHex, fgHex).toFixed(1);
+      container.innerHTML += `
+        <div class="pair-card dark">
+          <div class="pair-card-header">${opt.label}</div>
+          <div class="pair-swatch-light" style="background:${bgHex};color:${fgHex};border:1.5px solid ${bdHex};margin:12px;min-height:72px;display:flex;flex-direction:column;gap:4px;justify-content:center;">
+            <div style="font-size:13px;font-weight:600;">Your subscription expires in 3 days.</div>
+            <div style="font-size:10px;opacity:0.7;">yellow-${opt.bg} + yellow-${opt.text}</div>
+            <span class="contrast-badge ${parseFloat(cr)>=4.5?'pass':'fail'}">${cr}:1</span>
+          </div>
+        </div>`;
+    }
+  }
+
+  // ── Accent solid dark mode ──
+  {
+    const container = document.getElementById('accent-dark-compare');
+    const opts = [
+      { label: 'blue-400 (brighter)', step: 400 },
+      { label: 'blue-500 (current spec)', step: 500 },
+      { label: 'blue-600 (brand anchor)', step: 600 },
+    ];
+    for (const opt of opts) {
+      const bg = hex('blue', opt.step);
+      const fg = hex('neutral', 50);
+      const cr = contrastRatio(bg, fg).toFixed(1);
+      container.innerHTML += `
+        <div class="pair-card dark">
+          <div class="pair-card-header">${opt.label}</div>
+          <div class="pair-swatch" style="background:${bg};color:${fg};">
+            <div class="label">Accent</div>
+            <div class="meta">${bg}</div>
+            <span class="contrast-badge ${parseFloat(cr)>=3?'pass':'fail'}">${cr}:1</span>
+          </div>
+        </div>`;
+    }
+  }
+}
+
+// ════════════════════════════════════════
+// SECTION 3: Semantic pairings
+// ════════════════════════════════════════
+function buildPairings() {
+  for (const [mode, mapping, containerId] of [
+    ['light', SEMANTIC_LIGHT, 'pairings-light'],
+    ['dark', SEMANTIC_DARK, 'pairings-dark'],
+  ]) {
+    const container = document.getElementById(containerId);
+    const isDarkMode = mode === 'dark';
+
+    for (const [group, tokens] of Object.entries(mapping)) {
+      const solidHex = hex(...tokens.solid);
+      const onSolidHex = hex(...tokens.onSolid);
+      const lightHex = hex(...tokens.light);
+      const onLightHex = hex(...tokens.onLight);
+      const borderHex = hex(...tokens.border);
+
+      const solidCR = contrastRatio(solidHex, onSolidHex).toFixed(1);
+      const lightCR = contrastRatio(lightHex, onLightHex).toFixed(1);
+      const solidPass = parseFloat(solidCR) >= 4.5;
+      const lightPass = parseFloat(lightCR) >= 4.5;
+
+      const card = document.createElement('div');
+      card.className = `pair-card ${isDarkMode ? 'dark' : ''}`;
+      card.innerHTML = `
+        <div class="pair-card-header">${group}</div>
+        <div class="pair-swatch" style="background:${solidHex};color:${onSolidHex};">
+          <div class="label">Solid fill</div>
+          <div class="meta">${tokens.solid[0]}-${tokens.solid[1]} + ${tokens.onSolid[0]}-${tokens.onSolid[1]}</div>
+          <span class="contrast-badge ${solidPass?'pass':'fail'}">${solidCR}:1</span>
+        </div>
+        <div class="pair-swatch-light" style="background:${lightHex};color:${onLightHex};border:1.5px solid ${borderHex};">
+          <div class="label" style="font-size:13px;font-weight:600;">Light surface</div>
+          <div class="meta" style="font-size:10px;opacity:0.7;">${tokens.light[0]}-${tokens.light[1]} + ${tokens.onLight[0]}-${tokens.onLight[1]}</div>
+          <span class="contrast-badge ${lightPass?'pass':'fail'}">${lightCR}:1</span>
+        </div>
+      `;
+      container.appendChild(card);
+    }
+  }
+}
+
+// ════════════════════════════════════════
+// SECTION 3: Component previews
+// ════════════════════════════════════════
+function buildComponents() {
+  // Default buttons
+  const btnContainer = document.getElementById('buttons-default');
+  const buttons = [
+    { label: 'Primary', bg: hex('neutral',1000), fg: hex('neutral',50) },
+    { label: 'Destructive', bg: hex('red',600), fg: hex('neutral',50) },
+    { label: 'Accent', bg: hex('blue',600), fg: hex('neutral',50) },
+    { label: 'Warning', bg: hex('yellow',600), fg: hex('neutral',1000) },
+  ];
+  for (const b of buttons) {
+    btnContainer.innerHTML += `<div class="mock-btn" style="background:${b.bg};color:${b.fg};">${b.label}</div>`;
+  }
+
+  // Buttons with states
+  const statesContainer = document.getElementById('buttons-states');
+  const stateRows = [
+    { label: 'Primary', bg: hex('neutral',1000), fg: hex('neutral',50), overlay: 'lighten' },
+    { label: 'Destructive', bg: hex('red',600), fg: hex('neutral',50), overlay: 'lighten' },
+    { label: 'Secondary', bg: hex('neutral',100), fg: hex('neutral',1000), overlay: 'darken' },
+  ];
+  for (const row of stateRows) {
+    const hoverOv = row.overlay === 'lighten' ? '#ffffff14' : '#00000014';
+    const pressOv = row.overlay === 'lighten' ? '#ffffff29' : '#00000029';
+    const hoverComp = composite(row.bg, hoverOv);
+    const pressComp = composite(row.bg, pressOv);
+    statesContainer.innerHTML += `
+      <div style="margin-bottom:12px;">
+        <div class="ramp-label">${row.label} <span class="tag">${row.overlay} overlay</span></div>
+        <div class="btn-row">
+          <div class="mock-btn" style="background:${row.bg};color:${row.fg};">Default</div>
+          <div class="mock-btn" style="background:${hoverComp};color:${row.fg};">Hover</div>
+          <div class="mock-btn" style="background:${pressComp};color:${row.fg};">Pressed</div>
+          <div class="mock-btn" style="background:${hex('neutral',200)};color:${hex('neutral',400)};">Disabled</div>
+        </div>
+      </div>
+    `;
+  }
+
+  // Banners
+  const bannerContainer = document.getElementById('banners');
+  const banners = [
+    { group: 'error', icon: '!', text: 'Payment failed. Please try again.' },
+    { group: 'warning', icon: '!', text: 'Your subscription expires in 3 days.' },
+    { group: 'success', icon: '✓', text: 'Account created successfully.' },
+    { group: 'accent', icon: 'i', text: 'New features are available.' },
+  ];
+  for (const b of banners) {
+    const t = SEMANTIC_LIGHT[b.group];
+    bannerContainer.innerHTML += `
+      <div class="mock-banner" style="background:${hex(...t.light)};color:${hex(...t.onLight)};border:1px solid ${hex(...t.border)};">
+        <span style="width:20px;height:20px;border-radius:50%;background:${hex(...t.solid)};color:${hex(...t.onSolid)};display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0;">${b.icon}</span>
+        ${b.text}
+      </div>
+    `;
+  }
+
+  // Inputs
+  const inputContainer = document.getElementById('inputs');
+  inputContainer.innerHTML = `
+    <div class="mock-input-group">
+      <div class="mock-input" style="border:1.5px solid ${hex('neutral',200)};">Email address</div>
+      <div class="mock-helper" style="color:${hex('neutral',500)};">Enter your email</div>
+    </div>
+    <div class="mock-input-group">
+      <div class="mock-input" style="border:2px solid ${hex('red',600)};">invalid@</div>
+      <div class="mock-helper" style="color:${hex('red',700)};">Please enter a valid email address</div>
+    </div>
+  `;
+}
+
+// ════════════════════════════════════════
+// SECTION 4: Overlay demos
+// ════════════════════════════════════════
+function buildOverlayDemos() {
+  const container = document.getElementById('overlay-demos');
+  const demos = [
+    { label: 'Solid black', base: hex('neutral',1000), fg: '#fff', hover: '#ffffff14', pressed: '#ffffff29' },
+    { label: 'Solid red', base: hex('red',600), fg: '#fff', hover: '#ffffff14', pressed: '#ffffff29' },
+    { label: 'Light gray', base: hex('neutral',100), fg: '#000', hover: '#00000014', pressed: '#00000029' },
+    { label: 'Light blue', base: hex('blue',50), fg: hex('blue',700), hover: '#00000014', pressed: '#00000029' },
+  ];
+  for (const d of demos) {
+    const hComp = composite(d.base, d.hover);
+    const pComp = composite(d.base, d.pressed);
+    container.innerHTML += `
+      <div style="margin-bottom:16px;">
+        <div class="ramp-label">${d.label}</div>
+        <div class="overlay-demo">
+          <div class="step">
+            <div class="overlay-swatch" style="background:${d.base};color:${d.fg};"><span class="hex-label">${d.base}</span></div>
+            <div class="step-label">Default</div>
+          </div>
+          <span class="arrow">→</span>
+          <div class="step">
+            <div class="overlay-swatch" style="background:${hComp};color:${d.fg};"><span class="hex-label">${hComp}</span></div>
+            <div class="step-label">Hover (8%)</div>
+          </div>
+          <span class="arrow">→</span>
+          <div class="step">
+            <div class="overlay-swatch" style="background:${pComp};color:${d.fg};"><span class="hex-label">${pComp}</span></div>
+            <div class="step-label">Pressed (16%)</div>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+}
+
+// ════════════════════════════════════════
+// SECTION 5: Disabled
+// ════════════════════════════════════════
+function buildDisabled() {
+  const container = document.getElementById('disabled-buttons');
+  const fill = hex('neutral',200);
+  const text = hex('neutral',400);
+  const cr = contrastRatio(fill, text).toFixed(1);
+  const variants = ['Primary', 'Destructive', 'Accent', 'Secondary'];
+  for (const v of variants) {
+    container.innerHTML += `<div class="mock-btn" style="background:${fill};color:${text};">${v}</div>`;
+  }
+  container.innerHTML += `<span class="contrast-badge" style="align-self:center;">${cr}:1 contrast</span>`;
+}
+
+// ════════════════════════════════════════
+// SECTION 6: Token diff
+// ════════════════════════════════════════
+function buildTokenDiff() {
+  const container = document.getElementById('token-diff');
+
+  const oldTokens = {
+    'surface': [
+      ['base','neutral-50','neutral-50',''],['raised','neutral-100','neutral-100',''],['sunken','neutral-200','neutral-200',''],['overlay','neutral-50','neutral-50',''],['contrast','neutral-1000','neutral-1000',''],
+    ],
+    'on-surface': [
+      ['primary','neutral-1000','neutral-1000',''],['secondary','neutral-700','neutral-700',''],['tertiary','neutral-500','neutral-500',''],
+      ['disabled','neutral-300','neutral-400','changed'],['contrast','neutral-50','neutral-50',''],
+    ],
+    'border': [
+      ['default','neutral-200','neutral-200',''],['subtle','neutral-100','neutral-100',''],['strong','neutral-400','neutral-400',''],
+      ['disabled','—','neutral-200','new'],
+    ],
+    'interactive': [
+      ['primary','neutral-1000','neutral-1000',''],
+      ['primary-hover','neutral-900','—','removed'],['primary-pressed','neutral-800','—','removed'],['primary-disabled','neutral-300','—','removed'],
+      ['secondary','neutral-100','neutral-100',''],['disabled','—','neutral-200','new'],
+    ],
+    'error': [
+      ['base → solid','crimson-500','red-600','changed'],['subtle → light','crimson-100','red-50','changed'],
+      ['— → on-solid','—','neutral-50','new'],['text → on-light','crimson-600','red-700','changed'],['border','crimson-400','red-600','changed'],
+    ],
+    'success': [
+      ['base → solid','lime-500','green-600','changed'],['subtle → light','lime-100','green-50','changed'],
+      ['— → on-solid','—','neutral-50','new'],['text → on-light','lime-600','green-700','changed'],['border','lime-300','green-600','changed'],
+    ],
+    'warning': [
+      ['base → solid','gold-500','yellow-600','changed'],['subtle → light','gold-100','yellow-50','changed'],
+      ['— → on-solid','—','neutral-1000','new'],['text → on-light','gold-600','yellow-800','changed'],['border','gold-300','yellow-600','changed'],
+    ],
+    'info → accent': [
+      ['base → solid','blue-500','blue-600','changed'],['subtle → light','blue-100','blue-50','changed'],
+      ['— → on-solid','—','neutral-50','new'],['text → on-light','blue-600','blue-700','changed'],['border','blue-300','blue-600','changed'],
+    ],
+    'overlay': [
+      ['scrim','black-alpha-40','black-alpha-40',''],
+      ['solid-hover','—','white-alpha-8','new'],['solid-pressed','—','white-alpha-16','new'],
+      ['light-hover','—','black-alpha-8','new'],['light-pressed','—','black-alpha-16','new'],
+    ],
+  };
+
+  let html = '<table class="diff-table"><thead><tr><th>Token</th><th>Old value (light)</th><th>New value (light)</th><th>Status</th></tr></thead><tbody>';
+  for (const [group, rows] of Object.entries(oldTokens)) {
+    html += `<tr class="group-header"><td colspan="4">${group}</td></tr>`;
+    for (const [name, oldVal, newVal, status] of rows) {
+      const tag = status === 'new' ? '<span class="new-tag">NEW</span>'
+               : status === 'removed' ? '<span class="removed-tag">REMOVED</span>'
+               : status === 'changed' ? '<span class="changed-tag">CHANGED</span>' : '';
+      html += `<tr><td>${name}</td><td>${oldVal !== '—' ? oldVal : '—'}</td><td>${newVal !== '—' ? newVal : '—'}</td><td>${tag}</td></tr>`;
+    }
+  }
+  html += '</tbody></table>';
+  container.innerHTML = html;
+}
+
+// ── Dark mode toggle ──
+let darkMode = false;
+function toggleMode() {
+  darkMode = !darkMode;
+  document.body.style.background = darkMode ? '#0f0e0d' : '#f5f4f3';
+  document.body.style.color = darkMode ? '#f3f1f1' : '#090404';
+  document.querySelector('.mode-toggle').textContent = darkMode ? 'Toggle light mode' : 'Toggle dark mode';
+}
+
+// ── Init ──
+buildRampComparisons();
+buildWarningCompare();
+buildTuning();
+buildPairings();
+buildComponents();
+buildOverlayDemos();
+buildDisabled();
+buildTokenDiff();
+</script>
+</body>
+</html>

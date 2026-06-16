@@ -1,0 +1,10 @@
+{
+  "name": "@vance-club/origin",
+  "description": "Origin — Aspora's design system. Foundations, tokens, guidelines, and tooling.",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "build:icons": "cd lab/pipelines/icons && node build.mjs",
+    "verify:icons": "cd lab/pipelines/icons && node verify.mjs"
+  }
+}

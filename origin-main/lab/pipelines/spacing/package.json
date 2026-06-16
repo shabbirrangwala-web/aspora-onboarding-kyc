@@ -1,0 +1,13 @@
+{
+  "name": "@origin/pipeline-spacing",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "verify": "tsx verify.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.0.0",
+    "typescript": "^5.7.0"
+  }
+}

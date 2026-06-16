@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Origin sync</title>
+  <style>
+    /* ── Reset & Base ── */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 11px;
+    }
+
+    body {
+      font-family: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 11px;
+      line-height: 16px;
+      color: var(--figma-color-text, #333);
+      background: var(--figma-color-bg, #fff);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Layout ── */
+    .plugin {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--figma-color-border, #e5e5e5);
+    }
+
+    .header-title {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .header-version {
+      font-size: 10px;
+      color: var(--figma-color-text-secondary, #999);
+    }
+
+    .content {
+      flex: 1;
+      overflow-y: auto;
+      padding: 0;
+    }
+
+    .footer {
+      padding: 12px 16px;
+      border-top: 1px solid var(--figma-color-border, #e5e5e5);
+      display: flex;
+      gap: 8px;
+    }
+
+    /* ── Section ── */
+    .section {
+      border-bottom: 1px solid var(--figma-color-border, #e5e5e5);
+    }
+
+    .section-title {
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--figma-color-text-secondary, #999);
+      padding: 12px 16px 4px;
+    }
+
+    /* ── Foundation Row ── */
+    .foundation-row {
+      border-bottom: 1px solid var(--figma-color-border, #e5e5e5);
+    }
+
+    .foundation-row:last-child {
+      border-bottom: none;
+    }
+
+    .foundation-header {
+      display: flex;
+      align-items: center;
+      padding: 8px 16px;
+      cursor: pointer;
+      user-select: none;
+      gap: 8px;
+    }
+
+    .foundation-header:hover {
+      background: var(--figma-color-bg-hover, #f5f5f5);
+    }
+
+    .expand-icon {
+      width: 12px;
+      height: 12px;
+      flex-shrink: 0;
+      transition: transform 0.15s ease;
+      color: var(--figma-color-text-tertiary, #b3b3b3);
+    }
+
+    .foundation-row.expanded .expand-icon {
+      transform: rotate(90deg);
+    }
+
+    .foundation-name {
+      font-weight: 500;
+      flex: 1;
+    }
+
+    .foundation-summary {
+      font-size: 10px;
+      color: var(--figma-color-text-secondary, #999);
+      margin-right: 8px;
+      white-space: nowrap;
+    }
+
+    /* ── Status Badge ── */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 1px 6px;
+      border-radius: 3px;
+      font-size: 10px;
+      font-weight: 500;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .badge--synced {
+      background: #e6f4ea;
+      color: #137333;
+    }
+
+    .badge--out-of-sync {
+      background: #fce8e6;
+      color: #c5221f;
+    }
+
+    .badge--not-synced {
+      background: var(--figma-color-bg-secondary, #f0f0f0);
+      color: var(--figma-color-text-secondary, #999);
+    }
+
+    .badge--warnings {
+      background: #fef7e0;
+      color: #b05a00;
+    }
+
+    /* ── Sync Button ── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 28px;
+      padding: 0 12px;
+      border: none;
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: 11px;
+      font-weight: 500;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background 0.1s ease;
+    }
+
+    .btn:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+
+    .btn--primary {
+      background: var(--figma-color-bg-brand, #0d99ff);
+      color: #fff;
+    }
+
+    .btn--primary:hover:not(:disabled) {
+      background: var(--figma-color-bg-brand-hover, #0b8ce8);
+    }
+
+    .btn--secondary {
+      background: var(--figma-color-bg-secondary, #f0f0f0);
+      color: var(--figma-color-text, #333);
+    }
+
+    .btn--secondary:hover:not(:disabled) {
+      background: var(--figma-color-bg-tertiary, #e5e5e5);
+    }
+
+    .btn--small {
+      height: 24px;
+      padding: 0 8px;
+      font-size: 10px;
+    }
+
+    .btn--full {
+      width: 100%;
+    }
+
+    /* ── Diff Detail ── */
+    .diff-panel {
+      display: none;
+      background: var(--figma-color-bg-secondary, #fafafa);
+      border-top: 1px solid var(--figma-color-border, #e5e5e5);
+    }
+
+    .foundation-row.expanded .diff-panel {
+      display: block;
+    }
+
+    .diff-empty {
+      padding: 8px 16px 12px;
+      font-size: 10px;
+      color: var(--figma-color-text-tertiary, #b3b3b3);
+      font-style: italic;
+    }
+
+    .diff-entry {
+      display: flex;
+      align-items: flex-start;
+      padding: 4px 16px 4px 28px;
+      gap: 6px;
+      font-size: 10px;
+      line-height: 14px;
+    }
+
+    .diff-entry:last-child {
+      padding-bottom: 8px;
+    }
+
+    .diff-status {
+      display: inline-flex;
+      align-items: center;
+      padding: 0 4px;
+      border-radius: 2px;
+      font-size: 9px;
+      font-weight: 600;
+      text-transform: uppercase;
+      white-space: nowrap;
+      flex-shrink: 0;
+      line-height: 16px;
+    }
+
+    .diff-status--new       { background: #e6f4ea; color: #137333; }
+    .diff-status--changed   { background: #e8f0fe; color: #1a73e8; }
+    .diff-status--renamed   { background: #fef7e0; color: #b05a00; }
+    .diff-status--orphaned  { background: #fce8e6; color: #c5221f; }
+    .diff-status--in_sync   { background: var(--figma-color-bg-secondary, #f0f0f0); color: var(--figma-color-text-tertiary, #b3b3b3); }
+
+    .diff-path {
+      font-family: "SF Mono", "Roboto Mono", monospace;
+      word-break: break-all;
+      flex: 1;
+    }
+
+    .diff-values {
+      color: var(--figma-color-text-secondary, #999);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    /* ── Validation ── */
+    .validation-section {
+      display: none;
+    }
+
+    .validation-section.visible {
+      display: block;
+    }
+
+    .validation-check {
+      display: flex;
+      align-items: flex-start;
+      padding: 4px 16px;
+      gap: 6px;
+      font-size: 10px;
+      line-height: 14px;
+    }
+
+    .validation-icon {
+      flex-shrink: 0;
+      width: 14px;
+      text-align: center;
+    }
+
+    .validation-icon--pass { color: #137333; }
+    .validation-icon--fail { color: #c5221f; }
+    .validation-icon--warn { color: #b05a00; }
+
+    .validation-message {
+      flex: 1;
+    }
+
+    .validation-details {
+      padding: 2px 16px 4px 36px;
+      font-size: 9px;
+      font-family: "SF Mono", "Roboto Mono", monospace;
+      color: var(--figma-color-text-secondary, #999);
+    }
+
+    /* ── Checklist ── */
+    .checklist-section {
+      padding: 8px 16px 12px;
+    }
+
+    .checklist-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+      padding: 3px 0;
+      font-size: 10px;
+      line-height: 14px;
+      color: var(--figma-color-text-secondary, #999);
+    }
+
+    .checklist-item input[type="checkbox"] {
+      margin-top: 1px;
+      flex-shrink: 0;
+    }
+
+    /* ── Log ── */
+    .log-section {
+      max-height: 80px;
+      overflow-y: auto;
+      padding: 4px 16px 8px;
+    }
+
+    .log-entry {
+      font-size: 10px;
+      font-family: "SF Mono", "Roboto Mono", monospace;
+      line-height: 14px;
+      padding: 1px 0;
+    }
+
+    .log-entry--info    { color: var(--figma-color-text-secondary, #999); }
+    .log-entry--success { color: #137333; }
+    .log-entry--warn    { color: #b05a00; }
+    .log-entry--error   { color: #c5221f; }
+
+    /* ── Spinner ── */
+    .spinner {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border: 2px solid var(--figma-color-border, #e5e5e5);
+      border-top-color: var(--figma-color-bg-brand, #0d99ff);
+      border-radius: 50%;
+      animation: spin 0.6s linear infinite;
+      flex-shrink: 0;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .syncing .btn--small {
+      display: none;
+    }
+
+    /* ── Error Banner ── */
+    .error-banner {
+      display: none;
+      padding: 8px 16px;
+      background: #fce8e6;
+      color: #c5221f;
+      font-size: 10px;
+      line-height: 14px;
+    }
+
+    .error-banner.visible {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="plugin">
+    <!-- Header -->
+    <div class="header">
+      <span class="header-title">Origin sync</span>
+      <span class="header-version">v0.1.0</span>
+    </div>
+
+    <!-- Error Banner -->
+    <div id="error-banner" class="error-banner"></div>
+
+    <!-- Content -->
+    <div class="content">
+      <!-- Dashboard -->
+      <div class="section">
+        <div class="section-title">Foundations</div>
+
+        <div class="foundation-row" data-foundation="color">
+          <div class="foundation-header" onclick="toggleExpand(this)">
+            <svg class="expand-icon" viewBox="0 0 12 12" fill="none">
+              <path d="M4 2L8 6L4 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="foundation-name">Color</span>
+            <span class="foundation-summary" data-summary>--</span>
+            <span class="badge badge--not-synced" data-badge>Not synced</span>
+            <button class="btn btn--secondary btn--small" onclick="event.stopPropagation(); syncOne('color')">Sync</button>
+          </div>
+          <div class="diff-panel" data-diff>
+            <div class="diff-empty">No diff data yet</div>
+          </div>
+        </div>
+
+        <div class="foundation-row" data-foundation="typography">
+          <div class="foundation-header" onclick="toggleExpand(this)">
+            <svg class="expand-icon" viewBox="0 0 12 12" fill="none">
+              <path d="M4 2L8 6L4 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="foundation-name">Typography</span>
+            <span class="foundation-summary" data-summary>--</span>
+            <span class="badge badge--not-synced" data-badge>Not synced</span>
+            <button class="btn btn--secondary btn--small" onclick="event.stopPropagation(); syncOne('typography')">Sync</button>
+          </div>
+          <div class="diff-panel" data-diff>
+            <div class="diff-empty">No diff data yet</div>
+          </div>
+        </div>
+
+        <div class="foundation-row" data-foundation="spacing">
+          <div class="foundation-header" onclick="toggleExpand(this)">
+            <svg class="expand-icon" viewBox="0 0 12 12" fill="none">
+              <path d="M4 2L8 6L4 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="foundation-name">Spacing</span>
+            <span class="foundation-summary" data-summary>--</span>
+            <span class="badge badge--not-synced" data-badge>Not synced</span>
+            <button class="btn btn--secondary btn--small" onclick="event.stopPropagation(); syncOne('spacing')">Sync</button>
+          </div>
+          <div class="diff-panel" data-diff>
+            <div class="diff-empty">No diff data yet</div>
+          </div>
+        </div>
+
+        <div class="foundation-row" data-foundation="radius">
+          <div class="foundation-header" onclick="toggleExpand(this)">
+            <svg class="expand-icon" viewBox="0 0 12 12" fill="none">
+              <path d="M4 2L8 6L4 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="foundation-name">Radius</span>
+            <span class="foundation-summary" data-summary>--</span>
+            <span class="badge badge--not-synced" data-badge>Not synced</span>
+            <button class="btn btn--secondary btn--small" onclick="event.stopPropagation(); syncOne('radius')">Sync</button>
+          </div>
+          <div class="diff-panel" data-diff>
+            <div class="diff-empty">No diff data yet</div>
+          </div>
+        </div>
+
+        <div class="foundation-row" data-foundation="asset">
+          <div class="foundation-header" onclick="toggleExpand(this)">
+            <svg class="expand-icon" viewBox="0 0 12 12" fill="none">
+              <path d="M4 2L8 6L4 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="foundation-name">Asset</span>
+            <span class="foundation-summary" data-summary>--</span>
+            <span class="badge badge--not-synced" data-badge>Not synced</span>
+            <button class="btn btn--secondary btn--small" onclick="event.stopPropagation(); syncOne('asset')">Sync</button>
+          </div>
+          <div class="diff-panel" data-diff>
+            <div class="diff-empty">No diff data yet</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Validation Results -->
+      <div id="validation-section" class="section validation-section">
+        <div class="section-title">Validation</div>
+        <div id="validation-results"></div>
+      </div>
+
+      <!-- Manual Checklist -->
+      <div class="section">
+        <div class="section-title">Manual Checklist</div>
+        <div class="checklist-section">
+          <label class="checklist-item">
+            <input type="checkbox" />
+            <span>Verify Number text styles have tabular-nums (tnum) OpenType feature enabled</span>
+          </label>
+          <label class="checklist-item">
+            <input type="checkbox" />
+            <span>Confirm Haffer font family is available in the Figma file</span>
+          </label>
+          <label class="checklist-item">
+            <input type="checkbox" />
+            <span>Review any orphaned variables flagged by validation</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Log -->
+      <div class="section">
+        <div class="section-title">Log</div>
+        <div id="log-section" class="log-section"></div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <button id="sync-all-btn" class="btn btn--primary btn--full" onclick="syncAll()">Sync All</button>
+    </div>
+  </div>
+
+  <script type="module" src="./ui.ts"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+{
+  "typography": {
+    "fontSize": {
+      "$type": "dimension",
+      "100": { "$value": "11px" },
+      "200": { "$value": "12px" },
+      "300": { "$value": "14px" },
+      "400": { "$value": "16px" },
+      "500": { "$value": "20px" },
+      "600": { "$value": "22px" },
+      "700": { "$value": "24px" },
+      "800": { "$value": "28px" },
+      "900": { "$value": "32px" },
+      "1000": { "$value": "36px" },
+      "1100": { "$value": "45px" },
+      "1200": { "$value": "57px" }
+    },
+    "lineHeight": {
+      "$type": "dimension",
+      "100": { "$value": "12px" },
+      "200": { "$value": "16px" },
+      "300": { "$value": "20px" },
+      "400": { "$value": "24px" },
+      "500": { "$value": "28px" },
+      "600": { "$value": "32px" },
+      "700": { "$value": "36px" },
+      "800": { "$value": "40px" },
+      "900": { "$value": "44px" },
+      "1000": { "$value": "48px" },
+      "1100": { "$value": "52px" },
+      "1200": { "$value": "56px" }
+    },
+    "letterSpacing": {
+      "$type": "dimension",
+      "tight-4": { "$value": "-2%" },
+      "tight-3": { "$value": "-1.7%" },
+      "tight-2": { "$value": "-1%" },
+      "tight-1": { "$value": "-0.9%" },
+      "tight-0": { "$value": "-0.6%" },
+      "none": { "$value": "0%" },
+      "wide-1": { "$value": "0.5%" },
+      "wide-2": { "$value": "1.5%" }
+    },
+    "fontWeight": {
+      "$type": "fontWeight",
+      "regular": { "$value": 400 },
+      "medium": { "$value": 500 },
+      "semibold": { "$value": 600 },
+      "bold": { "$value": 700 },
+      "heavy": { "$value": 900 }
+    },
+    "fontFamily": {
+      "$type": "fontFamily",
+      "primary": { "$value": "Haffer" }
+    }
+  }
+}

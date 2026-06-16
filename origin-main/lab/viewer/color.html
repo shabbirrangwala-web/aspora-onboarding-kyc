@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Origin Color System</title>
+  <script src="https://cdn.jsdelivr.net/npm/culori@4/bundled/culori.min.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --page-bg: #faf9f8;
+      --page-text: #1a1412;
+      --page-text-secondary: #6b5e56;
+      --section-border: #e8e2dd;
+      --card-bg: #ffffff;
+    }
+
+    html.dark {
+      --page-bg: #151211;
+      --page-text: #f2efed;
+      --page-text-secondary: #a89e97;
+      --section-border: #2e2824;
+      --card-bg: #1e1b19;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      background: var(--page-bg);
+      color: var(--page-text);
+      line-height: 1.5;
+      padding: 40px;
+      max-width: 1400px;
+      margin: 0 auto;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 48px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    header p {
+      color: var(--page-text-secondary);
+      font-size: 14px;
+    }
+
+    .header-left { display: flex; flex-direction: column; gap: 4px; }
+
+    .header-actions { display: flex; gap: 8px; align-items: center; }
+
+    button {
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 8px 16px;
+      border-radius: 8px;
+      border: 1px solid var(--section-border);
+      background: var(--card-bg);
+      color: var(--page-text);
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    button:hover { opacity: 0.8; }
+
+    section {
+      margin-bottom: 56px;
+    }
+
+    section > h2 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--section-border);
+    }
+
+    /* Ramp strips */
+    .ramp {
+      margin-bottom: 20px;
+    }
+
+    .ramp-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    .ramp-name {
+      font-size: 13px;
+      font-weight: 600;
+      width: 90px;
+      flex-shrink: 0;
+      text-transform: capitalize;
+    }
+
+    .ramp-anchor {
+      font-size: 11px;
+      color: var(--page-text-secondary);
+      font-family: 'SF Mono', 'Fira Code', monospace;
+    }
+
+    .ramp-strip {
+      display: flex;
+      gap: 2px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .swatch {
+      flex: 1;
+      aspect-ratio: 1 / 1.1;
+      min-height: 64px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+      cursor: pointer;
+      position: relative;
+      transition: transform 0.15s;
+    }
+
+    .swatch:hover {
+      transform: scaleY(1.08);
+      z-index: 2;
+    }
+
+    .swatch-step {
+      font-size: 10px;
+      font-weight: 600;
+      opacity: 0.85;
+    }
+
+    .swatch-hex {
+      font-size: 9px;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      opacity: 0.7;
+    }
+
+    .swatch-anchor-dot {
+      position: absolute;
+      bottom: 4px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      border: 1.5px solid;
+    }
+
+    /* Tooltip */
+    .tooltip {
+      display: none;
+      position: fixed;
+      z-index: 100;
+      background: var(--card-bg);
+      border: 1px solid var(--section-border);
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 12px;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      line-height: 1.7;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+      pointer-events: none;
+    }
+
+    .tooltip.visible { display: block; }
+
+    /* Toast */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: var(--page-text);
+      color: var(--page-bg);
+      padding: 8px 20px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      opacity: 0;
+      transition: all 0.25s;
+      z-index: 200;
+    }
+
+    .toast.visible {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* Semantic tokens grid */
+    .semantic-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    .semantic-column {
+      background: var(--card-bg);
+      border: 1px solid var(--section-border);
+      border-radius: 12px;
+      padding: 24px;
+    }
+
+    .semantic-column h3 {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .semantic-group {
+      margin-bottom: 24px;
+    }
+
+    .semantic-group-label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--page-text-secondary);
+      margin-bottom: 10px;
+    }
+
+    .semantic-tokens {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .semantic-token {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 10px;
+      border-radius: 6px;
+      border: 1px solid rgba(128,128,128,0.1);
+      cursor: pointer;
+      transition: opacity 0.15s;
+    }
+
+    .semantic-token:hover { opacity: 0.8; }
+
+    .semantic-token-swatch {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      border: 1px solid rgba(128,128,128,0.15);
+      flex-shrink: 0;
+    }
+
+    .semantic-token-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .semantic-token-name {
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .semantic-token-value {
+      font-size: 10px;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      color: var(--page-text-secondary);
+    }
+
+    /* Contrast audit */
+    .contrast-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    .contrast-table th {
+      text-align: left;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--page-text-secondary);
+      padding: 8px 12px;
+      border-bottom: 1px solid var(--section-border);
+    }
+
+    .contrast-table td {
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--section-border);
+      vertical-align: middle;
+    }
+
+    .contrast-preview {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 28px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .contrast-ratio {
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-weight: 600;
+    }
+
+    .contrast-pass { color: #2a7d3f; }
+    .contrast-fail { color: #c4342d; }
+    html.dark .contrast-pass { color: #6ee77a; }
+    html.dark .contrast-fail { color: #f87171; }
+
+    .badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    .badge-pass { background: #dcfce7; color: #166534; }
+    .badge-fail { background: #fef2f2; color: #991b1b; }
+    html.dark .badge-pass { background: #14532d; color: #86efac; }
+    html.dark .badge-fail { background: #450a0a; color: #fca5a5; }
+
+    /* Export section */
+    .export-section {
+      display: flex;
+      gap: 8px;
+      margin-top: 16px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 900px) {
+      .semantic-grid { grid-template-columns: 1fr; }
+      body { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <h1>Origin Color System</h1>
+      <p>OKLCH-based color ramps &middot; 8 scales &middot; 13 steps &middot; Light + Dark</p>
+    </div>
+    <div class="header-actions">
+      <button id="mode-toggle">Dark Mode</button>
+      <button id="export-json">Export JSON</button>
+      <button id="export-css">Export CSS</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="primitives">
+      <h2>Primitive Scales</h2>
+      <div id="ramp-container"></div>
+    </section>
+
+    <section id="semantics">
+      <h2>Semantic Tokens</h2>
+      <div class="semantic-grid" id="semantic-grid"></div>
+    </section>
+
+    <section id="contrast">
+      <h2>Contrast Audit</h2>
+      <div id="contrast-container"></div>
+    </section>
+  </main>
+
+  <div class="tooltip" id="tooltip"></div>
+  <div class="toast" id="toast"></div>
+
+<script>
+// ============================================================
+// 1. BRAND COLOR DEFINITIONS
+// ============================================================
+
+const STEPS = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950, 975, 1000];
+
+// Lightness values for each step (perceptually even in OKLCH)
+const LIGHTNESS_MAP = {
+  50:   1.0,
+  100:  0.96,
+  200:  0.92,
+  300:  0.85,
+  400:  0.76,
+  500:  0.65,
+  600:  0.54,
+  700:  0.43,
+  800:  0.33,
+  900:  0.23,
+  950:  0.18,
+  975:  0.15,
+  1000: 0.12,
+};
+
+const BRAND_COLORS = {
+  neutral:  { hex: '#680D0D', isNeutral: true, neutralChromaMin: 0.000, neutralChromaMax: 0.012 },
+  maroon:   { hex: '#680D0D' },
+  crimson:  { hex: '#B33056' },    // consolidated: rose (#E04F79) dropped — appears near crimson.500
+  peach:    { hex: '#FFAE92' },    // consolidated: orange (#FF671F) dropped — peach dominant in illustrations
+  gold:     { hex: '#FAA810' },
+  lime:     { hex: '#AFEA6A' },    // consolidated: olive (#354503) dropped — appears near lime.800
+  teal:     { hex: '#097E8D' },    // consolidated: deepTeal (#06484A) dropped — appears near teal.800
+  blue:     { hex: '#4E68F4' },
+};
+
+// ============================================================
+// 2. RAMP GENERATION
+// ============================================================
+
+function hexToOklch(hex) {
+  const parsed = culori.parse(hex);
+  const oklch = culori.oklch(parsed);
+  return { l: oklch.l, c: oklch.c || 0, h: oklch.h || 0 };
+}
+
+function oklchToHex(l, c, h) {
+  const color = { mode: 'oklch', l, c, h };
+  // Reduce chroma until color fits sRGB gamut (preserves hue)
+  const clamped = culori.clampChroma(color, 'oklch');
+  return culori.formatHex(culori.rgb(clamped));
+}
+
+function oklchToRgb(l, c, h) {
+  const color = { mode: 'oklch', l, c, h };
+  const clamped = culori.clampChroma(color, 'oklch');
+  const rgb = culori.rgb(clamped);
+  return {
+    r: Math.round(rgb.r * 255),
+    g: Math.round(rgb.g * 255),
+    b: Math.round(rgb.b * 255),
+  };
+}
+
+function oklchToHsl(l, c, h) {
+  const color = { mode: 'oklch', l, c, h };
+  const clamped = culori.clampChroma(color, 'oklch');
+  const hsl = culori.hsl(culori.rgb(clamped));
+  return {
+    h: Math.round(hsl.h || 0),
+    s: Math.round((hsl.s || 0) * 100),
+    l: Math.round((hsl.l || 0) * 100),
+  };
+}
+
+function generateRamp(config) {
+  const anchor = hexToOklch(config.hex);
+  const hue = anchor.h;
+  const isNeutral = config.isNeutral || false;
+
+  // Find which step the anchor naturally sits closest to
+  let anchorStep = 500;
+  let minDist = Infinity;
+  for (const [step, l] of Object.entries(LIGHTNESS_MAP)) {
+    const dist = Math.abs(anchor.l - l);
+    if (dist < minDist) {
+      minDist = dist;
+      anchorStep = parseInt(step);
+    }
+  }
+
+  const ramp = [];
+
+  for (const step of STEPS) {
+    // Chromatic ramps use 0.985 at step 50 for a barely-there tint; neutral stays 1.0 (pure white)
+    const targetL = (step === 50 && !isNeutral) ? 0.985 : LIGHTNESS_MAP[step];
+    let chroma;
+
+    if (isNeutral) {
+      // Neutral: warmth builds gradually — clean white at top, subtle warmth mid-range, clear warmth in darks
+      const maxC = config.neutralChromaMax || 0.012;
+      const t = Math.max(0, (1.0 - targetL) / 0.88); // 0 at white, ~1 at darkest
+      chroma = maxC * Math.pow(t, 0.7); // gentle curve so warmth shows in mid-tones
+    } else {
+      // Chromatic: chroma peaks around anchor lightness, tapers at extremes
+      const anchorL = anchor.l;
+      const anchorC = anchor.c;
+      const distFromAnchor = Math.abs(targetL - anchorL);
+      const maxDist = Math.max(anchorL - 0.12, 0.97 - anchorL);
+      const normalizedDist = maxDist > 0 ? distFromAnchor / maxDist : 0;
+      const falloff = 1 - 0.75 * Math.pow(normalizedDist, 1.5);
+      chroma = anchorC * Math.max(0.12, falloff);
+    }
+
+    const hex = oklchToHex(targetL, chroma, hue);
+    const rgb = oklchToRgb(targetL, chroma, hue);
+    const hsl = oklchToHsl(targetL, chroma, hue);
+
+    // At the anchor step, use the exact original hex for brand fidelity
+    const useOriginal = step === anchorStep && !isNeutral;
+    const finalHex = useOriginal ? config.hex : hex;
+    const finalRgb = useOriginal ? (() => {
+      const p = culori.rgb(culori.parse(config.hex));
+      return { r: Math.round(p.r * 255), g: Math.round(p.g * 255), b: Math.round(p.b * 255) };
+    })() : rgb;
+    const finalHsl = useOriginal ? (() => {
+      const h = culori.hsl(culori.parse(config.hex));
+      return { h: Math.round(h.h || 0), s: Math.round((h.s || 0) * 100), l: Math.round((h.l || 0) * 100) };
+    })() : hsl;
+    const finalOklch = useOriginal ? anchor : { l: targetL, c: chroma, h: hue };
+
+    ramp.push({
+      step,
+      oklch: { l: Math.round(finalOklch.l * 1000) / 1000, c: Math.round(finalOklch.c * 1000) / 1000, h: Math.round(finalOklch.h * 10) / 10 },
+      hex: finalHex,
+      rgb: finalRgb,
+      hsl: finalHsl,
+      isAnchor: step === anchorStep,
+    });
+  }
+
+  return ramp;
+}
+
+// Generate all ramps
+const RAMPS = {};
+for (const [name, config] of Object.entries(BRAND_COLORS)) {
+  RAMPS[name] = generateRamp(config);
+}
+
+// Alpha ramps (not generated — fixed opacity steps)
+RAMPS['white-alpha'] = [
+  { step: 100, hex: '#ffffff',   oklch: { l: 1.0, c: 0, h: 0 }, rgb: { r: 255, g: 255, b: 255 }, hsl: { h: 0, s: 0, l: 100 }, isAnchor: false },
+  { step: 70,  hex: '#ffffffb3', oklch: { l: 1.0, c: 0, h: 0 }, rgb: { r: 255, g: 255, b: 255 }, hsl: { h: 0, s: 0, l: 100 }, isAnchor: false },
+  { step: 40,  hex: '#ffffff66', oklch: { l: 1.0, c: 0, h: 0 }, rgb: { r: 255, g: 255, b: 255 }, hsl: { h: 0, s: 0, l: 100 }, isAnchor: false },
+  { step: 16,  hex: '#ffffff29', oklch: { l: 1.0, c: 0, h: 0 }, rgb: { r: 255, g: 255, b: 255 }, hsl: { h: 0, s: 0, l: 100 }, isAnchor: false },
+  { step: 8,   hex: '#ffffff14', oklch: { l: 1.0, c: 0, h: 0 }, rgb: { r: 255, g: 255, b: 255 }, hsl: { h: 0, s: 0, l: 100 }, isAnchor: false },
+];
+RAMPS['black-alpha'] = [
+  { step: 100, hex: '#000000',   oklch: { l: 0, c: 0, h: 0 }, rgb: { r: 0, g: 0, b: 0 }, hsl: { h: 0, s: 0, l: 0 }, isAnchor: false },
+  { step: 70,  hex: '#000000b3', oklch: { l: 0, c: 0, h: 0 }, rgb: { r: 0, g: 0, b: 0 }, hsl: { h: 0, s: 0, l: 0 }, isAnchor: false },
+  { step: 40,  hex: '#00000066', oklch: { l: 0, c: 0, h: 0 }, rgb: { r: 0, g: 0, b: 0 }, hsl: { h: 0, s: 0, l: 0 }, isAnchor: false },
+  { step: 16,  hex: '#00000029', oklch: { l: 0, c: 0, h: 0 }, rgb: { r: 0, g: 0, b: 0 }, hsl: { h: 0, s: 0, l: 0 }, isAnchor: false },
+  { step: 8,   hex: '#00000014', oklch: { l: 0, c: 0, h: 0 }, rgb: { r: 0, g: 0, b: 0 }, hsl: { h: 0, s: 0, l: 0 }, isAnchor: false },
+];
+
+// ============================================================
+// 3. SEMANTIC TOKEN DEFINITIONS
+// ============================================================
+
+const SEMANTIC_TOKENS = {
+  // Surface
+  'surface-primary':    { light: 'neutral.50', dark: 'neutral.950',  group: 'Surface' },
+  'surface-secondary':  { light: 'neutral.100', dark: 'neutral.900',  group: 'Surface' },
+  'surface-tertiary':   { light: 'neutral.200', dark: 'neutral.1000', group: 'Surface' },
+  'surface-overlay':    { light: 'neutral.50', dark: 'neutral.900',  group: 'Surface' },
+  'surface-contrast':   { light: 'neutral.1000', dark: 'neutral.50',   group: 'Surface' },
+
+  // On-surface
+  'on-surface-primary':   { light: 'neutral.1000', dark: 'neutral.50',  group: 'On Surface' },
+  'on-surface-secondary': { light: 'neutral.700', dark: 'neutral.300', group: 'On Surface' },
+  'on-surface-tertiary':  { light: 'neutral.500', dark: 'neutral.500', group: 'On Surface' },
+  'on-surface-disabled':  { light: 'neutral.300', dark: 'neutral.700', group: 'On Surface' },
+  'on-surface-contrast':  { light: 'neutral.50', dark: 'neutral.1000', group: 'On Surface' },
+
+  // Border
+  'border-primary':   { light: 'neutral.200', dark: 'neutral.900', group: 'Border' },
+  'border-secondary': { light: 'neutral.300', dark: 'neutral.800', group: 'Border' },
+
+  // Interactive
+  'interactive-primary':          { light: 'neutral.1000', dark: 'neutral.50',  group: 'Interactive' },
+  'interactive-primary-hover':    { light: 'neutral.900', dark: 'neutral.100', group: 'Interactive' },
+  'interactive-primary-pressed':  { light: 'neutral.800', dark: 'neutral.200', group: 'Interactive' },
+  'interactive-primary-disabled': { light: 'neutral.300', dark: 'neutral.700', group: 'Interactive' },
+  'interactive-secondary':        { light: 'neutral.100', dark: 'neutral.900', group: 'Interactive' },
+
+  // Status — Success (lime-600 in light is first step passing 4.5:1 on white while still reading green)
+  'success-base':   { light: 'lime.500', dark: 'lime.500',  group: 'Success' },
+  'success-subtle': { light: 'lime.50', dark: 'lime.950',  group: 'Success' },
+  'success-text':   { light: 'lime.600', dark: 'lime.300',  group: 'Success' },
+  'success-border': { light: 'lime.300', dark: 'lime.700',  group: 'Success' },
+
+  // Status — Warning (gold-600 in light passes 4.5:1 and reads amber)
+  'warning-base':   { light: 'gold.500', dark: 'gold.500',  group: 'Warning' },
+  'warning-subtle': { light: 'gold.50', dark: 'gold.950',  group: 'Warning' },
+  'warning-text':   { light: 'gold.600', dark: 'gold.300',  group: 'Warning' },
+  'warning-border': { light: 'gold.300', dark: 'gold.700',  group: 'Warning' },
+
+  // Status — Error (crimson-600 = brand anchor, naturally passes 4.5:1 on white)
+  'error-base':   { light: 'crimson.500', dark: 'crimson.500',  group: 'Error' },
+  'error-subtle': { light: 'crimson.50', dark: 'crimson.950',  group: 'Error' },
+  'error-text':   { light: 'crimson.600', dark: 'crimson.300',  group: 'Error' },
+  'error-border': { light: 'crimson.400', dark: 'crimson.700',  group: 'Error' },
+
+  // Status — Info (blue-600 = brand anchor, passes 4.5:1 on white)
+  'info-base':   { light: 'blue.500', dark: 'blue.500',  group: 'Info' },
+  'info-subtle': { light: 'blue.50', dark: 'blue.950',  group: 'Info' },
+  'info-text':   { light: 'blue.600', dark: 'blue.300',  group: 'Info' },
+  'info-border': { light: 'blue.300', dark: 'blue.700',  group: 'Info' },
+
+  // On-brand — light text set (for dark brand backgrounds: maroon, olive, deepTeal, crimson, teal, blue)
+  'on-brand-light':          { light: 'white-alpha.100', dark: 'white-alpha.100',  group: 'On Brand Light' },
+  'on-brand-light-secondary':{ light: 'white-alpha.70', dark: 'white-alpha.70', group: 'On Brand Light' },
+  'on-brand-light-disabled': { light: 'white-alpha.40', dark: 'white-alpha.40', group: 'On Brand Light' },
+
+  // On-brand — dark text set (for light brand backgrounds: lime, peach, gold)
+  'on-brand-dark':           { light: 'black-alpha.100', dark: 'black-alpha.100', group: 'On Brand Dark' },
+  'on-brand-dark-secondary': { light: 'black-alpha.70', dark: 'black-alpha.70',  group: 'On Brand Dark' },
+  'on-brand-dark-disabled':  { light: 'black-alpha.40', dark: 'black-alpha.40',  group: 'On Brand Dark' },
+
+  // Brand Dark — mapped to anchor step (dark brand backgrounds)
+  'brand-dark-maroon':   { light: 'maroon.800', dark: 'maroon.800',   group: 'Brand Dark' },
+  'brand-dark-crimson':  { light: 'crimson.600', dark: 'crimson.600',  group: 'Brand Dark' },
+  'brand-dark-teal':     { light: 'teal.600', dark: 'teal.600',     group: 'Brand Dark' },
+  'brand-dark-blue':     { light: 'blue.600', dark: 'blue.600',     group: 'Brand Dark' },
+
+  // Brand Light — mapped to anchor step (light brand backgrounds)
+  'brand-light-peach':    { light: 'peach.300', dark: 'peach.300',    group: 'Brand Light' },
+  'brand-light-gold':     { light: 'gold.400', dark: 'gold.400',     group: 'Brand Light' },
+  'brand-light-lime':     { light: 'lime.300', dark: 'lime.300',     group: 'Brand Light' },
+};
+
+function resolveToken(tokenName, mode) {
+  const mapping = SEMANTIC_TOKENS[tokenName];
+  if (!mapping) return null;
+  const ref = mapping[mode];
+  const [rampName, stepStr] = ref.split('.');
+  const step = parseInt(stepStr);
+  const ramp = RAMPS[rampName];
+  if (!ramp) return null;
+  return ramp.find(s => s.step === step) || null;
+}
+
+// ============================================================
+// 4. CONTRAST RATIO
+// ============================================================
+
+function relativeLuminance(hex) {
+  const parsed = culori.parse(hex);
+  const rgb = culori.rgb(parsed);
+  const srgb = [rgb.r, rgb.g, rgb.b].map(v => {
+    v = Math.max(0, Math.min(1, v));
+    return v <= 0.04045 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4);
+  });
+  return 0.2126 * srgb[0] + 0.7152 * srgb[1] + 0.0722 * srgb[2];
+}
+
+function contrastRatio(hex1, hex2) {
+  const l1 = relativeLuminance(hex1);
+  const l2 = relativeLuminance(hex2);
+  const lighter = Math.max(l1, l2);
+  const darker = Math.min(l1, l2);
+  return (lighter + 0.05) / (darker + 0.05);
+}
+
+function textColorForBg(hex) {
+  const lum = relativeLuminance(hex);
+  return lum > 0.4 ? '#000000' : '#ffffff';
+}
+
+const CONTRAST_PAIRS = [
+  { fg: 'on-surface-primary',   bg: 'surface-primary',   label: 'Primary text on primary',   required: 4.5 },
+  { fg: 'on-surface-secondary', bg: 'surface-primary',   label: 'Secondary text on primary', required: 4.5 },
+  { fg: 'on-surface-tertiary',  bg: 'surface-primary',   label: 'Tertiary text on primary',  required: 3.0 },
+  { fg: 'on-surface-primary',   bg: 'surface-secondary', label: 'Primary text on card',      required: 4.5 },
+  { fg: 'on-surface-contrast',  bg: 'surface-contrast',  label: 'Inverted text',             required: 4.5 },
+  { fg: 'interactive-primary',  bg: 'surface-primary',   label: 'Button on primary',         required: 3.0 },
+  { fg: 'success-text',         bg: 'success-subtle',  label: 'Success text on subtle',   required: 4.5 },
+  { fg: 'warning-text',         bg: 'warning-subtle',  label: 'Warning text on subtle',   required: 4.5 },
+  { fg: 'error-text',           bg: 'error-subtle',    label: 'Error text on subtle',     required: 4.5 },
+  { fg: 'info-text',            bg: 'info-subtle',     label: 'Info text on subtle',      required: 4.5 },
+];
+
+// ============================================================
+// 5. RENDERING
+// ============================================================
+
+const tooltip = document.getElementById('tooltip');
+const toast = document.getElementById('toast');
+let toastTimer = null;
+
+function showToast(msg) {
+  toast.textContent = msg;
+  toast.classList.add('visible');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toast.classList.remove('visible'), 1500);
+}
+
+function copyToClipboard(text) {
+  navigator.clipboard.writeText(text).then(() => showToast(`Copied ${text}`));
+}
+
+// --- Primitive ramps ---
+function renderRamps() {
+  const container = document.getElementById('ramp-container');
+  container.innerHTML = '';
+
+  const alphaRamps = ['white-alpha', 'black-alpha'];
+
+  for (const [name, ramp] of Object.entries(RAMPS)) {
+    if (alphaRamps.includes(name)) continue;
+
+    const div = document.createElement('div');
+    div.className = 'ramp';
+
+    const config = BRAND_COLORS[name];
+    div.innerHTML = `
+      <div class="ramp-header">
+        <span class="ramp-name">${name}</span>
+        <span class="ramp-anchor">${config.hex}</span>
+      </div>
+    `;
+
+    const strip = document.createElement('div');
+    strip.className = 'ramp-strip';
+
+    for (const swatch of ramp) {
+      const el = document.createElement('div');
+      el.className = 'swatch';
+      el.style.background = swatch.hex;
+      const tc = textColorForBg(swatch.hex);
+      el.style.color = tc;
+      el.innerHTML = `
+        <span class="swatch-step">${swatch.step}</span>
+        <span class="swatch-hex">${swatch.hex}</span>
+        ${swatch.isAnchor ? `<span class="swatch-anchor-dot" style="background:${tc};border-color:${tc}"></span>` : ''}
+      `;
+
+      el.addEventListener('click', () => copyToClipboard(swatch.hex));
+      el.addEventListener('mouseenter', (e) => {
+        const { oklch, hex, rgb, hsl } = swatch;
+        tooltip.innerHTML = `
+          <div><strong>${name}-${swatch.step}</strong></div>
+          <div>oklch(${oklch.l.toFixed(3)} ${oklch.c.toFixed(3)} ${oklch.h.toFixed(1)})</div>
+          <div>${hex}</div>
+          <div>rgb(${rgb.r}, ${rgb.g}, ${rgb.b})</div>
+          <div>hsl(${hsl.h}, ${hsl.s}%, ${hsl.l}%)</div>
+        `;
+        tooltip.classList.add('visible');
+        positionTooltip(e);
+      });
+      el.addEventListener('mousemove', positionTooltip);
+      el.addEventListener('mouseleave', () => tooltip.classList.remove('visible'));
+
+      strip.appendChild(el);
+    }
+
+    div.appendChild(strip);
+    container.appendChild(div);
+  }
+
+  // Alpha ramps — rendered separately
+  for (const name of alphaRamps) {
+    const ramp = RAMPS[name];
+    const div = document.createElement('div');
+    div.className = 'ramp';
+
+    div.innerHTML = `
+      <div class="ramp-header">
+        <span class="ramp-name">${name}</span>
+        <span class="ramp-anchor" style="opacity:0.5">opacity</span>
+      </div>
+    `;
+
+    const strip = document.createElement('div');
+    strip.className = 'ramp-strip';
+
+    for (const swatch of ramp) {
+      const el = document.createElement('div');
+      el.className = 'swatch';
+      el.style.background = swatch.hex;
+      el.style.border = '1px solid #e4e4e7';
+      const isWhite = name === 'white-alpha';
+      el.style.color = isWhite ? '#222' : '#fff';
+      el.innerHTML = `
+        <span class="swatch-step">${swatch.step}%</span>
+        <span class="swatch-hex">${swatch.hex}</span>
+      `;
+      el.addEventListener('click', () => copyToClipboard(swatch.hex));
+      strip.appendChild(el);
+    }
+
+    div.appendChild(strip);
+    container.appendChild(div);
+  }
+}
+
+function positionTooltip(e) {
+  const pad = 12;
+  let x = e.clientX + pad;
+  let y = e.clientY + pad;
+  const rect = tooltip.getBoundingClientRect();
+  if (x + rect.width > window.innerWidth - pad) x = e.clientX - rect.width - pad;
+  if (y + rect.height > window.innerHeight - pad) y = e.clientY - rect.height - pad;
+  tooltip.style.left = x + 'px';
+  tooltip.style.top = y + 'px';
+}
+
+// --- Semantic tokens ---
+function renderSemanticTokens() {
+  const grid = document.getElementById('semantic-grid');
+  grid.innerHTML = '';
+
+  for (const mode of ['light', 'dark']) {
+    const col = document.createElement('div');
+    col.className = 'semantic-column';
+    if (mode === 'dark') {
+      col.style.background = RAMPS.neutral.find(s => s.step === 950).hex;
+      col.style.color = RAMPS.neutral.find(s => s.step === 50).hex;
+    }
+
+    col.innerHTML = `<h3>Colors / ${mode === 'light' ? 'Light' : 'Dark'}</h3>`;
+
+    // Group tokens
+    const groups = {};
+    for (const [tokenName, config] of Object.entries(SEMANTIC_TOKENS)) {
+      const group = config.group;
+      if (!groups[group]) groups[group] = [];
+      groups[group].push({ name: tokenName, ...config });
+    }
+
+    for (const [groupName, tokens] of Object.entries(groups)) {
+      const groupDiv = document.createElement('div');
+      groupDiv.className = 'semantic-group';
+      groupDiv.innerHTML = `<div class="semantic-group-label">${groupName}</div>`;
+
+      const tokensDiv = document.createElement('div');
+      tokensDiv.className = 'semantic-tokens';
+
+      for (const token of tokens) {
+        const resolved = resolveToken(token.name, mode);
+        if (!resolved) continue;
+
+        const el = document.createElement('div');
+        el.className = 'semantic-token';
+        el.innerHTML = `
+          <div class="semantic-token-swatch" style="background:${resolved.hex}"></div>
+          <div class="semantic-token-info">
+            <span class="semantic-token-name">${token.name}</span>
+            <span class="semantic-token-value">${resolved.hex} &middot; ${token[mode]}</span>
+          </div>
+        `;
+        el.addEventListener('click', () => copyToClipboard(resolved.hex));
+        tokensDiv.appendChild(el);
+      }
+
+      groupDiv.appendChild(tokensDiv);
+      col.appendChild(groupDiv);
+    }
+
+    grid.appendChild(col);
+  }
+}
+
+// --- Contrast audit ---
+function renderContrastAudit() {
+  const container = document.getElementById('contrast-container');
+  container.innerHTML = '';
+
+  for (const mode of ['light', 'dark']) {
+    const section = document.createElement('div');
+    section.style.marginBottom = '32px';
+
+    const table = document.createElement('table');
+    table.className = 'contrast-table';
+    table.innerHTML = `
+      <thead>
+        <tr>
+          <th colspan="6" style="font-size:14px;text-transform:none;font-weight:600;padding-bottom:16px;">
+            ${mode === 'light' ? 'Light' : 'Dark'} Mode
+          </th>
+        </tr>
+        <tr>
+          <th>Pair</th>
+          <th>Foreground</th>
+          <th>Background</th>
+          <th>Preview</th>
+          <th>Ratio</th>
+          <th>Required</th>
+        </tr>
+      </thead>
+    `;
+
+    const tbody = document.createElement('tbody');
+
+    for (const pair of CONTRAST_PAIRS) {
+      const fgResolved = resolveToken(pair.fg, mode);
+      const bgResolved = resolveToken(pair.bg, mode);
+      if (!fgResolved || !bgResolved) continue;
+
+      const ratio = contrastRatio(fgResolved.hex, bgResolved.hex);
+      const passes = ratio >= pair.required;
+
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td>${pair.label}</td>
+        <td style="font-family:monospace;font-size:12px;">${fgResolved.hex}</td>
+        <td style="font-family:monospace;font-size:12px;">${bgResolved.hex}</td>
+        <td>
+          <div class="contrast-preview" style="background:${bgResolved.hex};color:${fgResolved.hex};">Aa</div>
+        </td>
+        <td>
+          <span class="contrast-ratio ${passes ? 'contrast-pass' : 'contrast-fail'}">
+            ${ratio.toFixed(2)}:1
+          </span>
+        </td>
+        <td>
+          <span class="badge ${passes ? 'badge-pass' : 'badge-fail'}">
+            ${passes ? 'PASS' : 'FAIL'} ${pair.required}:1
+          </span>
+        </td>
+      `;
+      tbody.appendChild(tr);
+    }
+
+    table.appendChild(tbody);
+    section.appendChild(table);
+    container.appendChild(section);
+  }
+
+  // --- Brand accessibility matrix ---
+  const matrixSection = document.createElement('div');
+  matrixSection.style.marginTop = '40px';
+  matrixSection.innerHTML = `<h3 style="font-size:15px;font-weight:600;margin-bottom:16px;">On-Brand Accessibility Matrix</h3>
+    <p style="font-size:13px;color:var(--page-text-secondary);margin-bottom:16px;">
+      Shows which text set (light or dark) is accessible on each brand color at key steps.
+      <span class="badge badge-pass">PASS</span> = meets WCAG AA 4.5:1 for normal text.
+    </p>`;
+
+  const brandNames = ['maroon','rose','gold','olive','lime','teal','deepTeal','blue','orange','peach','crimson'];
+  const testSteps = [300, 400, 500, 600, 700];
+  const onBrandLight = resolveToken('on-brand-light', 'light')?.hex || '#ffffff';
+  const onBrandDark = resolveToken('on-brand-dark', 'light')?.hex || '#090404';
+
+  const mtable = document.createElement('table');
+  mtable.className = 'contrast-table';
+  mtable.innerHTML = `<thead><tr>
+    <th>Brand Color</th>
+    ${testSteps.map(s => `<th>${s}</th>`).join('')}
+  </tr></thead>`;
+
+  const mtbody = document.createElement('tbody');
+
+  for (const name of brandNames) {
+    const tr = document.createElement('tr');
+    let cells = `<td style="font-weight:600;text-transform:capitalize;">${name}</td>`;
+
+    for (const step of testSteps) {
+      const swatch = RAMPS[name]?.find(s => s.step === step);
+      if (!swatch) { cells += '<td>-</td>'; continue; }
+
+      const ratioLight = contrastRatio(onBrandLight, swatch.hex);
+      const ratioDark = contrastRatio(onBrandDark, swatch.hex);
+      const lightPass = ratioLight >= 4.5;
+      const darkPass = ratioDark >= 4.5;
+
+      const bestLabel = lightPass && darkPass ? 'Both'
+        : lightPass ? 'Light'
+        : darkPass ? 'Dark'
+        : 'None';
+      const bestClass = (lightPass || darkPass) ? 'badge-pass' : 'badge-fail';
+
+      cells += `<td>
+        <div class="contrast-preview" style="background:${swatch.hex};color:${lightPass ? onBrandLight : onBrandDark};font-size:10px;">Aa</div>
+        <div style="margin-top:4px;">
+          <span class="badge ${bestClass}">${bestLabel}</span>
+          <span style="font-size:10px;color:var(--page-text-secondary);display:block;margin-top:2px;">
+            L:${ratioLight.toFixed(1)} D:${ratioDark.toFixed(1)}
+          </span>
+        </div>
+      </td>`;
+    }
+
+    tr.innerHTML = cells;
+    mtbody.appendChild(tr);
+  }
+
+  mtable.appendChild(mtbody);
+  matrixSection.appendChild(mtable);
+  container.appendChild(matrixSection);
+}
+
+// ============================================================
+// 6. EXPORT
+// ============================================================
+
+function exportJSON() {
+  const data = {
+    primitives: {},
+    semantic: { light: {}, dark: {} },
+  };
+
+  for (const [name, ramp] of Object.entries(RAMPS)) {
+    data.primitives[name] = {};
+    for (const swatch of ramp) {
+      data.primitives[name][swatch.step] = {
+        hex: swatch.hex,
+        oklch: `oklch(${swatch.oklch.l.toFixed(3)} ${swatch.oklch.c.toFixed(3)} ${swatch.oklch.h.toFixed(1)})`,
+        rgb: `rgb(${swatch.rgb.r}, ${swatch.rgb.g}, ${swatch.rgb.b})`,
+        hsl: `hsl(${swatch.hsl.h}, ${swatch.hsl.s}%, ${swatch.hsl.l}%)`,
+      };
+    }
+  }
+
+  for (const mode of ['light', 'dark']) {
+    for (const [tokenName, config] of Object.entries(SEMANTIC_TOKENS)) {
+      const resolved = resolveToken(tokenName, mode);
+      if (resolved) {
+        data.semantic[mode][tokenName] = {
+          hex: resolved.hex,
+          ref: config[mode],
+        };
+      }
+    }
+  }
+
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'origin-color-system.json';
+  a.click();
+  URL.revokeObjectURL(url);
+  showToast('JSON exported');
+}
+
+function exportCSS() {
+  let css = '/* Origin Color System — Primitive Tokens */\n:root {\n';
+
+  for (const [name, ramp] of Object.entries(RAMPS)) {
+    css += `\n  /* ${name} */\n`;
+    for (const swatch of ramp) {
+      css += `  --color-${name}-${swatch.step}: ${swatch.hex};\n`;
+    }
+  }
+
+  css += '}\n\n/* Semantic Tokens — Light */\n:root, [data-theme="light"] {\n';
+  for (const [tokenName] of Object.entries(SEMANTIC_TOKENS)) {
+    const resolved = resolveToken(tokenName, 'light');
+    if (resolved) css += `  --${tokenName}: ${resolved.hex};\n`;
+  }
+
+  css += '}\n\n/* Semantic Tokens — Dark */\n[data-theme="dark"] {\n';
+  for (const [tokenName] of Object.entries(SEMANTIC_TOKENS)) {
+    const resolved = resolveToken(tokenName, 'dark');
+    if (resolved) css += `  --${tokenName}: ${resolved.hex};\n`;
+  }
+  css += '}\n';
+
+  const blob = new Blob([css], { type: 'text/css' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'origin-color-system.css';
+  a.click();
+  URL.revokeObjectURL(url);
+  showToast('CSS exported');
+}
+
+// ============================================================
+// 7. INIT
+// ============================================================
+
+function render() {
+  renderRamps();
+  renderSemanticTokens();
+  renderContrastAudit();
+}
+
+// Dark mode toggle
+document.getElementById('mode-toggle').addEventListener('click', () => {
+  document.documentElement.classList.toggle('dark');
+  const isDark = document.documentElement.classList.contains('dark');
+  document.getElementById('mode-toggle').textContent = isDark ? 'Light Mode' : 'Dark Mode';
+});
+
+document.getElementById('export-json').addEventListener('click', exportJSON);
+document.getElementById('export-css').addEventListener('click', exportCSS);
+
+render();
+
+// Log ramps to console for debugging
+console.log('RAMPS:', RAMPS);
+console.log('Resolved semantic tokens (light):', Object.fromEntries(
+  Object.keys(SEMANTIC_TOKENS).map(k => [k, resolveToken(k, 'light')?.hex])
+));
+</script>
+</body>
+</html>

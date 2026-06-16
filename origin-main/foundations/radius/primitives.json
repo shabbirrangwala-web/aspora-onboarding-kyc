@@ -1,0 +1,13 @@
+{
+  "radius": {
+    "$type": "dimension",
+    "4":    { "$value": "4px" },
+    "8":    { "$value": "8px" },
+    "12":   { "$value": "12px" },
+    "16":   { "$value": "16px" },
+    "20":   { "$value": "20px" },
+    "24":   { "$value": "24px" },
+    "36":   { "$value": "36px" },
+    "full": { "$value": "9999px", "$description": "Fully rounded — produces pill/capsule shapes" }
+  }
+}

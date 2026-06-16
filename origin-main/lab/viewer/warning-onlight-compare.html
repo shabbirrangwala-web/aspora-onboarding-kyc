@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Warning on-light — step comparison</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'DM Sans', system-ui, sans-serif; background: #f5f4f3; color: #090404; -webkit-font-smoothing: antialiased; }
+.page { max-width: 1100px; margin: 0 auto; padding: 48px 24px; }
+h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+.sub { font-size: 14px; color: #554e4d; margin-bottom: 40px; }
+h2 { font-size: 16px; font-weight: 700; margin-bottom: 16px; margin-top: 40px; }
+h2:first-of-type { margin-top: 0; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 32px; }
+.card { background: #fff; border-radius: 12px; border: 1px solid #e6e4e4; overflow: hidden; }
+.card-header { padding: 10px 14px; font-size: 11px; font-weight: 700; border-bottom: 1px solid #e6e4e4; color: #554e4d; }
+.sample { margin: 12px; display: flex; flex-direction: column; gap: 12px; }
+.banner { border-radius: 8px; padding: 14px 16px; display: flex; flex-direction: column; gap: 4px; }
+.banner .title { font-size: 14px; font-weight: 600; }
+.banner .body { font-size: 12px; opacity: 0.85; }
+.text-sample { padding: 12px 16px; display: flex; flex-direction: column; gap: 4px; }
+.text-sample .label { font-size: 10px; color: #938e8d; text-transform: uppercase; letter-spacing: 0.5px; }
+.text-sample .text { font-size: 14px; font-weight: 600; }
+.text-sample .helper { font-size: 12px; }
+.meta { font-size: 10px; color: #938e8d; margin-top: 2px; }
+.badge { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 6px; border-radius: 4px; margin-top: 4px; }
+.badge.pass { background: #d4ffda; color: #006127; }
+.badge.fail { background: #ffedeb; color: #99000b; }
+.mock-input { padding: 10px 14px; border-radius: 8px; font-family: inherit; font-size: 13px; background: #fff; margin-bottom: 4px; }
+.ref-row { display: flex; gap: 12px; margin-bottom: 16px; }
+.ref-card { flex: 1; background: #fff; border-radius: 12px; border: 1px solid #e6e4e4; padding: 16px; }
+.ref-card .label { font-size: 10px; color: #938e8d; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+</style>
+</head>
+<body>
+<div class="page">
+<h1>Warning on-light text — step comparison</h1>
+<p class="sub">Testing different steps for warning text on white and warning-light surfaces. The challenge: deep yellows go brown.</p>
+
+<div id="content"></div>
+</div>
+<script>
+const Y = {
+  50:'#fffaee', 100:'#fff0d1', 200:'#ffe1a0', 300:'#fcc537',
+  400:'#eab308', 500:'#b38800', 600:'#8b6900', 700:'#654b00', 800:'#453200',
+};
+const WHITE = '#ffffff';
+const SURFACE = '#f5f4f3';
+
+function lum(hex) {
+  const r = parseInt(hex.slice(1,3),16)/255, g = parseInt(hex.slice(3,5),16)/255, b = parseInt(hex.slice(5,7),16)/255;
+  const f = c => c <= 0.03928 ? c/12.92 : Math.pow((c+0.055)/1.055, 2.4);
+  return 0.2126*f(r) + 0.7152*f(g) + 0.0722*f(b);
+}
+function cr(a,b) { const l1=Math.max(lum(a),lum(b)), l2=Math.min(lum(a),lum(b)); return ((l1+0.05)/(l2+0.05)).toFixed(1); }
+
+const el = document.getElementById('content');
+let html = '';
+
+const steps = [
+  { step: 500, hex: Y[500], label: 'yellow-500 (#b38800)' },
+  { step: 600, hex: Y[600], label: 'yellow-600 (#8b6900)' },
+  { step: 700, hex: Y[700], label: 'yellow-700 (#654b00) — current' },
+];
+
+// ── On white background ──
+html += '<h2>As standalone text on white surface</h2>';
+html += '<div class="grid">';
+for (const s of steps) {
+  const ratio = cr(WHITE, s.hex);
+  const pass = parseFloat(ratio) >= 4.5;
+  html += `
+    <div class="card">
+      <div class="card-header">${s.label}</div>
+      <div class="sample">
+        <div class="text-sample">
+          <div class="label">Helper text</div>
+          <div class="text" style="color:${s.hex};">Your subscription expires in 3 days</div>
+          <div class="helper" style="color:${s.hex};">Please update your payment method to avoid interruption.</div>
+          <div class="meta">vs white: <span class="badge ${pass?'pass':'fail'}">${ratio}:1</span></div>
+        </div>
+      </div>
+    </div>`;
+}
+html += '</div>';
+
+// ── On yellow-100 banner ──
+html += '<h2>On warning light surface (yellow-100)</h2>';
+html += '<div class="grid">';
+for (const s of steps) {
+  const ratio = cr(Y[100], s.hex);
+  const pass = parseFloat(ratio) >= 4.5;
+  html += `
+    <div class="card">
+      <div class="card-header">${s.label}</div>
+      <div class="sample">
+        <div class="banner" style="background:${Y[100]};color:${s.hex};border:1.5px solid ${Y[400]};">
+          <div class="title">Your subscription expires in 3 days</div>
+          <div class="body">Please update your payment method to avoid interruption.</div>
+          <div class="meta" style="color:${s.hex};opacity:0.6;">vs yellow-100: <span class="badge ${pass?'pass':'fail'}">${ratio}:1</span></div>
+        </div>
+      </div>
+    </div>`;
+}
+html += '</div>';
+
+// ── Input field with warning ──
+html += '<h2>Input field with warning helper text</h2>';
+html += '<div class="grid">';
+for (const s of steps) {
+  const ratio = cr(WHITE, s.hex);
+  const pass = parseFloat(ratio) >= 4.5;
+  html += `
+    <div class="card">
+      <div class="card-header">${s.label}</div>
+      <div class="sample">
+        <div style="padding:0 12px;">
+          <div class="mock-input" style="border:2px solid ${Y[400]};">Card expires 04/26</div>
+          <div style="font-size:12px;color:${s.hex};margin-top:2px;">⚠ Your card will expire soon</div>
+          <div class="meta" style="margin-top:4px;"><span class="badge ${pass?'pass':'fail'}">${ratio}:1</span></div>
+        </div>
+      </div>
+    </div>`;
+}
+html += '</div>';
+
+// ── Reference: how other groups look ──
+html += '<h2>Reference — other groups\' on-light text for comparison</h2>';
+html += '<div class="ref-row">';
+const refs = [
+  { label: 'error on-light', hex: '#99000b', name: 'red-700' },
+  { label: 'success on-light', hex: '#006127', name: 'green-700' },
+  { label: 'accent on-light', hex: '#2e3eb1', name: 'blue-700' },
+];
+for (const r of refs) {
+  const ratio = cr(WHITE, r.hex);
+  html += `
+    <div class="ref-card">
+      <div class="label">${r.label}</div>
+      <div style="font-size:14px;font-weight:600;color:${r.hex};margin-bottom:4px;">Sample text in ${r.name}</div>
+      <div style="font-size:12px;color:${r.hex};">Helper text in the same color</div>
+      <div class="meta" style="margin-top:6px;"><span class="badge pass">${ratio}:1</span> · ${r.hex}</div>
+    </div>`;
+}
+html += '</div>';
+
+el.innerHTML = html;
+</script>
+</body>
+</html>

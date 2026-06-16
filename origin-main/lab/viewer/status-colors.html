@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Origin — Status Color Explorer</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Primitives */
+    --lime-50: #f3ffe8; --lime-100: #deffbd; --lime-200: #bffb7c;
+    --lime-300: #afea6a; --lime-400: #8ec54b; --lime-500: #70a031;
+    --lime-600: #547d1a; --lime-700: #3b5b05;
+
+    --gold-50: #fff9f2; --gold-100: #ffefdb; --gold-200: #ffdfb6;
+    --gold-300: #ffc16b; --gold-400: #faa810; --gold-500: #c18000;
+    --gold-600: #966200; --gold-700: #6d4700;
+
+    --crimson-50: #fff8f9; --crimson-100: #ffedef; --crimson-200: #ffdadf;
+    --crimson-300: #ffb7c3; --crimson-400: #f190a2; --crimson-500: #d8637e;
+    --crimson-600: #b33056; --crimson-700: #90163f;
+
+    --blue-50: #f8faff; --blue-100: #edf2ff; --blue-200: #dbe4ff;
+    --blue-300: #bbccff; --blue-400: #93adff; --blue-500: #6583ff;
+    --blue-600: #4e68f4; --blue-700: #2e3eb1;
+
+    --maroon-50: #fff8f7; --maroon-100: #ffedeb; --maroon-200: #ffdbd6;
+    --maroon-300: #f0c1ba; --maroon-400: #dca098; --maroon-500: #c17971;
+    --maroon-600: #a4544c; --maroon-700: #85302a;
+
+    --peach-50: #fff8f6; --peach-100: #ffeee8; --peach-200: #ffdcd0;
+    --peach-300: #ffae92; --peach-400: #e99b80; --peach-500: #c07b63;
+    --peach-600: #985d49; --peach-700: #714231;
+
+    --teal-50: #f1fdff; --teal-100: #dff7fb; --teal-200: #cbecf1;
+    --teal-300: #a8d7e0; --teal-400: #7dbdc8; --teal-500: #499dab;
+    --teal-600: #097e8d; --teal-700: #005b66;
+
+    --neutral-50: #ffffff; --neutral-100: #f3f1f1; --neutral-200: #e6e4e4;
+    --neutral-300: #d0cdcc; --neutral-500: #938e8d; --neutral-700: #554e4d;
+    --neutral-900: #221b1a; --neutral-950: #16100f; --neutral-1000: #090404;
+
+    --surface: var(--neutral-50);
+    --text-primary: var(--neutral-1000);
+    --text-secondary: var(--neutral-700);
+    --text-tertiary: var(--neutral-500);
+    --border: var(--neutral-200);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    background: #f5f4f3;
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 48px 24px;
+  }
+
+  h1 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+  }
+
+  .subtitle {
+    font-size: 15px;
+    color: var(--text-secondary);
+    margin-bottom: 48px;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    margin-bottom: 20px;
+    padding-top: 40px;
+    border-top: 1px solid var(--border);
+  }
+
+  h2:first-of-type { border-top: none; padding-top: 0; }
+
+  h3 {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--text-tertiary);
+    margin-bottom: 16px;
+    margin-top: 32px;
+  }
+
+  /* ── Swatch grid ── */
+  .swatch-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+
+  .swatch-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .swatch-group-label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-tertiary);
+    margin-bottom: 4px;
+  }
+
+  .swatch {
+    height: 48px;
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,0.06);
+    display: flex;
+    align-items: flex-end;
+    padding: 6px 8px;
+    font-size: 10px;
+    font-weight: 500;
+    color: rgba(0,0,0,0.4);
+    cursor: pointer;
+    transition: transform 0.1s;
+  }
+
+  .swatch:hover { transform: scale(1.02); }
+  .swatch.active { outline: 2px solid var(--neutral-1000); outline-offset: 2px; }
+
+  /* ── Comparison sections ── */
+  .comparison-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+
+  .comparison-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid var(--border);
+  }
+
+  .comparison-label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-tertiary);
+    margin-bottom: 12px;
+  }
+
+  /* ── Mock UI components ── */
+
+  /* Inline banner */
+  .mock-banner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  .mock-banner .icon {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  /* Badge/tag */
+  .mock-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 8px;
+    margin-bottom: 8px;
+  }
+
+  .mock-badge .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+  }
+
+  /* Toast notification */
+  .mock-toast {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    border-left: 3px solid;
+  }
+
+  /* Mobile mockup frame */
+  .phone-frame {
+    width: 100%;
+    max-width: 375px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+  }
+
+  .phone-content {
+    padding: 20px;
+  }
+
+  .phone-header {
+    text-align: center;
+    padding: 40px 20px 20px;
+  }
+
+  .phone-header .check-circle {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--neutral-1000);
+    margin: 0 auto 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 28px;
+  }
+
+  .phone-header h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  /* ── Controls ── */
+  .controls {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+
+  .control-btn {
+    padding: 6px 14px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: white;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s;
+    color: var(--text-secondary);
+  }
+
+  .control-btn:hover { background: var(--neutral-100); }
+  .control-btn.active {
+    background: var(--neutral-1000);
+    color: white;
+    border-color: var(--neutral-1000);
+  }
+
+  /* ── Step comparison strip ── */
+  .step-strip {
+    display: flex;
+    gap: 2px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .step-cell {
+    flex: 1;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 9px;
+    font-weight: 600;
+    color: rgba(0,0,0,0.3);
+  }
+
+  .step-cell.dark-text { color: rgba(255,255,255,0.5); }
+
+  .step-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    color: var(--text-tertiary);
+    margin-bottom: 4px;
+    padding: 0 2px;
+  }
+
+  /* ── Full-width sections ── */
+  .section-full {
+    margin-bottom: 48px;
+  }
+
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .option-card {
+    background: white;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+  }
+
+  .option-header {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .option-body {
+    padding: 16px;
+  }
+
+  /* ── Dark mode mockup ── */
+  .dark-bg {
+    background: var(--neutral-950);
+    color: var(--neutral-100);
+  }
+
+  .dark-bg .comparison-label {
+    color: var(--neutral-500);
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <h1>Status Color Explorer</h1>
+  <p class="subtitle">Compare subtle background intensities, warning vs error differentiation, and banner treatments across Origin's status palette.</p>
+
+  <!-- ── Section 1: Ramp comparison ── -->
+  <h2>Ramp Overview</h2>
+  <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 20px;">Steps 50 through 600 for each status ramp. Current <code>subtle</code> tokens use step 50.</p>
+
+  <div style="margin-bottom: 8px;">
+    <div class="step-label"><span>50</span><span>100</span><span>200</span><span>300</span><span>400</span><span>500</span><span>600</span></div>
+  </div>
+
+  <div style="margin-bottom: 6px; font-size: 11px; font-weight: 600; color: var(--text-tertiary);">SUCCESS (lime)</div>
+  <div class="step-strip">
+    <div class="step-cell" style="background: var(--lime-50);">50</div>
+    <div class="step-cell" style="background: var(--lime-100);">100</div>
+    <div class="step-cell" style="background: var(--lime-200);">200</div>
+    <div class="step-cell" style="background: var(--lime-300);">300</div>
+    <div class="step-cell" style="background: var(--lime-400);">400</div>
+    <div class="step-cell dark-text" style="background: var(--lime-500);">500</div>
+    <div class="step-cell dark-text" style="background: var(--lime-600);">600</div>
+  </div>
+
+  <div style="margin-bottom: 6px; margin-top: 16px; font-size: 11px; font-weight: 600; color: var(--text-tertiary);">WARNING (gold)</div>
+  <div class="step-strip">
+    <div class="step-cell" style="background: var(--gold-50);">50</div>
+    <div class="step-cell" style="background: var(--gold-100);">100</div>
+    <div class="step-cell" style="background: var(--gold-200);">200</div>
+    <div class="step-cell" style="background: var(--gold-300);">300</div>
+    <div class="step-cell" style="background: var(--gold-400);">400</div>
+    <div class="step-cell dark-text" style="background: var(--gold-500);">500</div>
+    <div class="step-cell dark-text" style="background: var(--gold-600);">600</div>
+  </div>
+
+  <div style="margin-bottom: 6px; margin-top: 16px; font-size: 11px; font-weight: 600; color: var(--text-tertiary);">ERROR (crimson)</div>
+  <div class="step-strip">
+    <div class="step-cell" style="background: var(--crimson-50);">50</div>
+    <div class="step-cell" style="background: var(--crimson-100);">100</div>
+    <div class="step-cell" style="background: var(--crimson-200);">200</div>
+    <div class="step-cell" style="background: var(--crimson-300);">300</div>
+    <div class="step-cell" style="background: var(--crimson-400);">400</div>
+    <div class="step-cell dark-text" style="background: var(--crimson-500);">500</div>
+    <div class="step-cell dark-text" style="background: var(--crimson-600);">600</div>
+  </div>
+
+  <div style="margin-bottom: 6px; margin-top: 16px; font-size: 11px; font-weight: 600; color: var(--text-tertiary);">INFO (blue)</div>
+  <div class="step-strip">
+    <div class="step-cell" style="background: var(--blue-50);">50</div>
+    <div class="step-cell" style="background: var(--blue-100);">100</div>
+    <div class="step-cell" style="background: var(--blue-200);">200</div>
+    <div class="step-cell" style="background: var(--blue-300);">300</div>
+    <div class="step-cell" style="background: var(--blue-400);">400</div>
+    <div class="step-cell dark-text" style="background: var(--blue-500);">500</div>
+    <div class="step-cell dark-text" style="background: var(--blue-600);">600</div>
+  </div>
+
+  <!-- ── Section 2: Subtle step comparison ── -->
+  <h2>Subtle Background: Step 50 vs 100 vs 200</h2>
+  <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 24px;">Same banner content, different background intensity. Which step gives enough presence without being heavy?</p>
+
+  <div class="grid-3" style="margin-bottom: 32px;">
+    <div>
+      <div class="option-card">
+        <div class="option-header">Step 50 (current)</div>
+        <div class="option-body">
+          <div class="mock-banner" style="background: var(--gold-50); color: var(--gold-600);">
+            <div class="icon" style="background: var(--gold-500); color: white;">!</div>
+            Checks taking longer than expected
+          </div>
+          <div class="mock-banner" style="background: var(--crimson-50); color: var(--crimson-600);">
+            <div class="icon" style="background: var(--crimson-500); color: white;">!</div>
+            Payment failed. Try again.
+          </div>
+          <div class="mock-banner" style="background: var(--lime-50); color: var(--lime-600);">
+            <div class="icon" style="background: var(--lime-500); color: white;">&#10003;</div>
+            Transfer complete
+          </div>
+          <div class="mock-banner" style="background: var(--blue-50); color: var(--blue-600);">
+            <div class="icon" style="background: var(--blue-500); color: white;">i</div>
+            New feature available
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="option-card">
+        <div class="option-header">Step 100</div>
+        <div class="option-body">
+          <div class="mock-banner" style="background: var(--gold-100); color: var(--gold-600);">
+            <div class="icon" style="background: var(--gold-500); color: white;">!</div>
+            Checks taking longer than expected
+          </div>
+          <div class="mock-banner" style="background: var(--crimson-100); color: var(--crimson-600);">
+            <div class="icon" style="background: var(--crimson-500); color: white;">!</div>
+            Payment failed. Try again.
+          </div>
+          <div class="mock-banner" style="background: var(--lime-100); color: var(--lime-600);">
+            <div class="icon" style="background: var(--lime-500); color: white;">&#10003;</div>
+            Transfer complete
+          </div>
+          <div class="mock-banner" style="background: var(--blue-100); color: var(--blue-600);">
+            <div class="icon" style="background: var(--blue-500); color: white;">i</div>
+            New feature available
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="option-card">
+        <div class="option-header">Step 200</div>
+        <div class="option-body">
+          <div class="mock-banner" style="background: var(--gold-200); color: var(--gold-700);">
+            <div class="icon" style="background: var(--gold-500); color: white;">!</div>
+            Checks taking longer than expected
+          </div>
+          <div class="mock-banner" style="background: var(--crimson-200); color: var(--crimson-700);">
+            <div class="icon" style="background: var(--crimson-500); color: white;">!</div>
+            Payment failed. Try again.
+          </div>
+          <div class="mock-banner" style="background: var(--lime-200); color: var(--lime-700);">
+            <div class="icon" style="background: var(--lime-500); color: white;">&#10003;</div>
+            Transfer complete
+          </div>
+          <div class="mock-banner" style="background: var(--blue-200); color: var(--blue-700);">
+            <div class="icon" style="background: var(--blue-500); color: white;">i</div>
+            New feature available
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Section 3: Warning vs Error differentiation ── -->
+  <h2>Warning vs Error: Can You Tell Them Apart?</h2>
+  <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 24px;">Side-by-side at each step level. Notice how they converge at step 50 and diverge at higher steps.</p>
+
+  <div class="grid-3" style="margin-bottom: 32px;">
+    <div>
+      <div class="option-card">
+        <div class="option-header">Step 50 — nearly identical</div>
+        <div class="option-body">
+          <div class="mock-banner" style="background: var(--gold-50); color: var(--gold-600); margin-bottom: 6px;">
+            <div class="icon" style="background: var(--gold-500); color: white;">!</div>
+            Warning message
+          </div>
+          <div class="mock-banner" style="background: var(--crimson-50); color: var(--crimson-600);">
+            <div class="icon" style="background: var(--crimson-500); color: white;">!</div>
+            Error message
+          </div>
+          <div style="margin-top: 12px;">
+            <div class="mock-badge" style="background: var(--gold-50); color: var(--gold-600);">
+              <div class="dot" style="background: var(--gold-500);"></div>Pending
+            </div>
+            <div class="mock-badge" style="background: var(--crimson-50); color: var(--crimson-600);">
+              <div class="dot" style="background: var(--crimson-500);"></div>Failed
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="option-card">
+        <div class="option-header">Step 100 — distinguishable</div>
+        <div class="option-body">
+          <div class="mock-banner" style="background: var(--gold-100); color: var(--gold-600); margin-bottom: 6px;">
+            <div class="icon" style="background: var(--gold-500); color: white;">!</div>
+            Warning message
+          </div>
+          <div class="mock-banner" style="background: var(--crimson-100); color: var(--crimson-600);">
+            <div class="icon" style="background: var(--crimson-500); color: white;">!</div>
+            Error message
+          </div>
+          <div style="margin-top: 12px;">
+            <div class="mock-badge" style="background: var(--gold-100); color: var(--gold-600);">
+              <div class="dot" style="background: var(--gold-500);"></div>Pending
+            </div>
+            <div class="mock-badge" style="background: var(--crimson-100); color: var(--crimson-600);">
+              <div class="dot" style="background: var(--crimson-500);"></div>Failed
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="option-card">
+        <div class="option-header">Step 200 — clearly distinct</div>
+        <div class="option-body">
+          <div class="mock-banner" style="background: var(--gold-200); color: var(--gold-700); margin-bottom: 6px;">
+            <div class="icon" style="background: var(--gold-500); color: white;">!</div>
+            Warning message
+          </div>
+          <div class="mock-banner" style="background: var(--crimson-200); color: var(--crimson-700);">
+            <div class="icon" style="background: var(--crimson-500); color: white;">!</div>
+            Error message
+          </div>
+          <div style="margin-top: 12px;">
+            <div class="mock-badge" style="background: var(--gold-200); color: var(--gold-700);">
+              <div class="dot" style="background: var(--gold-500);"></div>Pending
+            </div>
+            <div class="mock-badge" style="background: var(--crimson-200); color: var(--crimson-700);">
+              <div class="dot" style="background: var(--crimson-500);"></div>Failed
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Section 4: In-context mobile mockup ── -->
+  <h2>In Context: Transfer Success Screen</h2>
+  <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 24px;">Your actual use case — warning banner on a success screen. Current vs proposed.</p>
+
+  <div class="comparison-row">
+    <div>
+      <div class="comparison-label">Current (step 50)</div>
+      <div class="phone-frame">
+        <div class="phone-content">
+          <div style="font-size: 24px; margin-bottom: 32px; cursor: pointer;">&times;</div>
+          <div class="phone-header">
+            <div class="check-circle">&#10003;</div>
+            <h4>We have received your payment!</h4>
+            <p style="font-size: 14px; color: var(--text-secondary);">Transfer initiated</p>
+          </div>
+          <div style="height: 24px;"></div>
+          <div class="mock-banner" style="background: var(--gold-50); color: var(--gold-600); border: 1px solid var(--gold-300); border-radius: 12px;">
+            <div class="icon" style="background: transparent; color: var(--gold-500); border: 1.5px solid var(--gold-400); font-size: 10px;">i</div>
+            Checks taking longer than expected
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="comparison-label">Proposed (step 100)</div>
+      <div class="phone-frame">
+        <div class="phone-content">
+          <div style="font-size: 24px; margin-bottom: 32px; cursor: pointer;">&times;</div>
+          <div class="phone-header">
+            <div class="check-circle">&#10003;</div>
+            <h4>We have received your payment!</h4>
+            <p style="font-size: 14px; color: var(--text-secondary);">Transfer initiated</p>
+          </div>
+          <div style="height: 24px;"></div>
+          <div class="mock-banner" style="background: var(--gold-100); color: var(--gold-600); border: 1px solid var(--gold-300); border-radius: 12px;">
+            <div class="icon" style="background: transparent; color: var(--gold-500); border: 1.5px solid var(--gold-400); font-size: 10px;">i</div>
+            Checks taking longer than expected
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Section 5: All four status types as toast + badge ── -->
+  <h2>Full Status Set: Toast + Badge Treatments</h2>
+  <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 24px;">All four status types using step 100 for subtle backgrounds. Border uses the status border token.</p>
+
+  <div class="comparison-row">
+    <div>
+      <div class="comparison-label">Toast variant (left border accent)</div>
+      <div class="comparison-card">
+        <div class="mock-toast" style="background: var(--lime-100); border-color: var(--lime-500); color: var(--lime-600);">
+          <span style="font-size: 16px;">&#10003;</span> Transfer completed successfully
+        </div>
+        <div class="mock-toast" style="background: var(--gold-100); border-color: var(--gold-500); color: var(--gold-600);">
+          <span style="font-size: 16px;">&#9888;</span> Verification pending
+        </div>
+        <div class="mock-toast" style="background: var(--crimson-100); border-color: var(--crimson-500); color: var(--crimson-600);">
+          <span style="font-size: 16px;">&#10005;</span> Payment declined
+        </div>
+        <div class="mock-toast" style="background: var(--blue-100); border-color: var(--blue-500); color: var(--blue-600);">
+          <span style="font-size: 16px;">&#8505;</span> Rate updated
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="comparison-label">Badge variant (inline tags)</div>
+      <div class="comparison-card">
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <div class="mock-badge" style="background: var(--lime-100); color: var(--lime-600);">
+            <div class="dot" style="background: var(--lime-500);"></div>Completed
+          </div>
+          <div class="mock-badge" style="background: var(--gold-100); color: var(--gold-600);">
+            <div class="dot" style="background: var(--gold-500);"></div>Pending
+          </div>
+          <div class="mock-badge" style="background: var(--crimson-100); color: var(--crimson-600);">
+            <div class="dot" style="background: var(--crimson-500);"></div>Failed
+          </div>
+          <div class="mock-badge" style="background: var(--blue-100); color: var(--blue-600);">
+            <div class="dot" style="background: var(--blue-500);"></div>Processing
+          </div>
+        </div>
+        <div style="height: 20px;"></div>
+        <p style="font-size: 12px; color: var(--text-tertiary);">Compare: same badges at step 50 (barely visible)</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px;">
+          <div class="mock-badge" style="background: var(--lime-50); color: var(--lime-600);">
+            <div class="dot" style="background: var(--lime-500);"></div>Completed
+          </div>
+          <div class="mock-badge" style="background: var(--gold-50); color: var(--gold-600);">
+            <div class="dot" style="background: var(--gold-500);"></div>Pending
+          </div>
+          <div class="mock-badge" style="background: var(--crimson-50); color: var(--crimson-600);">
+            <div class="dot" style="background: var(--crimson-500);"></div>Failed
+          </div>
+          <div class="mock-badge" style="background: var(--blue-50); color: var(--blue-600);">
+            <div class="dot" style="background: var(--blue-500);"></div>Processing
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Section 6: Dark mode preview ── -->
+  <h2>Dark Mode Preview</h2>
+  <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 24px;">Current dark semantic tokens use step 950 for subtle, step 300 for text. How do they look?</p>
+
+  <div class="comparison-row">
+    <div>
+      <div class="comparison-label">Dark — current (step 950 subtle)</div>
+      <div class="comparison-card dark-bg">
+        <div class="mock-banner" style="background: var(--lime-700); color: var(--lime-300); border-radius: 10px; margin-bottom: 6px;">
+          <span>&#10003;</span> Transfer completed
+        </div>
+        <div class="mock-banner" style="background: var(--gold-700); color: var(--gold-300); border-radius: 10px; margin-bottom: 6px;">
+          <span>&#9888;</span> Verification pending
+        </div>
+        <div class="mock-banner" style="background: var(--crimson-700); color: var(--crimson-300); border-radius: 10px; margin-bottom: 6px;">
+          <span>&#10005;</span> Payment declined
+        </div>
+        <div class="mock-banner" style="background: var(--blue-700); color: var(--blue-300); border-radius: 10px;">
+          <span>&#8505;</span> Rate updated
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="comparison-label">Dark — badges</div>
+      <div class="comparison-card dark-bg">
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <div class="mock-badge" style="background: var(--lime-700); color: var(--lime-300);">
+            <div class="dot" style="background: var(--lime-400);"></div>Completed
+          </div>
+          <div class="mock-badge" style="background: var(--gold-700); color: var(--gold-300);">
+            <div class="dot" style="background: var(--gold-400);"></div>Pending
+          </div>
+          <div class="mock-badge" style="background: var(--crimson-700); color: var(--crimson-300);">
+            <div class="dot" style="background: var(--crimson-400);"></div>Failed
+          </div>
+          <div class="mock-badge" style="background: var(--blue-700); color: var(--blue-300);">
+            <div class="dot" style="background: var(--blue-400);"></div>Processing
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Section 7: Accent color candidates ── -->
+  <h2>Accent Color Candidates</h2>
+  <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 24px;">Three brand ramps not claimed by status: maroon, peach, teal. Also showing blue (info) for the "reuse info as accent" option. Which one works as a general-purpose accent for selections, focus, active states?</p>
+
+  <div style="margin-bottom: 8px;">
+    <div class="step-label"><span>50</span><span>100</span><span>200</span><span>300</span><span>400</span><span>500</span><span>600</span><span>700</span></div>
+  </div>
+
+  <div style="margin-bottom: 6px; font-size: 11px; font-weight: 600; color: var(--text-tertiary);">TEAL</div>
+  <div class="step-strip">
+    <div class="step-cell" style="background: var(--teal-50);">50</div>
+    <div class="step-cell" style="background: var(--teal-100);">100</div>
+    <div class="step-cell" style="background: var(--teal-200);">200</div>
+    <div class="step-cell" style="background: var(--teal-300);">300</div>
+    <div class="step-cell" style="background: var(--teal-400);">400</div>
+    <div class="step-cell dark-text" style="background: var(--teal-500);">500</div>
+    <div class="step-cell dark-text" style="background: var(--teal-600);">600</div>
+    <div class="step-cell dark-text" style="background: var(--teal-700);">700</div>
+  </div>
+
+  <div style="margin-bottom: 6px; margin-top: 16px; font-size: 11px; font-weight: 600; color: var(--text-tertiary);">MAROON</div>
+  <div class="step-strip">
+    <div class="step-cell" style="background: var(--maroon-50);">50</div>
+    <div class="step-cell" style="background: var(--maroon-100);">100</div>
+    <div class="step-cell" style="background: var(--maroon-200);">200</div>
+    <div class="step-cell" style="background: var(--maroon-300);">300</div>
+    <div class="step-cell" style="background: var(--maroon-400);">400</div>
+    <div class="step-cell dark-text" style="background: var(--maroon-500);">500</div>
+    <div class="step-cell dark-text" style="background: var(--maroon-600);">600</div>
+    <div class="step-cell dark-text" style="background: var(--maroon-700);">700</div>
+  </div>
+
+  <div style="margin-bottom: 6px; margin-top: 16px; font-size: 11px; font-weight: 600; color: var(--text-tertiary);">PEACH</div>
+  <div class="step-strip">
+    <div class="step-cell" style="background: var(--peach-50);">50</div>
+    <div class="step-cell" style="background: var(--peach-100);">100</div>
+    <div class="step-cell" style="background: var(--peach-200);">200</div>
+    <div class="step-cell" style="background: var(--peach-300);">300</div>
+    <div class="step-cell" style="background: var(--peach-400);">400</div>
+    <div class="step-cell dark-text" style="background: var(--peach-500);">500</div>
+    <div class="step-cell dark-text" style="background: var(--peach-600);">600</div>
+    <div class="step-cell dark-text" style="background: var(--peach-700);">700</div>
+  </div>
+
+  <div style="margin-bottom: 6px; margin-top: 16px; font-size: 11px; font-weight: 600; color: var(--text-tertiary);">BLUE (reuse info)</div>
+  <div class="step-strip">
+    <div class="step-cell" style="background: var(--blue-50);">50</div>
+    <div class="step-cell" style="background: var(--blue-100);">100</div>
+    <div class="step-cell" style="background: var(--blue-200);">200</div>
+    <div class="step-cell" style="background: var(--blue-300);">300</div>
+    <div class="step-cell" style="background: var(--blue-400);">400</div>
+    <div class="step-cell dark-text" style="background: var(--blue-500);">500</div>
+    <div class="step-cell dark-text" style="background: var(--blue-600);">600</div>
+    <div class="step-cell dark-text" style="background: var(--blue-700);">700</div>
+  </div>
+
+  <!-- ── Accent in-context mockups ── -->
+  <h3>Accent in context: selected tab, active toggle, focus ring, selected list item</h3>
+
+  <div class="grid-4" style="margin-bottom: 32px;">
+    <!-- Teal -->
+    <div class="option-card">
+      <div class="option-header" style="background: var(--teal-50);">Teal</div>
+      <div class="option-body">
+        <!-- Tabs -->
+        <div style="display: flex; gap: 0; margin-bottom: 16px; border-bottom: 2px solid var(--neutral-200);">
+          <div style="padding: 8px 16px; font-size: 13px; font-weight: 600; color: var(--teal-600); border-bottom: 2px solid var(--teal-600); margin-bottom: -2px;">Activity</div>
+          <div style="padding: 8px 16px; font-size: 13px; color: var(--text-tertiary);">Settings</div>
+        </div>
+        <!-- Toggle -->
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 16px;">
+          <div style="width: 40px; height: 22px; background: var(--teal-500); border-radius: 11px; position: relative;">
+            <div style="width: 18px; height: 18px; background: white; border-radius: 50%; position: absolute; right: 2px; top: 2px;"></div>
+          </div>
+          <span style="font-size: 13px;">Push notifications</span>
+        </div>
+        <!-- Selected item -->
+        <div style="padding: 10px 12px; background: var(--teal-100); border-radius: 8px; border-left: 3px solid var(--teal-500); font-size: 13px; margin-bottom: 12px;">
+          GBP Account <span style="color: var(--teal-600); font-weight: 600;">Selected</span>
+        </div>
+        <!-- Link / CTA -->
+        <div style="font-size: 13px; color: var(--teal-600); font-weight: 600; cursor: pointer;">View all transactions &rarr;</div>
+      </div>
+    </div>
+
+    <!-- Maroon -->
+    <div class="option-card">
+      <div class="option-header" style="background: var(--maroon-50);">Maroon</div>
+      <div class="option-body">
+        <div style="display: flex; gap: 0; margin-bottom: 16px; border-bottom: 2px solid var(--neutral-200);">
+          <div style="padding: 8px 16px; font-size: 13px; font-weight: 600; color: var(--maroon-600); border-bottom: 2px solid var(--maroon-600); margin-bottom: -2px;">Activity</div>
+          <div style="padding: 8px 16px; font-size: 13px; color: var(--text-tertiary);">Settings</div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 16px;">
+          <div style="width: 40px; height: 22px; background: var(--maroon-500); border-radius: 11px; position: relative;">
+            <div style="width: 18px; height: 18px; background: white; border-radius: 50%; position: absolute; right: 2px; top: 2px;"></div>
+          </div>
+          <span style="font-size: 13px;">Push notifications</span>
+        </div>
+        <div style="padding: 10px 12px; background: var(--maroon-100); border-radius: 8px; border-left: 3px solid var(--maroon-500); font-size: 13px; margin-bottom: 12px;">
+          GBP Account <span style="color: var(--maroon-600); font-weight: 600;">Selected</span>
+        </div>
+        <div style="font-size: 13px; color: var(--maroon-600); font-weight: 600; cursor: pointer;">View all transactions &rarr;</div>
+      </div>
+    </div>
+
+    <!-- Peach -->
+    <div class="option-card">
+      <div class="option-header" style="background: var(--peach-50);">Peach</div>
+      <div class="option-body">
+        <div style="display: flex; gap: 0; margin-bottom: 16px; border-bottom: 2px solid var(--neutral-200);">
+          <div style="padding: 8px 16px; font-size: 13px; font-weight: 600; color: var(--peach-600); border-bottom: 2px solid var(--peach-600); margin-bottom: -2px;">Activity</div>
+          <div style="padding: 8px 16px; font-size: 13px; color: var(--text-tertiary);">Settings</div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 16px;">
+          <div style="width: 40px; height: 22px; background: var(--peach-500); border-radius: 11px; position: relative;">
+            <div style="width: 18px; height: 18px; background: white; border-radius: 50%; position: absolute; right: 2px; top: 2px;"></div>
+          </div>
+          <span style="font-size: 13px;">Push notifications</span>
+        </div>
+        <div style="padding: 10px 12px; background: var(--peach-100); border-radius: 8px; border-left: 3px solid var(--peach-500); font-size: 13px; margin-bottom: 12px;">
+          GBP Account <span style="color: var(--peach-600); font-weight: 600;">Selected</span>
+        </div>
+        <div style="font-size: 13px; color: var(--peach-600); font-weight: 600; cursor: pointer;">View all transactions &rarr;</div>
+      </div>
+    </div>
+
+    <!-- Blue (info reuse) -->
+    <div class="option-card">
+      <div class="option-header" style="background: var(--blue-50);">Blue (reuse info)</div>
+      <div class="option-body">
+        <div style="display: flex; gap: 0; margin-bottom: 16px; border-bottom: 2px solid var(--neutral-200);">
+          <div style="padding: 8px 16px; font-size: 13px; font-weight: 600; color: var(--blue-600); border-bottom: 2px solid var(--blue-600); margin-bottom: -2px;">Activity</div>
+          <div style="padding: 8px 16px; font-size: 13px; color: var(--text-tertiary);">Settings</div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 16px;">
+          <div style="width: 40px; height: 22px; background: var(--blue-500); border-radius: 11px; position: relative;">
+            <div style="width: 18px; height: 18px; background: white; border-radius: 50%; position: absolute; right: 2px; top: 2px;"></div>
+          </div>
+          <span style="font-size: 13px;">Push notifications</span>
+        </div>
+        <div style="padding: 10px 12px; background: var(--blue-100); border-radius: 8px; border-left: 3px solid var(--blue-500); font-size: 13px; margin-bottom: 12px;">
+          GBP Account <span style="color: var(--blue-600); font-weight: 600;">Selected</span>
+        </div>
+        <div style="font-size: 13px; color: var(--blue-600); font-weight: 600; cursor: pointer;">View all transactions &rarr;</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Accent vs status confusion test ── -->
+  <h3>Confusion test: accent badge next to status badges</h3>
+  <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 16px;">Can you distinguish the accent from the status colors?</p>
+
+  <div class="grid-4" style="margin-bottom: 32px;">
+    <div class="option-card">
+      <div class="option-header">Teal accent</div>
+      <div class="option-body">
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <div class="mock-badge" style="background: var(--teal-100); color: var(--teal-600);"><div class="dot" style="background: var(--teal-500);"></div>Active</div>
+          <div class="mock-badge" style="background: var(--lime-100); color: var(--lime-600);"><div class="dot" style="background: var(--lime-500);"></div>Success</div>
+          <div class="mock-badge" style="background: var(--gold-100); color: var(--gold-600);"><div class="dot" style="background: var(--gold-500);"></div>Warning</div>
+          <div class="mock-badge" style="background: var(--crimson-100); color: var(--crimson-600);"><div class="dot" style="background: var(--crimson-500);"></div>Error</div>
+          <div class="mock-badge" style="background: var(--blue-100); color: var(--blue-600);"><div class="dot" style="background: var(--blue-500);"></div>Info</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="option-card">
+      <div class="option-header">Maroon accent</div>
+      <div class="option-body">
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <div class="mock-badge" style="background: var(--maroon-100); color: var(--maroon-600);"><div class="dot" style="background: var(--maroon-500);"></div>Active</div>
+          <div class="mock-badge" style="background: var(--lime-100); color: var(--lime-600);"><div class="dot" style="background: var(--lime-500);"></div>Success</div>
+          <div class="mock-badge" style="background: var(--gold-100); color: var(--gold-600);"><div class="dot" style="background: var(--gold-500);"></div>Warning</div>
+          <div class="mock-badge" style="background: var(--crimson-100); color: var(--crimson-600);"><div class="dot" style="background: var(--crimson-500);"></div>Error</div>
+          <div class="mock-badge" style="background: var(--blue-100); color: var(--blue-600);"><div class="dot" style="background: var(--blue-500);"></div>Info</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="option-card">
+      <div class="option-header">Peach accent</div>
+      <div class="option-body">
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <div class="mock-badge" style="background: var(--peach-100); color: var(--peach-600);"><div class="dot" style="background: var(--peach-500);"></div>Active</div>
+          <div class="mock-badge" style="background: var(--lime-100); color: var(--lime-600);"><div class="dot" style="background: var(--lime-500);"></div>Success</div>
+          <div class="mock-badge" style="background: var(--gold-100); color: var(--gold-600);"><div class="dot" style="background: var(--gold-500);"></div>Warning</div>
+          <div class="mock-badge" style="background: var(--crimson-100); color: var(--crimson-600);"><div class="dot" style="background: var(--crimson-500);"></div>Error</div>
+          <div class="mock-badge" style="background: var(--blue-100); color: var(--blue-600);"><div class="dot" style="background: var(--blue-500);"></div>Info</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="option-card">
+      <div class="option-header">Blue accent (= info)</div>
+      <div class="option-body">
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <div class="mock-badge" style="background: var(--blue-100); color: var(--blue-600);"><div class="dot" style="background: var(--blue-500);"></div>Active</div>
+          <div class="mock-badge" style="background: var(--lime-100); color: var(--lime-600);"><div class="dot" style="background: var(--lime-500);"></div>Success</div>
+          <div class="mock-badge" style="background: var(--gold-100); color: var(--gold-600);"><div class="dot" style="background: var(--gold-500);"></div>Warning</div>
+          <div class="mock-badge" style="background: var(--crimson-100); color: var(--crimson-600);"><div class="dot" style="background: var(--crimson-500);"></div>Error</div>
+          <div class="mock-badge" style="background: var(--blue-100); color: var(--blue-600);"><div class="dot" style="background: var(--blue-500);"></div>Info</div>
+        </div>
+        <p style="font-size: 11px; color: var(--crimson-600); margin-top: 8px; font-weight: 500;">&#9888; Active and Info are identical</p>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding: 40px 0; text-align: center; color: var(--text-tertiary); font-size: 12px;">
+    Origin Design System — Status Color Explorer
+  </div>
+</div>
+</body>
+</html>

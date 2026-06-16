@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Origin — Accent Color Exploration</title>
+<style>
+  @font-face {
+    font-family: 'Haffer';
+    src: local('Haffer');
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Haffer';
+    src: local('Haffer SemiBold');
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  :root {
+    --surface-primary: #ffffff;
+    --surface-secondary: #f7f6f6;
+    --on-surface-primary: #090404;
+    --on-surface-secondary: #554e4d;
+    --on-surface-tertiary: #938e8d;
+    --on-surface-disabled: #d0cdcc;
+    --on-surface-contrast: #ffffff;
+    --border-secondary: #ebe9e9;
+    --interactive-primary: #090404;
+    --interactive-secondary: #f7f6f6;
+
+    /* Status — current */
+    --blue-100: #edf2ff; --blue-500: #6583ff; --blue-600: #4e68f4;
+    --teal-100: #dff7fb; --teal-500: #499dab; --teal-600: #097e8d;
+    --lime-100: #deffbd; --lime-500: #70a031; --lime-600: #547d1a;
+    --gold-100: #ffefdb; --gold-500: #c18000; --gold-600: #966200;
+    --crimson-100: #ffedef; --crimson-500: #d8637e; --crimson-600: #b33056;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Haffer', 'DM Sans', system-ui, sans-serif;
+    background: #f0efed;
+    -webkit-font-smoothing: antialiased;
+    color: var(--on-surface-primary);
+  }
+
+  .page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 48px 24px;
+  }
+
+  h1 { font-size: 28px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 8px; }
+  .subtitle { font-size: 15px; color: var(--on-surface-secondary); margin-bottom: 48px; }
+  h2 { font-size: 18px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 20px; padding-top: 40px; border-top: 1px solid var(--border-secondary); }
+  h3 { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.8px; color: var(--on-surface-tertiary); margin-bottom: 16px; margin-top: 24px; }
+
+  .phone-row {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .phone-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .phone-label {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--on-surface-tertiary);
+  }
+
+  .phone {
+    width: 375px;
+    height: auto;
+    background: #1a1a1a;
+    border-radius: 40px;
+    padding: 12px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+  }
+
+  .phone-screen {
+    background: var(--surface-primary);
+    border-radius: 32px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* Status bar */
+  .status-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 24px 0;
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .status-bar-icons {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    font-size: 12px;
+  }
+
+  /* Bottom sheet overlay */
+  .overlay {
+    background: rgba(0,0,0,0.3);
+    padding: 200px 0 0 0;
+  }
+
+  .bottom-sheet {
+    background: white;
+    border-radius: 36px 36px 0 0;
+    padding: 0 0 0 0;
+  }
+
+  .sheet-nav {
+    padding: 20px;
+  }
+
+  .close-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--interactive-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: var(--on-surface-primary);
+    border: none;
+    cursor: pointer;
+  }
+
+  .sheet-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 0 16px 0;
+  }
+
+  .icon-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: var(--interactive-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon-circle svg {
+    width: 56px;
+    height: 56px;
+  }
+
+  .sheet-title {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: -0.37px;
+    text-align: center;
+    max-width: 320px;
+  }
+
+  .sheet-desc {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.14px;
+    color: var(--on-surface-secondary);
+    text-align: center;
+  }
+
+  .sheet-actions {
+    width: 100%;
+    padding: 8px 16px 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .btn {
+    width: 100%;
+    height: 52px;
+    border-radius: 32px;
+    border: none;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -0.08px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn-primary {
+    background: var(--interactive-primary);
+    color: var(--on-surface-contrast);
+  }
+
+  .btn-secondary {
+    background: var(--interactive-secondary);
+    color: var(--on-surface-primary);
+  }
+
+  .home-indicator {
+    display: flex;
+    justify-content: center;
+    padding: 8px 0 8px;
+  }
+
+  .home-indicator-bar {
+    width: 134px;
+    height: 5px;
+    background: var(--on-surface-primary);
+    border-radius: 100px;
+  }
+
+  /* Accent variations */
+  .accent-link {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -0.08px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .accent-text {
+    font-weight: 600;
+  }
+
+  .accent-underline {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  /* Info banner in sheet */
+  .info-banner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 500;
+    width: 100%;
+  }
+
+  .info-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <h1>Accent Color Exploration</h1>
+  <p class="subtitle">The idea: swap teal into the info role, free up blue as a general-purpose accent. Shown in a real bottom sheet from your product explorations.</p>
+
+  <h2>Bottom Sheet — Current vs Teal-as-Info + Blue-as-Accent</h2>
+  <h3>With accent link, accent info banner, and accent highlight text</h3>
+
+  <div class="phone-row" style="margin-bottom: 48px;">
+    <!-- Current: Blue = Info, no accent -->
+    <div class="phone-col">
+      <div class="phone-label">Current (no accent color)</div>
+      <div class="phone">
+        <div class="phone-screen">
+          <div class="overlay">
+            <div class="bottom-sheet">
+              <div class="sheet-nav">
+                <button class="close-btn">&times;</button>
+              </div>
+              <div class="sheet-body">
+                <div class="icon-circle">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="5" width="20" height="14" rx="3"/>
+                    <line x1="6" y1="12" x2="14" y2="12"/>
+                    <line x1="6" y1="15" x2="10" y2="15"/>
+                  </svg>
+                </div>
+                <div class="sheet-title">Debit card limit check</div>
+                <div class="sheet-desc">Please make sure your debit card's daily limit is at least <strong style="color: var(--on-surface-primary);">AED 1,200</strong> or more</div>
+
+                <div class="info-banner" style="background: var(--blue-100); color: var(--blue-600);">
+                  <div class="info-dot" style="background: var(--blue-500);"></div>
+                  Your current limit may be lower than required
+                </div>
+
+                <div style="font-size: 13px; color: var(--on-surface-secondary); text-align: center;">
+                  Need help? <a class="accent-link" style="color: var(--on-surface-primary);">Contact support</a>
+                </div>
+              </div>
+              <div class="sheet-actions">
+                <button class="btn btn-primary">Proceed to Payment</button>
+                <button class="btn btn-secondary">Choose a Different Method</button>
+              </div>
+              <div class="home-indicator"><div class="home-indicator-bar"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Proposed: Teal = Info, Blue = Accent -->
+    <div class="phone-col">
+      <div class="phone-label">Teal = Info, Blue = Accent</div>
+      <div class="phone">
+        <div class="phone-screen">
+          <div class="overlay">
+            <div class="bottom-sheet">
+              <div class="sheet-nav">
+                <button class="close-btn">&times;</button>
+              </div>
+              <div class="sheet-body">
+                <div class="icon-circle">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="5" width="20" height="14" rx="3"/>
+                    <line x1="6" y1="12" x2="14" y2="12"/>
+                    <line x1="6" y1="15" x2="10" y2="15"/>
+                  </svg>
+                </div>
+                <div class="sheet-title">Debit card limit check</div>
+                <div class="sheet-desc">Please make sure your debit card's daily limit is at least <strong style="color: var(--blue-600);">AED 1,200</strong> or more</div>
+
+                <div class="info-banner" style="background: var(--teal-100); color: var(--teal-600);">
+                  <div class="info-dot" style="background: var(--teal-500);"></div>
+                  Your current limit may be lower than required
+                </div>
+
+                <div style="font-size: 13px; color: var(--on-surface-secondary); text-align: center;">
+                  Need help? <a class="accent-link" style="color: var(--blue-600);">Contact support</a>
+                </div>
+              </div>
+              <div class="sheet-actions">
+                <button class="btn btn-primary">Proceed to Payment</button>
+                <button class="btn btn-secondary">Choose a Different Method</button>
+              </div>
+              <div class="home-indicator"><div class="home-indicator-bar"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── More accent contexts ── -->
+  <h2>Blue Accent in More Contexts</h2>
+  <h3>Links, highlighted amounts, selected states, inline emphasis</h3>
+
+  <div class="phone-row">
+    <!-- Transaction list with accent -->
+    <div class="phone-col">
+      <div class="phone-label">Transaction list with accents</div>
+      <div class="phone">
+        <div class="phone-screen" style="padding: 0;">
+          <div class="status-bar">
+            <span>9:41</span>
+            <div class="status-bar-icons">
+              <span>&#9679;&#9679;&#9679;&#9679;</span>
+            </div>
+          </div>
+          <div style="padding: 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+              <div style="font-size: 22px; font-weight: 600; letter-spacing: -0.37px;">Activity</div>
+              <a class="accent-link" style="color: var(--blue-600); font-size: 13px;">Filter</a>
+            </div>
+
+            <!-- Account balance -->
+            <div style="background: var(--interactive-primary); border-radius: 20px; padding: 20px; margin-bottom: 24px; color: white;">
+              <div style="font-size: 12px; opacity: 0.7; margin-bottom: 4px;">Available balance</div>
+              <div style="font-size: 32px; font-weight: 700; letter-spacing: -1px;">AED 12,450<span style="font-size: 20px; opacity: 0.5;">.00</span></div>
+              <div style="margin-top: 12px; display: flex; gap: 8px;">
+                <div style="background: rgba(255,255,255,0.15); padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: 600;">Send</div>
+                <div style="background: rgba(255,255,255,0.15); padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: 600;">Add funds</div>
+              </div>
+            </div>
+
+            <div style="font-size: 12px; font-weight: 600; color: var(--on-surface-tertiary); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;">Today</div>
+
+            <!-- Transaction rows -->
+            <div style="display: flex; flex-direction: column; gap: 0;">
+              <div style="display: flex; align-items: center; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--border-secondary);">
+                <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--interactive-secondary); display: flex; align-items: center; justify-content: center; font-size: 16px;">&#8593;</div>
+                <div style="flex: 1;">
+                  <div style="font-size: 14px; font-weight: 600;">Sent to Rahul</div>
+                  <div style="font-size: 12px; color: var(--on-surface-tertiary);">INR transfer</div>
+                </div>
+                <div style="text-align: right;">
+                  <div style="font-size: 14px; font-weight: 600;">-AED 500.00</div>
+                  <div style="font-size: 12px; color: var(--lime-600); font-weight: 500;">Completed</div>
+                </div>
+              </div>
+
+              <div style="display: flex; align-items: center; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--border-secondary);">
+                <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--interactive-secondary); display: flex; align-items: center; justify-content: center; font-size: 16px;">&#8595;</div>
+                <div style="flex: 1;">
+                  <div style="font-size: 14px; font-weight: 600;">Salary credit</div>
+                  <div style="font-size: 12px; color: var(--on-surface-tertiary);">Direct deposit</div>
+                </div>
+                <div style="text-align: right;">
+                  <div style="font-size: 14px; font-weight: 600; color: var(--blue-600);">+AED 8,200.00</div>
+                  <div style="font-size: 12px; color: var(--lime-600); font-weight: 500;">Completed</div>
+                </div>
+              </div>
+
+              <div style="display: flex; align-items: center; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--border-secondary);">
+                <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--interactive-secondary); display: flex; align-items: center; justify-content: center; font-size: 16px;">&#8593;</div>
+                <div style="flex: 1;">
+                  <div style="font-size: 14px; font-weight: 600;">Sent to Priya</div>
+                  <div style="font-size: 12px; color: var(--on-surface-tertiary);">INR transfer</div>
+                </div>
+                <div style="text-align: right;">
+                  <div style="font-size: 14px; font-weight: 600;">-AED 1,200.00</div>
+                  <div style="font-size: 12px; color: var(--gold-600); font-weight: 500;">Pending</div>
+                </div>
+              </div>
+
+              <div style="display: flex; align-items: center; gap: 12px; padding: 14px 0;">
+                <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--interactive-secondary); display: flex; align-items: center; justify-content: center; font-size: 16px;">&#8593;</div>
+                <div style="flex: 1;">
+                  <div style="font-size: 14px; font-weight: 600;">Card payment</div>
+                  <div style="font-size: 12px; color: var(--on-surface-tertiary);">Amazon.ae</div>
+                </div>
+                <div style="text-align: right;">
+                  <div style="font-size: 14px; font-weight: 600;">-AED 89.00</div>
+                  <div style="font-size: 12px; color: var(--crimson-600); font-weight: 500;">Failed</div>
+                </div>
+              </div>
+            </div>
+
+            <div style="text-align: center; padding: 16px 0;">
+              <a class="accent-link" style="color: var(--blue-600); font-size: 13px;">View all transactions &rarr;</a>
+            </div>
+          </div>
+          <div class="home-indicator"><div class="home-indicator-bar"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Info banner contexts with teal -->
+    <div class="phone-col">
+      <div class="phone-label">Teal info banners in context</div>
+      <div class="phone">
+        <div class="phone-screen" style="padding: 0;">
+          <div class="status-bar">
+            <span>9:41</span>
+            <div class="status-bar-icons">
+              <span>&#9679;&#9679;&#9679;&#9679;</span>
+            </div>
+          </div>
+          <div style="padding: 20px;">
+            <div style="font-size: 22px; font-weight: 600; letter-spacing: -0.37px; margin-bottom: 24px;">Transfer</div>
+
+            <!-- Info banner: teal -->
+            <div class="info-banner" style="background: var(--teal-100); color: var(--teal-600); margin-bottom: 20px; border-radius: 12px;">
+              <div class="info-dot" style="background: var(--teal-500);"></div>
+              Exchange rates update every 30 seconds
+            </div>
+
+            <!-- Amount input area -->
+            <div style="border: 1px solid var(--border-secondary); border-radius: 16px; padding: 16px; margin-bottom: 16px;">
+              <div style="font-size: 12px; color: var(--on-surface-tertiary); margin-bottom: 8px;">You send</div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div style="font-size: 28px; font-weight: 700; letter-spacing: -1px;">1,200.00</div>
+                <div style="background: var(--interactive-secondary); padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: 600;">AED &#9660;</div>
+              </div>
+            </div>
+
+            <!-- Rate display with accent -->
+            <div style="text-align: center; padding: 8px 0; margin-bottom: 16px;">
+              <span style="font-size: 13px; color: var(--on-surface-tertiary);">1 AED = </span>
+              <span style="font-size: 13px; color: var(--blue-600); font-weight: 600;">22.67 INR</span>
+            </div>
+
+            <div style="border: 1px solid var(--border-secondary); border-radius: 16px; padding: 16px; margin-bottom: 20px;">
+              <div style="font-size: 12px; color: var(--on-surface-tertiary); margin-bottom: 8px;">They receive</div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div style="font-size: 28px; font-weight: 700; letter-spacing: -1px; color: var(--blue-600);">27,204.00</div>
+                <div style="background: var(--interactive-secondary); padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: 600;">INR &#9660;</div>
+              </div>
+            </div>
+
+            <!-- Warning banner: gold (step 100) -->
+            <div class="info-banner" style="background: var(--gold-100); color: var(--gold-600); margin-bottom: 20px; border-radius: 12px;">
+              <div class="info-dot" style="background: var(--gold-500);"></div>
+              Rate locked for 2 minutes
+            </div>
+
+            <!-- Success banner -->
+            <div class="info-banner" style="background: var(--lime-100); color: var(--lime-600); margin-bottom: 20px; border-radius: 12px;">
+              <div class="info-dot" style="background: var(--lime-500);"></div>
+              No transfer fees applied
+            </div>
+
+            <div style="text-align: center; padding: 4px 0;">
+              <a class="accent-link" style="color: var(--blue-600); font-size: 13px;">View fee breakdown</a>
+            </div>
+          </div>
+          <div class="home-indicator"><div class="home-indicator-bar"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Badge confusion test ── -->
+  <h2>Confusion Test: All Status + Accent Together</h2>
+  <div style="background: white; border-radius: 16px; border: 1px solid var(--border-secondary); padding: 24px; max-width: 600px; margin-bottom: 48px;">
+    <h3 style="margin-top: 0;">Teal = Info, Blue = Accent</h3>
+    <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px;">
+      <div style="display: inline-flex; align-items: center; gap: 5px; padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; background: var(--blue-100); color: var(--blue-600);"><div style="width: 6px; height: 6px; border-radius: 50%; background: var(--blue-500);"></div>Selected</div>
+      <div style="display: inline-flex; align-items: center; gap: 5px; padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; background: var(--teal-100); color: var(--teal-600);"><div style="width: 6px; height: 6px; border-radius: 50%; background: var(--teal-500);"></div>Info</div>
+      <div style="display: inline-flex; align-items: center; gap: 5px; padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; background: var(--lime-100); color: var(--lime-600);"><div style="width: 6px; height: 6px; border-radius: 50%; background: var(--lime-500);"></div>Success</div>
+      <div style="display: inline-flex; align-items: center; gap: 5px; padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; background: var(--gold-100); color: var(--gold-600);"><div style="width: 6px; height: 6px; border-radius: 50%; background: var(--gold-500);"></div>Warning</div>
+      <div style="display: inline-flex; align-items: center; gap: 5px; padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; background: var(--crimson-100); color: var(--crimson-600);"><div style="width: 6px; height: 6px; border-radius: 50%; background: var(--crimson-500);"></div>Error</div>
+    </div>
+    <p style="font-size: 12px; color: var(--on-surface-tertiary);">All five are visually distinct. No confusion between accent (blue) and info (teal) — they sit on opposite temperature spectrums.</p>
+  </div>
+
+  <div style="padding: 20px 0; text-align: center; color: var(--on-surface-tertiary); font-size: 12px;">
+    Origin Design System — Accent Color Exploration
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,11515 @@
+[
+  {
+    "id": "arrow-up",
+    "aliases": [
+      "arrow-top"
+    ]
+  },
+  {
+    "id": "arrow-right",
+    "aliases": []
+  },
+  {
+    "id": "arrow-right-circle",
+    "aliases": []
+  },
+  {
+    "id": "arrow-left-up-circle",
+    "aliases": []
+  },
+  {
+    "id": "arrow-left",
+    "aliases": []
+  },
+  {
+    "id": "arrow-right-up-circle",
+    "aliases": []
+  },
+  {
+    "id": "arrow-left-down-circle",
+    "aliases": []
+  },
+  {
+    "id": "arrow-down",
+    "aliases": []
+  },
+  {
+    "id": "arrow-left-circle",
+    "aliases": []
+  },
+  {
+    "id": "arrow-down-left",
+    "aliases": []
+  },
+  {
+    "id": "arrow-up-left",
+    "aliases": []
+  },
+  {
+    "id": "arrow-down-right",
+    "aliases": []
+  },
+  {
+    "id": "arrow-up-right",
+    "aliases": []
+  },
+  {
+    "id": "arrow-up-circle",
+    "aliases": [
+      "arrow-top"
+    ]
+  },
+  {
+    "id": "arrow-right-down-circle",
+    "aliases": []
+  },
+  {
+    "id": "arrow-left-square",
+    "aliases": []
+  },
+  {
+    "id": "arrow-down-square",
+    "aliases": [
+      "bottom"
+    ]
+  },
+  {
+    "id": "arrow-up-square",
+    "aliases": [
+      "top"
+    ]
+  },
+  {
+    "id": "arrow-down-circle",
+    "aliases": [
+      "arrow-bottom"
+    ]
+  },
+  {
+    "id": "arrow-right-square",
+    "aliases": []
+  },
+  {
+    "id": "chevron-left-medium",
+    "aliases": []
+  },
+  {
+    "id": "chevron-bottom",
+    "aliases": []
+  },
+  {
+    "id": "square-arrow-top-right-corner",
+    "aliases": []
+  },
+  {
+    "id": "chevron-right-medium",
+    "aliases": []
+  },
+  {
+    "id": "chevron-top-small",
+    "aliases": []
+  },
+  {
+    "id": "chevron-down-medium",
+    "aliases": []
+  },
+  {
+    "id": "expand-315",
+    "aliases": [
+      "enlarge"
+    ]
+  },
+  {
+    "id": "square-arrow-bottom-left-corner",
+    "aliases": []
+  },
+  {
+    "id": "square-arrow-bottom-right-corner",
+    "aliases": []
+  },
+  {
+    "id": "minimize-315",
+    "aliases": [
+      "arrow",
+      "shrink"
+    ]
+  },
+  {
+    "id": "chevron-left",
+    "aliases": []
+  },
+  {
+    "id": "expand-45",
+    "aliases": [
+      "enlarge"
+    ]
+  },
+  {
+    "id": "chevron-top-medium",
+    "aliases": []
+  },
+  {
+    "id": "chevron-top",
+    "aliases": []
+  },
+  {
+    "id": "arrow-expand-hor",
+    "aliases": []
+  },
+  {
+    "id": "minimize-45",
+    "aliases": [
+      "arrow",
+      "shrink"
+    ]
+  },
+  {
+    "id": "chevron-right",
+    "aliases": []
+  },
+  {
+    "id": "chevron-down-small",
+    "aliases": []
+  },
+  {
+    "id": "square-arrow-top-left-corner",
+    "aliases": []
+  },
+  {
+    "id": "arrow-expand-ver",
+    "aliases": []
+  },
+  {
+    "id": "chevron-right-small",
+    "aliases": []
+  },
+  {
+    "id": "chevron-left-small",
+    "aliases": []
+  },
+  {
+    "id": "arrow-corner-right-down",
+    "aliases": []
+  },
+  {
+    "id": "arrow-path-up",
+    "aliases": []
+  },
+  {
+    "id": "arrow-path-left",
+    "aliases": []
+  },
+  {
+    "id": "expand-simple",
+    "aliases": []
+  },
+  {
+    "id": "arrow-path-down",
+    "aliases": []
+  },
+  {
+    "id": "arrow-corner-down-left",
+    "aliases": []
+  },
+  {
+    "id": "arrow-corner-up-left",
+    "aliases": []
+  },
+  {
+    "id": "arrow-corner-up-right",
+    "aliases": []
+  },
+  {
+    "id": "chevron-grabber-vertical",
+    "aliases": []
+  },
+  {
+    "id": "arrow-corner-down-right",
+    "aliases": []
+  },
+  {
+    "id": "arrow-corner-right-up",
+    "aliases": []
+  },
+  {
+    "id": "arrow-corner-left-up",
+    "aliases": []
+  },
+  {
+    "id": "arrow-path-right",
+    "aliases": []
+  },
+  {
+    "id": "chevron-double-left",
+    "aliases": []
+  },
+  {
+    "id": "chevron-grabber-horizontal",
+    "aliases": []
+  },
+  {
+    "id": "arrow-corner-left-down",
+    "aliases": []
+  },
+  {
+    "id": "expand-simple-2",
+    "aliases": []
+  },
+  {
+    "id": "chevron-double-right",
+    "aliases": []
+  },
+  {
+    "id": "arrow-split-down-2",
+    "aliases": [
+      "branch"
+    ]
+  },
+  {
+    "id": "arrow-redo-down",
+    "aliases": [
+      "forward"
+    ]
+  },
+  {
+    "id": "random",
+    "aliases": [
+      "productivity",
+      "smart"
+    ]
+  },
+  {
+    "id": "arrow-split-down",
+    "aliases": [
+      "rules",
+      "direction",
+      "split"
+    ]
+  },
+  {
+    "id": "step-forwards",
+    "aliases": [
+      "continue"
+    ]
+  },
+  {
+    "id": "arrows-repeat-circle",
+    "aliases": [
+      "repost"
+    ]
+  },
+  {
+    "id": "remix",
+    "aliases": [
+      "new-try",
+      "repeat"
+    ]
+  },
+  {
+    "id": "arrow-top-bottom",
+    "aliases": [
+      "sort 1",
+      "switch vertical"
+    ]
+  },
+  {
+    "id": "arrow-split-up",
+    "aliases": [
+      "rules",
+      "direction",
+      "split"
+    ]
+  },
+  {
+    "id": "arrows-repeat-right-left",
+    "aliases": [
+      "repost"
+    ]
+  },
+  {
+    "id": "arrows-repeat-right-left-off",
+    "aliases": [
+      "repost-off"
+    ]
+  },
+  {
+    "id": "arrow-bottom-top",
+    "aliases": [
+      "sort 2",
+      "switch vertical"
+    ]
+  },
+  {
+    "id": "arrow-left-right",
+    "aliases": [
+      "sort 2",
+      "switch horizonatl"
+    ]
+  },
+  {
+    "id": "arrow-rotate-clockwise",
+    "aliases": [
+      "rotate-right"
+    ]
+  },
+  {
+    "id": "arrow-split-left",
+    "aliases": [
+      "rules",
+      "direction",
+      "split"
+    ]
+  },
+  {
+    "id": "arrow-split-right",
+    "aliases": [
+      "rules",
+      "direction",
+      "split"
+    ]
+  },
+  {
+    "id": "arrow-undo-up",
+    "aliases": [
+      "back",
+      "top"
+    ]
+  },
+  {
+    "id": "arrow-right-left",
+    "aliases": [
+      "sort 1",
+      "switch horizontal"
+    ]
+  },
+  {
+    "id": "arrows-repeat",
+    "aliases": [
+      "repost"
+    ]
+  },
+  {
+    "id": "step-back",
+    "aliases": [
+      "undo"
+    ]
+  },
+  {
+    "id": "cursor-click",
+    "aliases": [
+      "arrow",
+      "clickbait"
+    ]
+  },
+  {
+    "id": "arrow-share-left",
+    "aliases": [
+      "back",
+      "last",
+      "reply"
+    ]
+  },
+  {
+    "id": "computer-use",
+    "aliases": [
+      "cursor"
+    ]
+  },
+  {
+    "id": "arrow-rotate-left-right",
+    "aliases": [
+      "repeat",
+      "refresh"
+    ]
+  },
+  {
+    "id": "collaboration-pointer-left",
+    "aliases": [
+      "cursor",
+      "agents"
+    ]
+  },
+  {
+    "id": "collaboration-pointer-right",
+    "aliases": [
+      "cursor",
+      "agents"
+    ]
+  },
+  {
+    "id": "arrows-hide",
+    "aliases": [
+      "collapse",
+      "minimize"
+    ]
+  },
+  {
+    "id": "squized",
+    "aliases": [
+      "centered",
+      "aligned"
+    ]
+  },
+  {
+    "id": "cursor-3",
+    "aliases": [
+      "arrow"
+    ]
+  },
+  {
+    "id": "square-cursor",
+    "aliases": [
+      "cursor box",
+      "arrow"
+    ]
+  },
+  {
+    "id": "arrows-zoom",
+    "aliases": [
+      "scale",
+      "motion",
+      "move",
+      "directions"
+    ]
+  },
+  {
+    "id": "ongoing",
+    "aliases": [
+      "moving"
+    ]
+  },
+  {
+    "id": "cursor-list",
+    "aliases": [
+      "cursor",
+      "list"
+    ]
+  },
+  {
+    "id": "arrow",
+    "aliases": [
+      "refresh",
+      "renew"
+    ]
+  },
+  {
+    "id": "arrow-up-down-left-right",
+    "aliases": [
+      "move"
+    ]
+  },
+  {
+    "id": "cursor-1",
+    "aliases": [
+      "arrow"
+    ]
+  },
+  {
+    "id": "arrow-rotate-right-left",
+    "aliases": [
+      "repeat",
+      "refresh",
+      "arrow-rotate-right-left",
+      "repeat",
+      "routines"
+    ]
+  },
+  {
+    "id": "remix-circle",
+    "aliases": [
+      "mix",
+      "new-try"
+    ]
+  },
+  {
+    "id": "arrows-show",
+    "aliases": [
+      "expand",
+      "maximize"
+    ]
+  },
+  {
+    "id": "arrow-rotate-counter-clockwise",
+    "aliases": [
+      "rotate-left"
+    ]
+  },
+  {
+    "id": "arrow-triangle-top",
+    "aliases": []
+  },
+  {
+    "id": "arrow-wall-2-right",
+    "aliases": [
+      "align right"
+    ]
+  },
+  {
+    "id": "chevron-large-left",
+    "aliases": [
+      "chev left",
+      "last"
+    ]
+  },
+  {
+    "id": "arrow-wall-up",
+    "aliases": [
+      "align top"
+    ]
+  },
+  {
+    "id": "arrow-wall-right",
+    "aliases": [
+      "align right"
+    ]
+  },
+  {
+    "id": "arrow-wall-left",
+    "aliases": [
+      "align left"
+    ]
+  },
+  {
+    "id": "chevron-large-top",
+    "aliases": [
+      "chev top",
+      "up"
+    ]
+  },
+  {
+    "id": "arrow-down-wall",
+    "aliases": []
+  },
+  {
+    "id": "arrow-wall-down",
+    "aliases": [
+      "align bottom"
+    ]
+  },
+  {
+    "id": "chevron-large-down",
+    "aliases": [
+      "chev down",
+      "down"
+    ]
+  },
+  {
+    "id": "chevron-triangle-down-small",
+    "aliases": [
+      "dropdown"
+    ]
+  },
+  {
+    "id": "arrow-wall-2-down",
+    "aliases": [
+      "align bottom"
+    ]
+  },
+  {
+    "id": "arrow-wall-2-left",
+    "aliases": [
+      "align left"
+    ]
+  },
+  {
+    "id": "arrow-triangle-left",
+    "aliases": []
+  },
+  {
+    "id": "arrow-wall-2-up",
+    "aliases": [
+      "align top"
+    ]
+  },
+  {
+    "id": "arrow-up-wall",
+    "aliases": []
+  },
+  {
+    "id": "arrow-triangle-bottom",
+    "aliases": []
+  },
+  {
+    "id": "chevron-large-right",
+    "aliases": [
+      "chev right",
+      "next"
+    ]
+  },
+  {
+    "id": "arrow-triangle-right",
+    "aliases": []
+  },
+  {
+    "id": "arrow-share-right",
+    "aliases": [
+      "next",
+      "forward"
+    ]
+  },
+  {
+    "id": "mouse-up",
+    "aliases": [
+      "hover",
+      "turn-up"
+    ]
+  },
+  {
+    "id": "phone-dynamic-island",
+    "aliases": []
+  },
+  {
+    "id": "square-arrow-out-top-left",
+    "aliases": [
+      "undock",
+      "box",
+      "arrow"
+    ]
+  },
+  {
+    "id": "mouse-down",
+    "aliases": [
+      "press",
+      "depth",
+      "deep-dive"
+    ]
+  },
+  {
+    "id": "square-arrow-top-right",
+    "aliases": [
+      "open",
+      "new",
+      "link",
+      "open link",
+      "box",
+      "arrow"
+    ]
+  },
+  {
+    "id": "redirect-arrow",
+    "aliases": []
+  },
+  {
+    "id": "square-arrow-center",
+    "aliases": [
+      "resize big",
+      "box",
+      "arrow"
+    ]
+  },
+  {
+    "id": "rotate-360-right",
+    "aliases": []
+  },
+  {
+    "id": "rotate-360-left",
+    "aliases": []
+  },
+  {
+    "id": "phone-top-dynamic-island",
+    "aliases": []
+  },
+  {
+    "id": "square-arrow-bottom-right",
+    "aliases": [
+      "resize small",
+      "box",
+      "arrow"
+    ]
+  },
+  {
+    "id": "jump",
+    "aliases": [
+      "skip"
+    ]
+  },
+  {
+    "id": "phone",
+    "aliases": [
+      "iphone",
+      "mobile"
+    ]
+  },
+  {
+    "id": "square-arrow-top-right-2",
+    "aliases": [
+      "open",
+      "new",
+      "link",
+      "open link",
+      "box",
+      "arrow"
+    ]
+  },
+  {
+    "id": "chevron-triangle-up-small",
+    "aliases": [
+      "dropdown"
+    ]
+  },
+  {
+    "id": "square-arrow-in-top-left",
+    "aliases": [
+      "dock",
+      "box",
+      "arrow"
+    ]
+  },
+  {
+    "id": "increase",
+    "aliases": [
+      "scale",
+      "show-more",
+      "change-position"
+    ]
+  },
+  {
+    "id": "tablet",
+    "aliases": [
+      "ipad",
+      "mobile"
+    ]
+  },
+  {
+    "id": "share-arrow-down",
+    "aliases": [
+      "save"
+    ]
+  },
+  {
+    "id": "arrow-loop-down-left",
+    "aliases": [
+      "restore",
+      "reset"
+    ]
+  },
+  {
+    "id": "mouse",
+    "aliases": []
+  },
+  {
+    "id": "usb-c",
+    "aliases": [
+      "type-c"
+    ]
+  },
+  {
+    "id": "old-phone",
+    "aliases": []
+  },
+  {
+    "id": "phone-top-punch-hole-center",
+    "aliases": []
+  },
+  {
+    "id": "usb",
+    "aliases": [
+      "connection",
+      "connect",
+      "save",
+      "data"
+    ]
+  },
+  {
+    "id": "television",
+    "aliases": [
+      "tv",
+      "monitor",
+      "video",
+      "screen",
+      "display"
+    ]
+  },
+  {
+    "id": "magic-mouse",
+    "aliases": []
+  },
+  {
+    "id": "studio-display-2",
+    "aliases": [
+      "xdr",
+      "imac"
+    ]
+  },
+  {
+    "id": "mac-mini",
+    "aliases": []
+  },
+  {
+    "id": "mouse-scroll-down",
+    "aliases": []
+  },
+  {
+    "id": "macintosh",
+    "aliases": [
+      "mac"
+    ]
+  },
+  {
+    "id": "macbook-air",
+    "aliases": []
+  },
+  {
+    "id": "calculator",
+    "aliases": []
+  },
+  {
+    "id": "imac",
+    "aliases": [
+      "computer"
+    ]
+  },
+  {
+    "id": "webcam",
+    "aliases": [
+      "camera",
+      "view"
+    ]
+  },
+  {
+    "id": "mouse-classic-2",
+    "aliases": [
+      "click"
+    ]
+  },
+  {
+    "id": "macbook",
+    "aliases": [
+      "laptop",
+      "computer"
+    ]
+  },
+  {
+    "id": "mouse-classic",
+    "aliases": [
+      "click"
+    ]
+  },
+  {
+    "id": "mouse-scroll-up",
+    "aliases": []
+  },
+  {
+    "id": "studio-display",
+    "aliases": [
+      "thunderbolt"
+    ]
+  },
+  {
+    "id": "tape",
+    "aliases": []
+  },
+  {
+    "id": "circle-record",
+    "aliases": [
+      "voicemail",
+      "band",
+      "tape"
+    ]
+  },
+  {
+    "id": "keyboard-cable",
+    "aliases": []
+  },
+  {
+    "id": "smartwatch-1",
+    "aliases": [
+      "clock",
+      "time"
+    ]
+  },
+  {
+    "id": "television-old",
+    "aliases": [
+      "tv",
+      "monitor",
+      "video",
+      "screen",
+      "display"
+    ]
+  },
+  {
+    "id": "smartwatch-2",
+    "aliases": [
+      "clock",
+      "time"
+    ]
+  },
+  {
+    "id": "server-1",
+    "aliases": [
+      "storage",
+      "data",
+      "coins",
+      "money",
+      "database"
+    ]
+  },
+  {
+    "id": "tape-2",
+    "aliases": [
+      "cassette",
+      "record",
+      "music"
+    ]
+  },
+  {
+    "id": "keyboard-down",
+    "aliases": []
+  },
+  {
+    "id": "storage",
+    "aliases": [
+      "hdd",
+      "ssd"
+    ]
+  },
+  {
+    "id": "server-2",
+    "aliases": [
+      "storage",
+      "data",
+      "coins",
+      "money",
+      "database"
+    ]
+  },
+  {
+    "id": "speaker",
+    "aliases": [
+      "music",
+      "sound"
+    ]
+  },
+  {
+    "id": "airpod-case",
+    "aliases": [
+      "airpods"
+    ]
+  },
+  {
+    "id": "devices-2",
+    "aliases": [
+      "laptop-phone"
+    ]
+  },
+  {
+    "id": "printer",
+    "aliases": [
+      "print"
+    ]
+  },
+  {
+    "id": "chip-simple",
+    "aliases": [
+      "processor"
+    ]
+  },
+  {
+    "id": "chip-esim",
+    "aliases": []
+  },
+  {
+    "id": "chip",
+    "aliases": [
+      "processor"
+    ]
+  },
+  {
+    "id": "keyboard-up",
+    "aliases": []
+  },
+  {
+    "id": "devices",
+    "aliases": [
+      "macbook",
+      "iphone",
+      "phone",
+      "connected"
+    ]
+  },
+  {
+    "id": "phone-haptic",
+    "aliases": [
+      "vibration"
+    ]
+  },
+  {
+    "id": "live-weak",
+    "aliases": [
+      "signal"
+    ]
+  },
+  {
+    "id": "wifi-weak",
+    "aliases": [
+      "spot",
+      "signal",
+      "hot spot"
+    ]
+  },
+  {
+    "id": "offline",
+    "aliases": [
+      "disconnect",
+      "energy"
+    ]
+  },
+  {
+    "id": "live-no-signal",
+    "aliases": [
+      "signal"
+    ]
+  },
+  {
+    "id": "nfc-2",
+    "aliases": []
+  },
+  {
+    "id": "haptic",
+    "aliases": [
+      "waves"
+    ]
+  },
+  {
+    "id": "haptic-feedback",
+    "aliases": [
+      "vibration"
+    ]
+  },
+  {
+    "id": "wifi-no-signal",
+    "aliases": [
+      "spot",
+      "signal",
+      "hot spot"
+    ]
+  },
+  {
+    "id": "live-full",
+    "aliases": [
+      "signal",
+      "podcast"
+    ]
+  },
+  {
+    "id": "nfc-1",
+    "aliases": []
+  },
+  {
+    "id": "chromecast",
+    "aliases": [
+      "cast"
+    ]
+  },
+  {
+    "id": "bluetooth",
+    "aliases": []
+  },
+  {
+    "id": "wifi-full",
+    "aliases": [
+      "spot",
+      "signal",
+      "hot spot"
+    ]
+  },
+  {
+    "id": "satellite-1",
+    "aliases": [
+      "radar",
+      "feed"
+    ]
+  },
+  {
+    "id": "airdrop",
+    "aliases": [
+      "file-sharing",
+      "radar"
+    ]
+  },
+  {
+    "id": "radar",
+    "aliases": [
+      "control",
+      "check"
+    ]
+  },
+  {
+    "id": "wifi-square",
+    "aliases": [
+      "spot",
+      "signal",
+      "hot spot"
+    ]
+  },
+  {
+    "id": "satellite-2",
+    "aliases": [
+      "radar",
+      "feed"
+    ]
+  },
+  {
+    "id": "signal-tower",
+    "aliases": [
+      "live",
+      "podcast"
+    ]
+  },
+  {
+    "id": "battery-medium",
+    "aliases": [
+      "power"
+    ]
+  },
+  {
+    "id": "fullscreen-1",
+    "aliases": []
+  },
+  {
+    "id": "airplay-audio",
+    "aliases": [
+      "audio-stream"
+    ]
+  },
+  {
+    "id": "connectors-1",
+    "aliases": [
+      "connection",
+      "apps"
+    ]
+  },
+  {
+    "id": "camera-auto",
+    "aliases": []
+  },
+  {
+    "id": "camera-2",
+    "aliases": [
+      "picture",
+      "image",
+      "cam"
+    ]
+  },
+  {
+    "id": "battery-low",
+    "aliases": [
+      "power"
+    ]
+  },
+  {
+    "id": "camera-1",
+    "aliases": [
+      "picture",
+      "image",
+      "cam"
+    ]
+  },
+  {
+    "id": "fullscreen-2",
+    "aliases": []
+  },
+  {
+    "id": "battery-loading",
+    "aliases": [
+      "power"
+    ]
+  },
+  {
+    "id": "agent-network",
+    "aliases": [
+      "connections",
+      "atoms"
+    ]
+  },
+  {
+    "id": "battery-error",
+    "aliases": [
+      "power"
+    ]
+  },
+  {
+    "id": "battery-empty",
+    "aliases": [
+      "power"
+    ]
+  },
+  {
+    "id": "battery-full",
+    "aliases": [
+      "power"
+    ]
+  },
+  {
+    "id": "airplay-video",
+    "aliases": [
+      "video-stream"
+    ]
+  },
+  {
+    "id": "camera-off",
+    "aliases": []
+  },
+  {
+    "id": "gyroscope-sensor",
+    "aliases": []
+  },
+  {
+    "id": "radio",
+    "aliases": [
+      "antenna",
+      "signal",
+      "broadcast",
+      "speaker"
+    ]
+  },
+  {
+    "id": "connectors-2",
+    "aliases": [
+      "connection",
+      "apps"
+    ]
+  },
+  {
+    "id": "camera-off-1",
+    "aliases": [
+      "cam-off"
+    ]
+  },
+  {
+    "id": "capture",
+    "aliases": [
+      "screen"
+    ]
+  },
+  {
+    "id": "lens",
+    "aliases": [
+      "camera",
+      "focal-length",
+      "aperture",
+      "f-stop",
+      "iso",
+      "focus",
+      "depth"
+    ]
+  },
+  {
+    "id": "camera-4",
+    "aliases": []
+  },
+  {
+    "id": "zap",
+    "aliases": [
+      "lightning",
+      "flash",
+      "thunder"
+    ]
+  },
+  {
+    "id": "camera-5",
+    "aliases": [
+      "action cam",
+      "GoPro"
+    ]
+  },
+  {
+    "id": "focus-auto",
+    "aliases": []
+  },
+  {
+    "id": "focus-square",
+    "aliases": []
+  },
+  {
+    "id": "focus-exposure",
+    "aliases": []
+  },
+  {
+    "id": "focus-zoom-out",
+    "aliases": []
+  },
+  {
+    "id": "downsize",
+    "aliases": [
+      "exit-full-screen",
+      "scale-down"
+    ]
+  },
+  {
+    "id": "focus-flash",
+    "aliases": []
+  },
+  {
+    "id": "downsize-2",
+    "aliases": [
+      "exit-full-screen",
+      "scale-down"
+    ]
+  },
+  {
+    "id": "auto-flash",
+    "aliases": []
+  },
+  {
+    "id": "full-screen",
+    "aliases": [
+      "focus"
+    ]
+  },
+  {
+    "id": "focus-remove",
+    "aliases": []
+  },
+  {
+    "id": "focus-zoom-in",
+    "aliases": []
+  },
+  {
+    "id": "focus-lock",
+    "aliases": []
+  },
+  {
+    "id": "no-flash",
+    "aliases": []
+  },
+  {
+    "id": "camera-3",
+    "aliases": [
+      "picture",
+      "image",
+      "cam"
+    ]
+  },
+  {
+    "id": "focus-macro",
+    "aliases": []
+  },
+  {
+    "id": "rear",
+    "aliases": [
+      "front-back",
+      "change-cam",
+      "lens"
+    ]
+  },
+  {
+    "id": "contrast",
+    "aliases": []
+  },
+  {
+    "id": "vignette",
+    "aliases": []
+  },
+  {
+    "id": "images-1",
+    "aliases": [
+      "photos",
+      "pictures",
+      "shot"
+    ]
+  },
+  {
+    "id": "adjust-photo",
+    "aliases": [
+      "tuning",
+      "settings"
+    ]
+  },
+  {
+    "id": "brilliance",
+    "aliases": [
+      "yin yang",
+      "ballance"
+    ]
+  },
+  {
+    "id": "focus-magic",
+    "aliases": []
+  },
+  {
+    "id": "unblur",
+    "aliases": []
+  },
+  {
+    "id": "brightness",
+    "aliases": []
+  },
+  {
+    "id": "shadows",
+    "aliases": []
+  },
+  {
+    "id": "noise-reduction",
+    "aliases": []
+  },
+  {
+    "id": "images-2",
+    "aliases": [
+      "photos",
+      "pictures",
+      "shot"
+    ]
+  },
+  {
+    "id": "blur",
+    "aliases": []
+  },
+  {
+    "id": "exposure-1",
+    "aliases": [
+      "plus-minus"
+    ]
+  },
+  {
+    "id": "images-1-alt",
+    "aliases": [
+      "photos",
+      "pictures",
+      "shot"
+    ]
+  },
+  {
+    "id": "add-image",
+    "aliases": [
+      "upload-image"
+    ]
+  },
+  {
+    "id": "focus-renew",
+    "aliases": []
+  },
+  {
+    "id": "highlights",
+    "aliases": []
+  },
+  {
+    "id": "blackpoint",
+    "aliases": [
+      "target"
+    ]
+  },
+  {
+    "id": "images-3",
+    "aliases": [
+      "photos",
+      "pictures",
+      "shot"
+    ]
+  },
+  {
+    "id": "illustration",
+    "aliases": [
+      "painting",
+      "art"
+    ]
+  },
+  {
+    "id": "images-4",
+    "aliases": [
+      "photos",
+      "macro",
+      "shot",
+      "picture"
+    ]
+  },
+  {
+    "id": "images-5",
+    "aliases": [
+      "photos",
+      "pictures",
+      "shot"
+    ]
+  },
+  {
+    "id": "aspect-ratio-16-9",
+    "aliases": [
+      "landscape"
+    ]
+  },
+  {
+    "id": "remove-background",
+    "aliases": []
+  },
+  {
+    "id": "video",
+    "aliases": [
+      "camera",
+      "movie",
+      "play"
+    ]
+  },
+  {
+    "id": "aspect-ratio-4-3",
+    "aliases": [
+      "landscape"
+    ]
+  },
+  {
+    "id": "wallpaper",
+    "aliases": [
+      "os"
+    ]
+  },
+  {
+    "id": "images-circle",
+    "aliases": []
+  },
+  {
+    "id": "video-on",
+    "aliases": [
+      "cam-on"
+    ]
+  },
+  {
+    "id": "remove-background-2",
+    "aliases": []
+  },
+  {
+    "id": "retouch",
+    "aliases": [
+      "face",
+      "hair"
+    ]
+  },
+  {
+    "id": "clapboard",
+    "aliases": [
+      "movie",
+      "film"
+    ]
+  },
+  {
+    "id": "screen-capture",
+    "aliases": [
+      "recording"
+    ]
+  },
+  {
+    "id": "images-4-2",
+    "aliases": [
+      "photos",
+      "pictures",
+      "shot"
+    ]
+  },
+  {
+    "id": "aspect-ratio-3-4",
+    "aliases": [
+      "portrait"
+    ]
+  },
+  {
+    "id": "video-off",
+    "aliases": [
+      "cam-off"
+    ]
+  },
+  {
+    "id": "aspect-ratio-21-9",
+    "aliases": [
+      "wide",
+      "landscape"
+    ]
+  },
+  {
+    "id": "cat",
+    "aliases": [
+      "image",
+      "animal",
+      "cute"
+    ]
+  },
+  {
+    "id": "aspect-ratio-1-1",
+    "aliases": [
+      "square"
+    ]
+  },
+  {
+    "id": "minimize",
+    "aliases": [
+      "window",
+      "layout"
+    ]
+  },
+  {
+    "id": "multi-media",
+    "aliases": [
+      "media",
+      "image-video"
+    ]
+  },
+  {
+    "id": "alt",
+    "aliases": []
+  },
+  {
+    "id": "video-roll",
+    "aliases": [
+      "movie"
+    ]
+  },
+  {
+    "id": "split",
+    "aliases": []
+  },
+  {
+    "id": "video-clip",
+    "aliases": [
+      "film",
+      "movie"
+    ]
+  },
+  {
+    "id": "expand",
+    "aliases": [
+      "window",
+      "layout"
+    ]
+  },
+  {
+    "id": "videos",
+    "aliases": [
+      "video-playlist"
+    ]
+  },
+  {
+    "id": "gif",
+    "aliases": []
+  },
+  {
+    "id": "auto-size",
+    "aliases": [
+      "automatic-size",
+      "page"
+    ]
+  },
+  {
+    "id": "hd",
+    "aliases": []
+  },
+  {
+    "id": "4k",
+    "aliases": []
+  },
+  {
+    "id": "picture-in-picture",
+    "aliases": []
+  },
+  {
+    "id": "gif-square",
+    "aliases": []
+  },
+  {
+    "id": "closed-captioning",
+    "aliases": [
+      "cc"
+    ]
+  },
+  {
+    "id": "video-trim",
+    "aliases": []
+  },
+  {
+    "id": "video-timeline",
+    "aliases": [
+      "edit-video"
+    ]
+  },
+  {
+    "id": "crop",
+    "aliases": []
+  },
+  {
+    "id": "share-screen",
+    "aliases": [
+      "screen-sharing"
+    ]
+  },
+  {
+    "id": "clapboard-wide",
+    "aliases": [
+      "movie",
+      "film"
+    ]
+  },
+  {
+    "id": "user-add-right",
+    "aliases": [
+      "people",
+      "person",
+      "member"
+    ]
+  },
+  {
+    "id": "user-remove-right",
+    "aliases": [
+      "people",
+      "person",
+      "member"
+    ]
+  },
+  {
+    "id": "user",
+    "aliases": [
+      "people",
+      "person",
+      "member"
+    ]
+  },
+  {
+    "id": "user-added",
+    "aliases": [
+      "people",
+      "person",
+      "member",
+      "checked"
+    ]
+  },
+  {
+    "id": "people-added",
+    "aliases": [
+      "user-added",
+      "user",
+      "person"
+    ]
+  },
+  {
+    "id": "user-key",
+    "aliases": [
+      "people",
+      "person",
+      "member",
+      "passkeys",
+      "access"
+    ]
+  },
+  {
+    "id": "user-settings",
+    "aliases": [
+      "people",
+      "person",
+      "member",
+      "cog"
+    ]
+  },
+  {
+    "id": "user-remove",
+    "aliases": [
+      "people",
+      "person",
+      "member"
+    ]
+  },
+  {
+    "id": "people-add-2",
+    "aliases": [
+      "user-add",
+      "user",
+      "person"
+    ]
+  },
+  {
+    "id": "user-edit",
+    "aliases": [
+      "people",
+      "person",
+      "member"
+    ]
+  },
+  {
+    "id": "people-like",
+    "aliases": [
+      "inner circle",
+      "user",
+      "person"
+    ]
+  },
+  {
+    "id": "user-duo",
+    "aliases": [
+      "team",
+      "members",
+      "persons"
+    ]
+  },
+  {
+    "id": "people",
+    "aliases": [
+      "user",
+      "person",
+      "avatar"
+    ]
+  },
+  {
+    "id": "people-remove-2",
+    "aliases": [
+      "user",
+      "person",
+      "delete"
+    ]
+  },
+  {
+    "id": "user-block",
+    "aliases": [
+      "people",
+      "person",
+      "member",
+      "blocked"
+    ]
+  },
+  {
+    "id": "user-group",
+    "aliases": [
+      "team",
+      "club",
+      "member",
+      "friends",
+      "community"
+    ]
+  },
+  {
+    "id": "user-add",
+    "aliases": [
+      "people",
+      "person",
+      "member"
+    ]
+  },
+  {
+    "id": "people-add",
+    "aliases": [
+      "user",
+      "person"
+    ]
+  },
+  {
+    "id": "people-remove",
+    "aliases": [
+      "user",
+      "person",
+      "delete"
+    ]
+  },
+  {
+    "id": "user-heart",
+    "aliases": [
+      "people",
+      "person",
+      "member",
+      "favorite"
+    ]
+  },
+  {
+    "id": "people-copy",
+    "aliases": [
+      "members"
+    ]
+  },
+  {
+    "id": "people-sparkles",
+    "aliases": [
+      "star",
+      "aura"
+    ]
+  },
+  {
+    "id": "people-2",
+    "aliases": [
+      "user",
+      "person",
+      "member"
+    ]
+  },
+  {
+    "id": "people-noise",
+    "aliases": [
+      "audio-quality",
+      "user-noise"
+    ]
+  },
+  {
+    "id": "surfing",
+    "aliases": [
+      "wave",
+      "vibe"
+    ]
+  },
+  {
+    "id": "people-gear",
+    "aliases": [
+      "user-settings",
+      "preferences",
+      "person"
+    ]
+  },
+  {
+    "id": "people-edit",
+    "aliases": [
+      "edit-user",
+      "edit-rights",
+      "user",
+      "person"
+    ]
+  },
+  {
+    "id": "people-id-card",
+    "aliases": [
+      "profile",
+      "user-account",
+      "badge",
+      "person"
+    ]
+  },
+  {
+    "id": "people-voice",
+    "aliases": [
+      "user",
+      "person"
+    ]
+  },
+  {
+    "id": "people-circle",
+    "aliases": [
+      "user-circle",
+      "avatar",
+      "profile"
+    ]
+  },
+  {
+    "id": "people-versus",
+    "aliases": [
+      "vs",
+      "match",
+      "1v1"
+    ]
+  },
+  {
+    "id": "team",
+    "aliases": [
+      "group",
+      "people",
+      "community",
+      "users"
+    ]
+  },
+  {
+    "id": "group-3",
+    "aliases": [
+      "users",
+      "team"
+    ]
+  },
+  {
+    "id": "group-2",
+    "aliases": [
+      "users",
+      "team"
+    ]
+  },
+  {
+    "id": "group-1",
+    "aliases": [
+      "users",
+      "shadowing"
+    ]
+  },
+  {
+    "id": "aura",
+    "aliases": [
+      "enlighten"
+    ]
+  },
+  {
+    "id": "vibe-coding-bird",
+    "aliases": [
+      "laptop",
+      "work"
+    ]
+  },
+  {
+    "id": "persona",
+    "aliases": [
+      "thanos-effect",
+      "remove-user",
+      "remove-account",
+      "blip"
+    ]
+  },
+  {
+    "id": "people-group-2",
+    "aliases": [
+      "user",
+      "group",
+      "friend"
+    ]
+  },
+  {
+    "id": "vibe-coding-star",
+    "aliases": [
+      "working",
+      "home-office"
+    ]
+  },
+  {
+    "id": "bath-woman-1",
+    "aliases": [
+      "women",
+      "female"
+    ]
+  },
+  {
+    "id": "giro-cards",
+    "aliases": []
+  },
+  {
+    "id": "credit-card-1",
+    "aliases": [
+      "card",
+      "payment"
+    ]
+  },
+  {
+    "id": "head",
+    "aliases": [
+      "avatar"
+    ]
+  },
+  {
+    "id": "teacher-whiteboard",
+    "aliases": []
+  },
+  {
+    "id": "brain-sideview",
+    "aliases": [
+      "thinking"
+    ]
+  },
+  {
+    "id": "gender-female",
+    "aliases": []
+  },
+  {
+    "id": "einstein",
+    "aliases": [
+      "thinking",
+      "physics"
+    ]
+  },
+  {
+    "id": "streaming",
+    "aliases": [
+      "live",
+      "stream"
+    ]
+  },
+  {
+    "id": "teacher",
+    "aliases": []
+  },
+  {
+    "id": "credit-card-add",
+    "aliases": [
+      "card",
+      "payment"
+    ]
+  },
+  {
+    "id": "bath-man-1",
+    "aliases": [
+      "man",
+      "male"
+    ]
+  },
+  {
+    "id": "gender-male",
+    "aliases": []
+  },
+  {
+    "id": "wheelchair",
+    "aliases": [
+      "bathroom accessible",
+      "toilet",
+      "wc"
+    ]
+  },
+  {
+    "id": "steve-jobs",
+    "aliases": [
+      "professor",
+      "innovation"
+    ]
+  },
+  {
+    "id": "contacts",
+    "aliases": [
+      "address-book"
+    ]
+  },
+  {
+    "id": "focus-mode",
+    "aliases": [
+      "hearing",
+      "headphones",
+      "music",
+      "do-not-disdurb"
+    ]
+  },
+  {
+    "id": "brain",
+    "aliases": [
+      "thinking",
+      "human",
+      "clever"
+    ]
+  },
+  {
+    "id": "giro-card",
+    "aliases": []
+  },
+  {
+    "id": "credit-card-2",
+    "aliases": [
+      "card",
+      "payment"
+    ]
+  },
+  {
+    "id": "currency-dollar",
+    "aliases": [
+      "money"
+    ]
+  },
+  {
+    "id": "currency-pesos",
+    "aliases": [
+      "money"
+    ]
+  },
+  {
+    "id": "coin-pounds",
+    "aliases": [
+      "currency",
+      "money"
+    ]
+  },
+  {
+    "id": "coin-pesos",
+    "aliases": [
+      "currency",
+      "money"
+    ]
+  },
+  {
+    "id": "currency-yen",
+    "aliases": [
+      "money"
+    ]
+  },
+  {
+    "id": "banknote-1",
+    "aliases": [
+      "money",
+      "bill"
+    ]
+  },
+  {
+    "id": "wallet-5",
+    "aliases": []
+  },
+  {
+    "id": "wallet-1",
+    "aliases": []
+  },
+  {
+    "id": "banknote-2",
+    "aliases": [
+      "money",
+      "bill"
+    ]
+  },
+  {
+    "id": "coin-dollar",
+    "aliases": [
+      "currency",
+      "money"
+    ]
+  },
+  {
+    "id": "currency-pounds",
+    "aliases": [
+      "money"
+    ]
+  },
+  {
+    "id": "wallet-2",
+    "aliases": []
+  },
+  {
+    "id": "wallet-3",
+    "aliases": []
+  },
+  {
+    "id": "wallet-4",
+    "aliases": []
+  },
+  {
+    "id": "coin-euro",
+    "aliases": [
+      "currency",
+      "money"
+    ]
+  },
+  {
+    "id": "coin-yen",
+    "aliases": [
+      "currency",
+      "money"
+    ]
+  },
+  {
+    "id": "currency-euro",
+    "aliases": [
+      "money"
+    ]
+  },
+  {
+    "id": "coin-rupees",
+    "aliases": [
+      "currency",
+      "money"
+    ]
+  },
+  {
+    "id": "currency-rupees",
+    "aliases": [
+      "money"
+    ]
+  },
+  {
+    "id": "moneybag",
+    "aliases": [
+      "purse",
+      "savings"
+    ]
+  },
+  {
+    "id": "coin-won",
+    "aliases": [
+      "currency",
+      "money"
+    ]
+  },
+  {
+    "id": "shopping-bag-4",
+    "aliases": []
+  },
+  {
+    "id": "shopping-bag-edit-2",
+    "aliases": []
+  },
+  {
+    "id": "shopping-bag-bookmark-2",
+    "aliases": []
+  },
+  {
+    "id": "coin-lira",
+    "aliases": [
+      "currency",
+      "money"
+    ]
+  },
+  {
+    "id": "shopping-bag-2",
+    "aliases": []
+  },
+  {
+    "id": "remove-from-basket",
+    "aliases": []
+  },
+  {
+    "id": "basket-2",
+    "aliases": [
+      "shopping-bag"
+    ]
+  },
+  {
+    "id": "basket-1",
+    "aliases": [
+      "cart",
+      "shopping"
+    ]
+  },
+  {
+    "id": "shopping-bag-block-2",
+    "aliases": []
+  },
+  {
+    "id": "coin-rand",
+    "aliases": [
+      "currency",
+      "money"
+    ]
+  },
+  {
+    "id": "shopping-bag-like-1",
+    "aliases": []
+  },
+  {
+    "id": "shopping-bag-1",
+    "aliases": []
+  },
+  {
+    "id": "remove-from-basket-2",
+    "aliases": []
+  },
+  {
+    "id": "shopping-bag-like-2",
+    "aliases": []
+  },
+  {
+    "id": "currency-lira",
+    "aliases": [
+      "money"
+    ]
+  },
+  {
+    "id": "add-to-basket-2",
+    "aliases": []
+  },
+  {
+    "id": "shopping-bag-3",
+    "aliases": []
+  },
+  {
+    "id": "add-to-basket",
+    "aliases": []
+  },
+  {
+    "id": "shopping-bag-add-2",
+    "aliases": []
+  },
+  {
+    "id": "fast-delivery",
+    "aliases": [
+      "quick-commerce"
+    ]
+  },
+  {
+    "id": "giftcard",
+    "aliases": [
+      "present"
+    ]
+  },
+  {
+    "id": "package-remove",
+    "aliases": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "gift-box",
+    "aliases": [
+      "present"
+    ]
+  },
+  {
+    "id": "gift-2",
+    "aliases": [
+      "present"
+    ]
+  },
+  {
+    "id": "package-in",
+    "aliases": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "package-security",
+    "aliases": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "package-delivery-2",
+    "aliases": [
+      "address"
+    ]
+  },
+  {
+    "id": "3d-package",
+    "aliases": [
+      "box"
+    ]
+  },
+  {
+    "id": "package-edit",
+    "aliases": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "package",
+    "aliases": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "package-out",
+    "aliases": [
+      "return",
+      "delivery"
+    ]
+  },
+  {
+    "id": "gift-1",
+    "aliases": [
+      "present"
+    ]
+  },
+  {
+    "id": "package-delivery",
+    "aliases": []
+  },
+  {
+    "id": "package-block",
+    "aliases": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "package-add",
+    "aliases": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "3d-package-2",
+    "aliases": [
+      "box",
+      "delivery"
+    ]
+  },
+  {
+    "id": "package-delivery-1",
+    "aliases": [
+      "address"
+    ]
+  },
+  {
+    "id": "package-search",
+    "aliases": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "package-ckeck",
+    "aliases": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "folder-open-front",
+    "aliases": []
+  },
+  {
+    "id": "move-folder",
+    "aliases": []
+  },
+  {
+    "id": "payment",
+    "aliases": [
+      "flow",
+      "connection"
+    ]
+  },
+  {
+    "id": "folder-delete",
+    "aliases": []
+  },
+  {
+    "id": "folder-shield",
+    "aliases": [
+      "folder-security"
+    ]
+  },
+  {
+    "id": "folder-add-left",
+    "aliases": []
+  },
+  {
+    "id": "folder-2",
+    "aliases": []
+  },
+  {
+    "id": "folder-bookmarks",
+    "aliases": []
+  },
+  {
+    "id": "folders-2",
+    "aliases": [
+      "collection",
+      "stuff"
+    ]
+  },
+  {
+    "id": "percent",
+    "aliases": [
+      "sales"
+    ]
+  },
+  {
+    "id": "receipt-storno",
+    "aliases": [
+      "close",
+      "remove"
+    ]
+  },
+  {
+    "id": "folder-1",
+    "aliases": []
+  },
+  {
+    "id": "folder-add-right",
+    "aliases": []
+  },
+  {
+    "id": "folder-cloud",
+    "aliases": []
+  },
+  {
+    "id": "receipt-check",
+    "aliases": [
+      "ticket"
+    ]
+  },
+  {
+    "id": "receipt-bill",
+    "aliases": [
+      "purchase",
+      "invoice"
+    ]
+  },
+  {
+    "id": "receipt-tax",
+    "aliases": [
+      "discount"
+    ]
+  },
+  {
+    "id": "folder-restricted",
+    "aliases": []
+  },
+  {
+    "id": "folders",
+    "aliases": [
+      "stuff"
+    ]
+  },
+  {
+    "id": "folder-link",
+    "aliases": [
+      "link",
+      "attachment"
+    ]
+  },
+  {
+    "id": "folder-download",
+    "aliases": []
+  },
+  {
+    "id": "sd-card",
+    "aliases": [
+      "memory-stick"
+    ]
+  },
+  {
+    "id": "folder-link-2",
+    "aliases": [
+      "link",
+      "attachment"
+    ]
+  },
+  {
+    "id": "files",
+    "aliases": [
+      "documents"
+    ]
+  },
+  {
+    "id": "sim-card-1",
+    "aliases": []
+  },
+  {
+    "id": "file-arrow-left-in",
+    "aliases": [
+      "document-arrow-left-in",
+      "incoming"
+    ]
+  },
+  {
+    "id": "server",
+    "aliases": [
+      "data",
+      "storage"
+    ]
+  },
+  {
+    "id": "file-arrow-right-out",
+    "aliases": [
+      "document-arrow-right-out",
+      "outgoing"
+    ]
+  },
+  {
+    "id": "folder-shared",
+    "aliases": []
+  },
+  {
+    "id": "sim-card-2",
+    "aliases": []
+  },
+  {
+    "id": "folder-open",
+    "aliases": []
+  },
+  {
+    "id": "file-arrow-right-in",
+    "aliases": [
+      "document-arrow-right-in",
+      "incoming"
+    ]
+  },
+  {
+    "id": "floppy-disk-2",
+    "aliases": [
+      "save"
+    ]
+  },
+  {
+    "id": "floppy-disk-1",
+    "aliases": [
+      "save"
+    ]
+  },
+  {
+    "id": "folder-upload",
+    "aliases": []
+  },
+  {
+    "id": "file-arrow-left-out",
+    "aliases": [
+      "document-arrow-left-out",
+      "outgoing"
+    ]
+  },
+  {
+    "id": "file-bend",
+    "aliases": [
+      "document"
+    ]
+  },
+  {
+    "id": "file-cloud",
+    "aliases": [
+      "document"
+    ]
+  },
+  {
+    "id": "file-chart",
+    "aliases": [
+      "document"
+    ]
+  },
+  {
+    "id": "archive",
+    "aliases": [
+      "folder",
+      "box"
+    ]
+  },
+  {
+    "id": "page-text-lock",
+    "aliases": []
+  },
+  {
+    "id": "file-lock",
+    "aliases": [
+      "document"
+    ]
+  },
+  {
+    "id": "page-cloud",
+    "aliases": []
+  },
+  {
+    "id": "page-attachment",
+    "aliases": []
+  },
+  {
+    "id": "page-edit",
+    "aliases": [
+      "document"
+    ]
+  },
+  {
+    "id": "page-link",
+    "aliases": []
+  },
+  {
+    "id": "file-text",
+    "aliases": [
+      "document"
+    ]
+  },
+  {
+    "id": "page-search",
+    "aliases": []
+  },
+  {
+    "id": "page-lock",
+    "aliases": []
+  },
+  {
+    "id": "page-pie-chart",
+    "aliases": []
+  },
+  {
+    "id": "page-empty",
+    "aliases": []
+  },
+  {
+    "id": "page-text-cloud",
+    "aliases": []
+  },
+  {
+    "id": "page-text-link",
+    "aliases": []
+  },
+  {
+    "id": "page-text",
+    "aliases": []
+  },
+  {
+    "id": "file-download",
+    "aliases": [
+      "document"
+    ]
+  },
+  {
+    "id": "page-search-lines",
+    "aliases": []
+  },
+  {
+    "id": "file-link",
+    "aliases": [
+      "hyperlink"
+    ]
+  },
+  {
+    "id": "page-text-pie-chart",
+    "aliases": []
+  },
+  {
+    "id": "file-edit",
+    "aliases": [
+      "document",
+      "cloud",
+      "sync"
+    ]
+  },
+  {
+    "id": "page-text-search",
+    "aliases": []
+  },
+  {
+    "id": "page-edit-text",
+    "aliases": [
+      "document",
+      "file"
+    ]
+  },
+  {
+    "id": "page-add",
+    "aliases": []
+  },
+  {
+    "id": "file-png",
+    "aliases": [
+      "document"
+    ]
+  },
+  {
+    "id": "page-check",
+    "aliases": [
+      "signed",
+      "document"
+    ]
+  },
+  {
+    "id": "page-text-add",
+    "aliases": []
+  },
+  {
+    "id": "library",
+    "aliases": [
+      "stuff",
+      "vinyl-records"
+    ]
+  },
+  {
+    "id": "page-cross",
+    "aliases": [
+      "close",
+      "x",
+      "document",
+      "list",
+      "file"
+    ]
+  },
+  {
+    "id": "finder",
+    "aliases": [
+      "files",
+      "os"
+    ]
+  },
+  {
+    "id": "notes",
+    "aliases": []
+  },
+  {
+    "id": "file-zip",
+    "aliases": []
+  },
+  {
+    "id": "notebook",
+    "aliases": [
+      "cover"
+    ]
+  },
+  {
+    "id": "face-id-face",
+    "aliases": []
+  },
+  {
+    "id": "sketchbook",
+    "aliases": []
+  },
+  {
+    "id": "page-cross-text",
+    "aliases": [
+      "close",
+      "x",
+      "document",
+      "list",
+      "file"
+    ]
+  },
+  {
+    "id": "file-jpg",
+    "aliases": [
+      "image",
+      "jpeg"
+    ]
+  },
+  {
+    "id": "file-pdf",
+    "aliases": [
+      "document"
+    ]
+  },
+  {
+    "id": "zip",
+    "aliases": [
+      "rar",
+      "compressed",
+      "archive"
+    ]
+  },
+  {
+    "id": "finder-face",
+    "aliases": []
+  },
+  {
+    "id": "dossier",
+    "aliases": []
+  },
+  {
+    "id": "folder-paper",
+    "aliases": []
+  },
+  {
+    "id": "globe-2",
+    "aliases": [
+      "network",
+      "translate"
+    ]
+  },
+  {
+    "id": "blank-page-portrait",
+    "aliases": []
+  },
+  {
+    "id": "world",
+    "aliases": [
+      "globus",
+      "internet",
+      "web",
+      "globe"
+    ]
+  },
+  {
+    "id": "note-text",
+    "aliases": []
+  },
+  {
+    "id": "initiatives",
+    "aliases": [
+      "nav",
+      "rooting"
+    ]
+  },
+  {
+    "id": "list-bullets-square",
+    "aliases": []
+  },
+  {
+    "id": "table",
+    "aliases": [
+      "spreedsheet",
+      "chart"
+    ]
+  },
+  {
+    "id": "blank-page-landscape",
+    "aliases": []
+  },
+  {
+    "id": "note-1",
+    "aliases": []
+  },
+  {
+    "id": "earth",
+    "aliases": [
+      "globe",
+      "world"
+    ]
+  },
+  {
+    "id": "script",
+    "aliases": [
+      "paper",
+      "page",
+      "contract",
+      "file",
+      "document",
+      "skills"
+    ]
+  },
+  {
+    "id": "notepad",
+    "aliases": [
+      "notes"
+    ]
+  },
+  {
+    "id": "map-pin",
+    "aliases": [
+      "location"
+    ]
+  },
+  {
+    "id": "note-2",
+    "aliases": []
+  },
+  {
+    "id": "map-pin-2",
+    "aliases": [
+      "location"
+    ]
+  },
+  {
+    "id": "script-2",
+    "aliases": [
+      "paper",
+      "page",
+      "contract",
+      "file",
+      "document",
+      "skills"
+    ]
+  },
+  {
+    "id": "standing-globe",
+    "aliases": [
+      "travel",
+      "language"
+    ]
+  },
+  {
+    "id": "map",
+    "aliases": [
+      "paper"
+    ]
+  },
+  {
+    "id": "send",
+    "aliases": [
+      "email",
+      "paper-plane",
+      "arrow"
+    ]
+  },
+  {
+    "id": "globe",
+    "aliases": [
+      "network",
+      "translate"
+    ]
+  },
+  {
+    "id": "pin-flag",
+    "aliases": [
+      "location"
+    ]
+  },
+  {
+    "id": "volume-minimum",
+    "aliases": [
+      "speaker",
+      "loud",
+      "sound"
+    ]
+  },
+  {
+    "id": "direction-2",
+    "aliases": [
+      "route"
+    ]
+  },
+  {
+    "id": "volume-full",
+    "aliases": [
+      "speaker",
+      "loud",
+      "sound"
+    ]
+  },
+  {
+    "id": "direction-1",
+    "aliases": [
+      "route"
+    ]
+  },
+  {
+    "id": "radar-2",
+    "aliases": [
+      "location",
+      "search"
+    ]
+  },
+  {
+    "id": "mute",
+    "aliases": [
+      "sound-off"
+    ]
+  },
+  {
+    "id": "location",
+    "aliases": [
+      "explore",
+      "compass"
+    ]
+  },
+  {
+    "id": "volume-down",
+    "aliases": []
+  },
+  {
+    "id": "volume-up",
+    "aliases": []
+  },
+  {
+    "id": "microphone",
+    "aliases": [
+      "mic",
+      "sound",
+      "podcast"
+    ]
+  },
+  {
+    "id": "pin-location",
+    "aliases": []
+  },
+  {
+    "id": "vocal-microphone",
+    "aliases": [
+      "singing",
+      "karaoke"
+    ]
+  },
+  {
+    "id": "pin-circle",
+    "aliases": [
+      "location"
+    ]
+  },
+  {
+    "id": "volume-half",
+    "aliases": [
+      "speaker",
+      "loud",
+      "sound"
+    ]
+  },
+  {
+    "id": "microphone-off",
+    "aliases": []
+  },
+  {
+    "id": "volume-off",
+    "aliases": [
+      "sound-off"
+    ]
+  },
+  {
+    "id": "map-pin-flat",
+    "aliases": [
+      "route"
+    ]
+  },
+  {
+    "id": "sound-fx",
+    "aliases": [
+      "sound-effects"
+    ]
+  },
+  {
+    "id": "podcast-1",
+    "aliases": [
+      "broadcast",
+      "mic"
+    ]
+  },
+  {
+    "id": "airpod-left",
+    "aliases": []
+  },
+  {
+    "id": "voice-high",
+    "aliases": [
+      "wave"
+    ]
+  },
+  {
+    "id": "airpods",
+    "aliases": [
+      "headphones",
+      "vibe"
+    ]
+  },
+  {
+    "id": "audio",
+    "aliases": [
+      "music",
+      "playlist",
+      "musical-note"
+    ]
+  },
+  {
+    "id": "airpod-right",
+    "aliases": []
+  },
+  {
+    "id": "scan-voice",
+    "aliases": []
+  },
+  {
+    "id": "voice-settings",
+    "aliases": [
+      "edit-voice"
+    ]
+  },
+  {
+    "id": "playlist",
+    "aliases": []
+  },
+  {
+    "id": "voice-mid",
+    "aliases": [
+      "wave"
+    ]
+  },
+  {
+    "id": "voice-mode",
+    "aliases": [
+      "voice-settings"
+    ]
+  },
+  {
+    "id": "keyboard",
+    "aliases": [
+      "midi",
+      "keys",
+      "piano"
+    ]
+  },
+  {
+    "id": "voice-low",
+    "aliases": [
+      "wave"
+    ]
+  },
+  {
+    "id": "headphones",
+    "aliases": [
+      "support",
+      "vibe"
+    ]
+  },
+  {
+    "id": "voice-share",
+    "aliases": []
+  },
+  {
+    "id": "megaphone",
+    "aliases": [
+      "loud",
+      "speak",
+      "promote",
+      "feedback"
+    ]
+  },
+  {
+    "id": "voice-3",
+    "aliases": [
+      "wave"
+    ]
+  },
+  {
+    "id": "voice-memo",
+    "aliases": [
+      "voice-control"
+    ]
+  },
+  {
+    "id": "podcast-2",
+    "aliases": [
+      "broadcast",
+      "mic"
+    ]
+  },
+  {
+    "id": "stable-voice",
+    "aliases": [
+      "stable-volume",
+      "voice-circle",
+      "voice-control"
+    ]
+  },
+  {
+    "id": "voice-record",
+    "aliases": []
+  },
+  {
+    "id": "stop",
+    "aliases": []
+  },
+  {
+    "id": "pause",
+    "aliases": []
+  },
+  {
+    "id": "stop-circle",
+    "aliases": []
+  },
+  {
+    "id": "rewind-10s",
+    "aliases": []
+  },
+  {
+    "id": "rewind-30s",
+    "aliases": []
+  },
+  {
+    "id": "forwards-10s",
+    "aliases": []
+  },
+  {
+    "id": "replay",
+    "aliases": [
+      "play-again"
+    ]
+  },
+  {
+    "id": "record",
+    "aliases": []
+  },
+  {
+    "id": "rewind-15s",
+    "aliases": []
+  },
+  {
+    "id": "fast-forward-15s",
+    "aliases": []
+  },
+  {
+    "id": "fast-forward-5s",
+    "aliases": []
+  },
+  {
+    "id": "back-10s",
+    "aliases": []
+  },
+  {
+    "id": "play",
+    "aliases": [
+      "go"
+    ]
+  },
+  {
+    "id": "play-circle",
+    "aliases": []
+  },
+  {
+    "id": "fast-forward",
+    "aliases": []
+  },
+  {
+    "id": "megaphone-2",
+    "aliases": [
+      "loud",
+      "speak",
+      "promote",
+      "feedback"
+    ]
+  },
+  {
+    "id": "fast-forward-30s",
+    "aliases": []
+  },
+  {
+    "id": "rewind-5s",
+    "aliases": []
+  },
+  {
+    "id": "fast-forward-10s",
+    "aliases": []
+  },
+  {
+    "id": "rewind",
+    "aliases": []
+  },
+  {
+    "id": "chart-2",
+    "aliases": [
+      "statistics",
+      "flipchart",
+      "presentation",
+      "graph"
+    ]
+  },
+  {
+    "id": "back",
+    "aliases": []
+  },
+  {
+    "id": "whiteboard-2",
+    "aliases": []
+  },
+  {
+    "id": "pie-chart-2",
+    "aliases": [
+      "graph",
+      "chart",
+      "statistics"
+    ]
+  },
+  {
+    "id": "cd",
+    "aliases": [
+      "disc",
+      "vinyl",
+      "dvd",
+      "dj",
+      "spin",
+      "music",
+      "album"
+    ]
+  },
+  {
+    "id": "pie-chart-1",
+    "aliases": [
+      "graph",
+      "chart",
+      "statistics"
+    ]
+  },
+  {
+    "id": "trending-2",
+    "aliases": [
+      "trends"
+    ]
+  },
+  {
+    "id": "pie-chart-3",
+    "aliases": [
+      "graph",
+      "statistics"
+    ]
+  },
+  {
+    "id": "whiteboard-1",
+    "aliases": [
+      "artboard"
+    ]
+  },
+  {
+    "id": "albums",
+    "aliases": [
+      "cover"
+    ]
+  },
+  {
+    "id": "chart-1",
+    "aliases": [
+      "statistics",
+      "flipchart",
+      "presentation",
+      "graph 2"
+    ]
+  },
+  {
+    "id": "analytics",
+    "aliases": [
+      "analysis"
+    ]
+  },
+  {
+    "id": "sunburst-chart-2",
+    "aliases": []
+  },
+  {
+    "id": "trending-1",
+    "aliases": [
+      "trends"
+    ]
+  },
+  {
+    "id": "conductor",
+    "aliases": [
+      "ochestrator",
+      "vibe"
+    ]
+  },
+  {
+    "id": "repeat",
+    "aliases": []
+  },
+  {
+    "id": "skip",
+    "aliases": [
+      "next"
+    ]
+  },
+  {
+    "id": "trending-3",
+    "aliases": [
+      "trends",
+      "upward"
+    ]
+  },
+  {
+    "id": "shuffle",
+    "aliases": [
+      "random"
+    ]
+  },
+  {
+    "id": "sunburst-chart",
+    "aliases": []
+  },
+  {
+    "id": "chart-6",
+    "aliases": [
+      "statistics",
+      "graph"
+    ]
+  },
+  {
+    "id": "chart-3",
+    "aliases": [
+      "statistics",
+      "graph",
+      "signal"
+    ]
+  },
+  {
+    "id": "line-chart-4",
+    "aliases": [
+      "statistics",
+      "graph"
+    ]
+  },
+  {
+    "id": "chart-waterfall-axis",
+    "aliases": []
+  },
+  {
+    "id": "trending-6",
+    "aliases": [
+      "trends",
+      "downward"
+    ]
+  },
+  {
+    "id": "chart-5",
+    "aliases": [
+      "statistics",
+      "graph"
+    ]
+  },
+  {
+    "id": "insights",
+    "aliases": [
+      "analyze"
+    ]
+  },
+  {
+    "id": "line-chart-2",
+    "aliases": [
+      "statistics",
+      "graph"
+    ]
+  },
+  {
+    "id": "trending-circle",
+    "aliases": []
+  },
+  {
+    "id": "combo-chart-axis",
+    "aliases": []
+  },
+  {
+    "id": "chart-waterfall",
+    "aliases": []
+  },
+  {
+    "id": "chart-4",
+    "aliases": [
+      "statistics",
+      "graph"
+    ]
+  },
+  {
+    "id": "stacked-bar-chart-axis-2",
+    "aliases": []
+  },
+  {
+    "id": "line-chart-1",
+    "aliases": [
+      "statistics",
+      "graph"
+    ]
+  },
+  {
+    "id": "trending-5",
+    "aliases": [
+      "chart",
+      "analytics"
+    ]
+  },
+  {
+    "id": "trending-4",
+    "aliases": [
+      "chart"
+    ]
+  },
+  {
+    "id": "chart-7",
+    "aliases": [
+      "statistics",
+      "graph"
+    ]
+  },
+  {
+    "id": "leaderboard",
+    "aliases": [
+      "winner",
+      "stats",
+      "graph"
+    ]
+  },
+  {
+    "id": "point-chart",
+    "aliases": [
+      "dots"
+    ]
+  },
+  {
+    "id": "line-chart-3",
+    "aliases": [
+      "statistics",
+      "graph"
+    ]
+  },
+  {
+    "id": "golf-ball",
+    "aliases": []
+  },
+  {
+    "id": "stacked-bar-chart-100-axis",
+    "aliases": []
+  },
+  {
+    "id": "sankey-chart",
+    "aliases": []
+  },
+  {
+    "id": "chart-compare",
+    "aliases": []
+  },
+  {
+    "id": "stacked-bar-chart-horizontal-100-axis",
+    "aliases": []
+  },
+  {
+    "id": "basketball",
+    "aliases": [
+      "nba"
+    ]
+  },
+  {
+    "id": "soccer",
+    "aliases": [
+      "football",
+      "mls"
+    ]
+  },
+  {
+    "id": "stacked-bar-chart-100",
+    "aliases": []
+  },
+  {
+    "id": "american-football",
+    "aliases": [
+      "nfl"
+    ]
+  },
+  {
+    "id": "frisbee-golf",
+    "aliases": []
+  },
+  {
+    "id": "stacked-bar-chart",
+    "aliases": []
+  },
+  {
+    "id": "pickelball",
+    "aliases": []
+  },
+  {
+    "id": "chart-compare-horizontal",
+    "aliases": []
+  },
+  {
+    "id": "stacked-bar-chart-2",
+    "aliases": [
+      "revenue"
+    ]
+  },
+  {
+    "id": "ice-hockey",
+    "aliases": []
+  },
+  {
+    "id": "baseball",
+    "aliases": []
+  },
+  {
+    "id": "volleyball",
+    "aliases": []
+  },
+  {
+    "id": "sankey-axis",
+    "aliases": []
+  },
+  {
+    "id": "tennis",
+    "aliases": []
+  },
+  {
+    "id": "frisbee",
+    "aliases": []
+  },
+  {
+    "id": "kickball",
+    "aliases": []
+  },
+  {
+    "id": "affinity",
+    "aliases": []
+  },
+  {
+    "id": "webflow",
+    "aliases": []
+  },
+  {
+    "id": "x",
+    "aliases": []
+  },
+  {
+    "id": "twitter",
+    "aliases": [
+      "larry"
+    ]
+  },
+  {
+    "id": "chrome",
+    "aliases": []
+  },
+  {
+    "id": "figma-simple",
+    "aliases": []
+  },
+  {
+    "id": "dia",
+    "aliases": []
+  },
+  {
+    "id": "patreon",
+    "aliases": []
+  },
+  {
+    "id": "sketch",
+    "aliases": []
+  },
+  {
+    "id": "versus-circle",
+    "aliases": [
+      "vs"
+    ]
+  },
+  {
+    "id": "figma",
+    "aliases": []
+  },
+  {
+    "id": "arc",
+    "aliases": []
+  },
+  {
+    "id": "firefox",
+    "aliases": []
+  },
+  {
+    "id": "instagram",
+    "aliases": []
+  },
+  {
+    "id": "opera",
+    "aliases": []
+  },
+  {
+    "id": "framer",
+    "aliases": []
+  },
+  {
+    "id": "facebook",
+    "aliases": []
+  },
+  {
+    "id": "bowling",
+    "aliases": []
+  },
+  {
+    "id": "safari",
+    "aliases": []
+  },
+  {
+    "id": "youtube",
+    "aliases": []
+  },
+  {
+    "id": "medium",
+    "aliases": []
+  },
+  {
+    "id": "slack",
+    "aliases": []
+  },
+  {
+    "id": "whatsapp",
+    "aliases": []
+  },
+  {
+    "id": "apple-intelligence",
+    "aliases": []
+  },
+  {
+    "id": "linkedin",
+    "aliases": []
+  },
+  {
+    "id": "copilot",
+    "aliases": []
+  },
+  {
+    "id": "discord",
+    "aliases": []
+  },
+  {
+    "id": "siri",
+    "aliases": []
+  },
+  {
+    "id": "artifact-news",
+    "aliases": []
+  },
+  {
+    "id": "anthropic",
+    "aliases": []
+  },
+  {
+    "id": "perplexity",
+    "aliases": []
+  },
+  {
+    "id": "openai",
+    "aliases": [
+      "chatgpt"
+    ]
+  },
+  {
+    "id": "microsoft-copilot",
+    "aliases": []
+  },
+  {
+    "id": "telegram",
+    "aliases": []
+  },
+  {
+    "id": "claudeai",
+    "aliases": []
+  },
+  {
+    "id": "threads",
+    "aliases": []
+  },
+  {
+    "id": "clawd",
+    "aliases": []
+  },
+  {
+    "id": "substack",
+    "aliases": []
+  },
+  {
+    "id": "github",
+    "aliases": []
+  },
+  {
+    "id": "vkontakte",
+    "aliases": []
+  },
+  {
+    "id": "pinterest",
+    "aliases": []
+  },
+  {
+    "id": "linktree",
+    "aliases": []
+  },
+  {
+    "id": "venmo",
+    "aliases": []
+  },
+  {
+    "id": "cash",
+    "aliases": []
+  },
+  {
+    "id": "imessage",
+    "aliases": []
+  },
+  {
+    "id": "apple",
+    "aliases": []
+  },
+  {
+    "id": "snapchat",
+    "aliases": []
+  },
+  {
+    "id": "twitch",
+    "aliases": []
+  },
+  {
+    "id": "pinterest-simple",
+    "aliases": []
+  },
+  {
+    "id": "google-play-store",
+    "aliases": []
+  },
+  {
+    "id": "tiktok",
+    "aliases": []
+  },
+  {
+    "id": "appstore",
+    "aliases": []
+  },
+  {
+    "id": "spotify",
+    "aliases": []
+  },
+  {
+    "id": "tumblr",
+    "aliases": []
+  },
+  {
+    "id": "cosmos",
+    "aliases": []
+  },
+  {
+    "id": "producthunt",
+    "aliases": []
+  },
+  {
+    "id": "apple-spring",
+    "aliases": []
+  },
+  {
+    "id": "arena",
+    "aliases": []
+  },
+  {
+    "id": "facebook-messenger",
+    "aliases": []
+  },
+  {
+    "id": "apple-music",
+    "aliases": []
+  },
+  {
+    "id": "lemonsqueezy",
+    "aliases": []
+  },
+  {
+    "id": "notion",
+    "aliases": []
+  },
+  {
+    "id": "robinhood",
+    "aliases": []
+  },
+  {
+    "id": "notion-ai",
+    "aliases": []
+  },
+  {
+    "id": "reddit",
+    "aliases": []
+  },
+  {
+    "id": "codepen",
+    "aliases": []
+  },
+  {
+    "id": "bluesky",
+    "aliases": []
+  },
+  {
+    "id": "dribbble",
+    "aliases": []
+  },
+  {
+    "id": "gumroad",
+    "aliases": []
+  },
+  {
+    "id": "duolingo",
+    "aliases": []
+  },
+  {
+    "id": "gemini",
+    "aliases": []
+  },
+  {
+    "id": "mastadon",
+    "aliases": []
+  },
+  {
+    "id": "php",
+    "aliases": []
+  },
+  {
+    "id": "rive",
+    "aliases": []
+  },
+  {
+    "id": "behance",
+    "aliases": []
+  },
+  {
+    "id": "quora",
+    "aliases": []
+  },
+  {
+    "id": "lottielab",
+    "aliases": []
+  },
+  {
+    "id": "rss-feed",
+    "aliases": []
+  },
+  {
+    "id": "google",
+    "aliases": []
+  },
+  {
+    "id": "phyton",
+    "aliases": []
+  },
+  {
+    "id": "java",
+    "aliases": []
+  },
+  {
+    "id": "java-coffee-bean",
+    "aliases": []
+  },
+  {
+    "id": "bitcoin-logo",
+    "aliases": []
+  },
+  {
+    "id": "grok",
+    "aliases": []
+  },
+  {
+    "id": "deepseek",
+    "aliases": []
+  },
+  {
+    "id": "vercel",
+    "aliases": []
+  },
+  {
+    "id": "javascript",
+    "aliases": []
+  },
+  {
+    "id": "xbox",
+    "aliases": []
+  },
+  {
+    "id": "bun",
+    "aliases": []
+  },
+  {
+    "id": "steam",
+    "aliases": []
+  },
+  {
+    "id": "c++",
+    "aliases": [
+      "cpp"
+    ]
+  },
+  {
+    "id": "npm",
+    "aliases": []
+  },
+  {
+    "id": "php-elephant",
+    "aliases": []
+  },
+  {
+    "id": "playstation",
+    "aliases": []
+  },
+  {
+    "id": "riot-games",
+    "aliases": []
+  },
+  {
+    "id": "central-icon-system",
+    "aliases": []
+  },
+  {
+    "id": "typescript",
+    "aliases": []
+  },
+  {
+    "id": "nintendo-switch",
+    "aliases": []
+  },
+  {
+    "id": "manus-ai",
+    "aliases": []
+  },
+  {
+    "id": "lovable",
+    "aliases": []
+  },
+  {
+    "id": "cursor",
+    "aliases": []
+  },
+  {
+    "id": "supabase",
+    "aliases": []
+  },
+  {
+    "id": "google-deepmind",
+    "aliases": []
+  },
+  {
+    "id": "replit",
+    "aliases": []
+  },
+  {
+    "id": "linear",
+    "aliases": []
+  },
+  {
+    "id": "google-aistudio",
+    "aliases": []
+  },
+  {
+    "id": "bolt",
+    "aliases": []
+  },
+  {
+    "id": "recraft",
+    "aliases": []
+  },
+  {
+    "id": "ollama",
+    "aliases": []
+  },
+  {
+    "id": "antigravity",
+    "aliases": []
+  },
+  {
+    "id": "notebooklm",
+    "aliases": []
+  },
+  {
+    "id": "v0",
+    "aliases": []
+  },
+  {
+    "id": "git",
+    "aliases": []
+  },
+  {
+    "id": "goose",
+    "aliases": []
+  },
+  {
+    "id": "windsurf",
+    "aliases": []
+  },
+  {
+    "id": "nvidia",
+    "aliases": []
+  },
+  {
+    "id": "wechat",
+    "aliases": []
+  },
+  {
+    "id": "midjourney",
+    "aliases": []
+  },
+  {
+    "id": "modelcontextprotocol",
+    "aliases": [
+      "mcp"
+    ]
+  },
+  {
+    "id": "iconists",
+    "aliases": []
+  },
+  {
+    "id": "things",
+    "aliases": []
+  },
+  {
+    "id": "formula1",
+    "aliases": []
+  },
+  {
+    "id": "devin",
+    "aliases": []
+  },
+  {
+    "id": "granola",
+    "aliases": []
+  },
+  {
+    "id": "factory",
+    "aliases": []
+  },
+  {
+    "id": "netify",
+    "aliases": []
+  },
+  {
+    "id": "european-union",
+    "aliases": [
+      "eu-stars"
+    ]
+  },
+  {
+    "id": "adobe-acrobat",
+    "aliases": []
+  },
+  {
+    "id": "iso-org",
+    "aliases": []
+  },
+  {
+    "id": "opencode",
+    "aliases": []
+  },
+  {
+    "id": "warp",
+    "aliases": []
+  },
+  {
+    "id": "red-dot-award",
+    "aliases": []
+  },
+  {
+    "id": "stack-overflow",
+    "aliases": []
+  },
+  {
+    "id": "amp",
+    "aliases": []
+  },
+  {
+    "id": "meta-ai",
+    "aliases": []
+  },
+  {
+    "id": "openai-codex",
+    "aliases": []
+  },
+  {
+    "id": "openclaw",
+    "aliases": []
+  },
+  {
+    "id": "openai-atlas",
+    "aliases": []
+  },
+  {
+    "id": "mistral",
+    "aliases": []
+  },
+  {
+    "id": "password",
+    "aliases": [
+      "lock",
+      "protection"
+    ]
+  },
+  {
+    "id": "solidjs",
+    "aliases": []
+  },
+  {
+    "id": "shield-check-3",
+    "aliases": [
+      "check"
+    ]
+  },
+  {
+    "id": "lock",
+    "aliases": [
+      "private"
+    ]
+  },
+  {
+    "id": "angularjs",
+    "aliases": []
+  },
+  {
+    "id": "svelte",
+    "aliases": []
+  },
+  {
+    "id": "rust",
+    "aliases": []
+  },
+  {
+    "id": "vue",
+    "aliases": []
+  },
+  {
+    "id": "react",
+    "aliases": []
+  },
+  {
+    "id": "shield",
+    "aliases": [
+      "security",
+      "protection"
+    ]
+  },
+  {
+    "id": "unlocked",
+    "aliases": [
+      "unlock",
+      "private"
+    ]
+  },
+  {
+    "id": "shield-code",
+    "aliases": [
+      "sandbox"
+    ]
+  },
+  {
+    "id": "shield-break",
+    "aliases": [
+      "not-secure"
+    ]
+  },
+  {
+    "id": "shield-keyhole",
+    "aliases": []
+  },
+  {
+    "id": "json",
+    "aliases": []
+  },
+  {
+    "id": "password-stars",
+    "aliases": []
+  },
+  {
+    "id": "shield-2",
+    "aliases": [
+      "safety",
+      "privacy"
+    ]
+  },
+  {
+    "id": "shield-crossed",
+    "aliases": [
+      "security",
+      "protection"
+    ]
+  },
+  {
+    "id": "shield-check-2",
+    "aliases": [
+      "protect",
+      "security",
+      "check"
+    ]
+  },
+  {
+    "id": "shield-check",
+    "aliases": [
+      "security",
+      "protection"
+    ]
+  },
+  {
+    "id": "ghost-2",
+    "aliases": [
+      "privacy",
+      "hidden",
+      "unknown"
+    ]
+  },
+  {
+    "id": "key-2",
+    "aliases": [
+      "password"
+    ]
+  },
+  {
+    "id": "umbrella-security",
+    "aliases": []
+  },
+  {
+    "id": "firewall",
+    "aliases": [
+      "wall"
+    ]
+  },
+  {
+    "id": "keyhole",
+    "aliases": []
+  },
+  {
+    "id": "finger-print-1",
+    "aliases": [
+      "touch-id"
+    ]
+  },
+  {
+    "id": "passkeys",
+    "aliases": [
+      "passkey",
+      "passwordless"
+    ]
+  },
+  {
+    "id": "incognito",
+    "aliases": [
+      "detective",
+      "privacy",
+      "anonymous",
+      "anonym",
+      "hidden"
+    ]
+  },
+  {
+    "id": "key-1",
+    "aliases": [
+      "password"
+    ]
+  },
+  {
+    "id": "vault",
+    "aliases": [
+      "safe"
+    ]
+  },
+  {
+    "id": "finger-print-2",
+    "aliases": [
+      "touch-id"
+    ]
+  },
+  {
+    "id": "code-large",
+    "aliases": [
+      "syntax",
+      "brackets"
+    ]
+  },
+  {
+    "id": "asterisk",
+    "aliases": [
+      "placeholder"
+    ]
+  },
+  {
+    "id": "safe-simple",
+    "aliases": [
+      "save"
+    ]
+  },
+  {
+    "id": "siren",
+    "aliases": [
+      "alarm"
+    ]
+  },
+  {
+    "id": "face-id",
+    "aliases": []
+  },
+  {
+    "id": "ghost",
+    "aliases": [
+      "hidden",
+      "unknown",
+      "horror"
+    ]
+  },
+  {
+    "id": "law",
+    "aliases": [
+      "legal",
+      "terms",
+      "imprint",
+      "balance"
+    ]
+  },
+  {
+    "id": "code-medium",
+    "aliases": [
+      "syntax",
+      "brackets",
+      "dev"
+    ]
+  },
+  {
+    "id": "passport",
+    "aliases": [
+      "visa"
+    ]
+  },
+  {
+    "id": "console-simple-2",
+    "aliases": []
+  },
+  {
+    "id": "console",
+    "aliases": [
+      "terminal"
+    ]
+  },
+  {
+    "id": "branch-simple",
+    "aliases": []
+  },
+  {
+    "id": "code-square",
+    "aliases": [
+      "syntax",
+      "dev"
+    ]
+  },
+  {
+    "id": "code-analyze",
+    "aliases": [
+      "vibe-coding"
+    ]
+  },
+  {
+    "id": "website",
+    "aliases": [
+      "webbuilder",
+      "coding"
+    ]
+  },
+  {
+    "id": "fork-code",
+    "aliases": []
+  },
+  {
+    "id": "code-assistant",
+    "aliases": [
+      "vibe-coding"
+    ]
+  },
+  {
+    "id": "draft",
+    "aliases": []
+  },
+  {
+    "id": "difference-modified",
+    "aliases": []
+  },
+  {
+    "id": "fork-simple",
+    "aliases": [
+      "agents"
+    ]
+  },
+  {
+    "id": "changes",
+    "aliases": [
+      "plus-minus",
+      "compare"
+    ]
+  },
+  {
+    "id": "difference-ignored",
+    "aliases": []
+  },
+  {
+    "id": "console-simple",
+    "aliases": [
+      "terminal"
+    ]
+  },
+  {
+    "id": "agentic-coding",
+    "aliases": [
+      "ai-code",
+      "vibe-code"
+    ]
+  },
+  {
+    "id": "vibe-coding",
+    "aliases": [
+      "ai",
+      "ide",
+      "syntax"
+    ]
+  },
+  {
+    "id": "code-insert",
+    "aliases": []
+  },
+  {
+    "id": "branch",
+    "aliases": []
+  },
+  {
+    "id": "vibe-coding-2",
+    "aliases": [
+      "ai",
+      "ide",
+      "syntax"
+    ]
+  },
+  {
+    "id": "code-brackets",
+    "aliases": []
+  },
+  {
+    "id": "merged-simple",
+    "aliases": []
+  },
+  {
+    "id": "animation-ease-out",
+    "aliases": []
+  },
+  {
+    "id": "code-tree",
+    "aliases": [
+      "file-tree"
+    ]
+  },
+  {
+    "id": "animation-linear",
+    "aliases": []
+  },
+  {
+    "id": "ship",
+    "aliases": [
+      "changelog"
+    ]
+  },
+  {
+    "id": "pull-request-simple",
+    "aliases": []
+  },
+  {
+    "id": "pull-request-closed-simple",
+    "aliases": []
+  },
+  {
+    "id": "draft-simple",
+    "aliases": []
+  },
+  {
+    "id": "merged",
+    "aliases": []
+  },
+  {
+    "id": "agent",
+    "aliases": [
+      "flow",
+      "diagram",
+      "org"
+    ]
+  },
+  {
+    "id": "merge-conflict-simple",
+    "aliases": []
+  },
+  {
+    "id": "animation-auto",
+    "aliases": []
+  },
+  {
+    "id": "bridge",
+    "aliases": [
+      "connection"
+    ]
+  },
+  {
+    "id": "request-closed",
+    "aliases": []
+  },
+  {
+    "id": "sandbox",
+    "aliases": [
+      "playground"
+    ]
+  },
+  {
+    "id": "merge-conflict",
+    "aliases": []
+  },
+  {
+    "id": "commits",
+    "aliases": []
+  },
+  {
+    "id": "animation-ease",
+    "aliases": []
+  },
+  {
+    "id": "animation-ease-in",
+    "aliases": []
+  },
+  {
+    "id": "pull-request",
+    "aliases": []
+  },
+  {
+    "id": "animation-none",
+    "aliases": []
+  },
+  {
+    "id": "push",
+    "aliases": [
+      "launch",
+      "rocket"
+    ]
+  },
+  {
+    "id": "ladybug",
+    "aliases": [
+      "issue"
+    ]
+  },
+  {
+    "id": "api-connection",
+    "aliases": []
+  },
+  {
+    "id": "animation-elastic",
+    "aliases": [
+      "bezier-curves"
+    ]
+  },
+  {
+    "id": "animation",
+    "aliases": []
+  },
+  {
+    "id": "bug-face",
+    "aliases": [
+      "issue"
+    ]
+  },
+  {
+    "id": "debugger",
+    "aliases": [
+      "debug"
+    ]
+  },
+  {
+    "id": "animate-path",
+    "aliases": [
+      "animation",
+      "jump"
+    ]
+  },
+  {
+    "id": "code-lines",
+    "aliases": []
+  },
+  {
+    "id": "animation-overshoot",
+    "aliases": []
+  },
+  {
+    "id": "speed-dots",
+    "aliases": [
+      "motion",
+      "animation"
+    ]
+  },
+  {
+    "id": "testflight",
+    "aliases": [
+      "beta"
+    ]
+  },
+  {
+    "id": "brackets-1",
+    "aliases": []
+  },
+  {
+    "id": "bug",
+    "aliases": [
+      "issue"
+    ]
+  },
+  {
+    "id": "brackets-2",
+    "aliases": []
+  },
+  {
+    "id": "api-aggregate",
+    "aliases": []
+  },
+  {
+    "id": "animation-undershoot",
+    "aliases": []
+  },
+  {
+    "id": "hammer",
+    "aliases": [
+      "craft",
+      "build"
+    ]
+  },
+  {
+    "id": "bezier-curves",
+    "aliases": [
+      "animation",
+      "motion",
+      "spring"
+    ]
+  },
+  {
+    "id": "hook",
+    "aliases": [
+      "phishing"
+    ]
+  },
+  {
+    "id": "color-picker",
+    "aliases": [
+      "color"
+    ]
+  },
+  {
+    "id": "color-roll",
+    "aliases": [
+      "paint-roller"
+    ]
+  },
+  {
+    "id": "write-1",
+    "aliases": [
+      "fountain-pen"
+    ]
+  },
+  {
+    "id": "eraser",
+    "aliases": [
+      "rubber",
+      "clean-up"
+    ]
+  },
+  {
+    "id": "write-2",
+    "aliases": [
+      "fountain-pen"
+    ]
+  },
+  {
+    "id": "pencil-ai",
+    "aliases": [
+      "edit",
+      "write",
+      "auto-write",
+      "prompt-suggestion",
+      "auto-prompt"
+    ]
+  },
+  {
+    "id": "paint-bucket",
+    "aliases": [
+      "design",
+      "color",
+      "appearance"
+    ]
+  },
+  {
+    "id": "feather-2",
+    "aliases": [
+      "writing"
+    ]
+  },
+  {
+    "id": "brush",
+    "aliases": [
+      "color"
+    ]
+  },
+  {
+    "id": "anchor",
+    "aliases": [
+      "webhooks"
+    ]
+  },
+  {
+    "id": "feather",
+    "aliases": [
+      "writing"
+    ]
+  },
+  {
+    "id": "pencil-2",
+    "aliases": [
+      "edit",
+      "write",
+      "prompt"
+    ]
+  },
+  {
+    "id": "write-3",
+    "aliases": [
+      "fountain-pen",
+      "vector",
+      "ink"
+    ]
+  },
+  {
+    "id": "eraser-simple",
+    "aliases": [
+      "rubber",
+      "clean-up"
+    ]
+  },
+  {
+    "id": "hammer-2",
+    "aliases": [
+      "crafting",
+      "building"
+    ]
+  },
+  {
+    "id": "paint-bucket-drop",
+    "aliases": []
+  },
+  {
+    "id": "pencil-3",
+    "aliases": [
+      "edit",
+      "write",
+      "prompt"
+    ]
+  },
+  {
+    "id": "pencil",
+    "aliases": [
+      "edit",
+      "write"
+    ]
+  },
+  {
+    "id": "paint-brush",
+    "aliases": [
+      "design",
+      "color",
+      "appearance"
+    ]
+  },
+  {
+    "id": "edit-small-2",
+    "aliases": []
+  },
+  {
+    "id": "markup",
+    "aliases": [
+      "marker",
+      "highlight"
+    ]
+  },
+  {
+    "id": "pencil-line",
+    "aliases": [
+      "signature",
+      "write"
+    ]
+  },
+  {
+    "id": "slice",
+    "aliases": [
+      "knife"
+    ]
+  },
+  {
+    "id": "select-lasso",
+    "aliases": [
+      "circle-to-search",
+      "encircle",
+      "mark"
+    ]
+  },
+  {
+    "id": "edit-small-1",
+    "aliases": [
+      "box",
+      "pencil",
+      "pen",
+      "write",
+      "draw"
+    ]
+  },
+  {
+    "id": "writing",
+    "aliases": [
+      "sketching",
+      "drawing"
+    ]
+  },
+  {
+    "id": "bezier-curves-2",
+    "aliases": [
+      "path"
+    ]
+  },
+  {
+    "id": "marker-2",
+    "aliases": [
+      "highlight"
+    ]
+  },
+  {
+    "id": "text-edit",
+    "aliases": [
+      "prompts",
+      "comment",
+      "draft"
+    ]
+  },
+  {
+    "id": "draw",
+    "aliases": [
+      "sketch",
+      "scratch"
+    ]
+  },
+  {
+    "id": "highlight",
+    "aliases": [
+      "mark",
+      "freehand",
+      "drawing",
+      "paint"
+    ]
+  },
+  {
+    "id": "edit-big",
+    "aliases": [
+      "box",
+      "pencil",
+      "pen",
+      "write",
+      "draw"
+    ]
+  },
+  {
+    "id": "marker-circle",
+    "aliases": [
+      "highlight"
+    ]
+  },
+  {
+    "id": "whiteboard",
+    "aliases": [
+      "sketch",
+      "forms"
+    ]
+  },
+  {
+    "id": "ruler",
+    "aliases": []
+  },
+  {
+    "id": "pencil-wave",
+    "aliases": [
+      "signature",
+      "write"
+    ]
+  },
+  {
+    "id": "input-form",
+    "aliases": [
+      "text-area",
+      "prompt",
+      "rename"
+    ]
+  },
+  {
+    "id": "select-lasso-dashed",
+    "aliases": [
+      "circle-to-search-dashed",
+      "encircle",
+      "mark"
+    ]
+  },
+  {
+    "id": "marker",
+    "aliases": [
+      "highlight"
+    ]
+  },
+  {
+    "id": "colors",
+    "aliases": [
+      "rgb",
+      "adjustments"
+    ]
+  },
+  {
+    "id": "bezier-remove",
+    "aliases": [
+      "vector",
+      "nodes"
+    ]
+  },
+  {
+    "id": "color-palette-2",
+    "aliases": [
+      "design",
+      "coloring"
+    ]
+  },
+  {
+    "id": "bezier-curve",
+    "aliases": [
+      "bezier",
+      "vector",
+      "svg"
+    ]
+  },
+  {
+    "id": "vector-anchor-point-disconnected",
+    "aliases": []
+  },
+  {
+    "id": "bezier--edit",
+    "aliases": []
+  },
+  {
+    "id": "vector-logo",
+    "aliases": [
+      "svg"
+    ]
+  },
+  {
+    "id": "markdown",
+    "aliases": []
+  },
+  {
+    "id": "bezier-pointer",
+    "aliases": []
+  },
+  {
+    "id": "signature",
+    "aliases": [
+      "sign"
+    ]
+  },
+  {
+    "id": "bezier-add",
+    "aliases": [
+      "vector",
+      "nodes"
+    ]
+  },
+  {
+    "id": "bezier",
+    "aliases": [
+      "vector",
+      "nodes"
+    ]
+  },
+  {
+    "id": "vector-anchor-point-mirrored",
+    "aliases": [
+      "mirror-angle"
+    ]
+  },
+  {
+    "id": "vector-anchor-point-asymmetric",
+    "aliases": []
+  },
+  {
+    "id": "toolbox",
+    "aliases": []
+  },
+  {
+    "id": "bezier-circle",
+    "aliases": [
+      "vector",
+      "nodes"
+    ]
+  },
+  {
+    "id": "color-swatch",
+    "aliases": [
+      "palette",
+      "colours"
+    ]
+  },
+  {
+    "id": "color-palette",
+    "aliases": [
+      "colours"
+    ]
+  },
+  {
+    "id": "magnet",
+    "aliases": [
+      "snap-pixel",
+      "snap"
+    ]
+  },
+  {
+    "id": "vector-anchor-point-straight",
+    "aliases": [
+      "no-smoothing"
+    ]
+  },
+  {
+    "id": "variables",
+    "aliases": [
+      "figma"
+    ]
+  },
+  {
+    "id": "boolean-group-union",
+    "aliases": []
+  },
+  {
+    "id": "boolean-group-exclude",
+    "aliases": []
+  },
+  {
+    "id": "rec-keyframe",
+    "aliases": [
+      "rhombus"
+    ]
+  },
+  {
+    "id": "boolean-group-intersect",
+    "aliases": []
+  },
+  {
+    "id": "keyframe",
+    "aliases": [
+      "rhombus"
+    ]
+  },
+  {
+    "id": "components",
+    "aliases": [
+      "figma"
+    ]
+  },
+  {
+    "id": "boolean-group-intersect-2",
+    "aliases": []
+  },
+  {
+    "id": "boolean-group-substract-2",
+    "aliases": []
+  },
+  {
+    "id": "rewrite-1",
+    "aliases": [
+      "resummarize",
+      "text-edit"
+    ]
+  },
+  {
+    "id": "summary",
+    "aliases": [
+      "summarize"
+    ]
+  },
+  {
+    "id": "rewrite",
+    "aliases": [
+      "re-edit",
+      "redo"
+    ]
+  },
+  {
+    "id": "remove-keyframe",
+    "aliases": [
+      "rhombus"
+    ]
+  },
+  {
+    "id": "boolean-group-union-2",
+    "aliases": []
+  },
+  {
+    "id": "rewrite-2",
+    "aliases": [
+      "write-again",
+      "text-edit"
+    ]
+  },
+  {
+    "id": "boolean-group-substract",
+    "aliases": []
+  },
+  {
+    "id": "boolean-group-intersect-3",
+    "aliases": []
+  },
+  {
+    "id": "integrations",
+    "aliases": [
+      "frames",
+      "keyframes",
+      "interactions"
+    ]
+  },
+  {
+    "id": "add-keyframe",
+    "aliases": [
+      "rhombus"
+    ]
+  },
+  {
+    "id": "rec-keyframe-2",
+    "aliases": [
+      "rhombus"
+    ]
+  },
+  {
+    "id": "repaint",
+    "aliases": [
+      "recreate",
+      "redo"
+    ]
+  },
+  {
+    "id": "web3",
+    "aliases": [
+      "crypto-space",
+      "nft"
+    ]
+  },
+  {
+    "id": "glass",
+    "aliases": [
+      "material",
+      "shader",
+      "liquid-glass"
+    ]
+  },
+  {
+    "id": "crypto-wallet",
+    "aliases": []
+  },
+  {
+    "id": "dispersion",
+    "aliases": [
+      "refraction",
+      "chromatic-aberration",
+      "light"
+    ]
+  },
+  {
+    "id": "distortion",
+    "aliases": [
+      "liquid",
+      "material"
+    ]
+  },
+  {
+    "id": "crypto",
+    "aliases": []
+  },
+  {
+    "id": "hdr",
+    "aliases": [
+      "lighting",
+      "brightness"
+    ]
+  },
+  {
+    "id": "crypto-coin",
+    "aliases": []
+  },
+  {
+    "id": "shaders",
+    "aliases": [
+      "material",
+      "effect"
+    ]
+  },
+  {
+    "id": "shader-effect",
+    "aliases": [
+      "material"
+    ]
+  },
+  {
+    "id": "airdrop-2",
+    "aliases": [
+      "free",
+      "drop",
+      "parachute"
+    ]
+  },
+  {
+    "id": "gooey",
+    "aliases": [
+      "morph",
+      "liquid-glass"
+    ]
+  },
+  {
+    "id": "shimmer",
+    "aliases": [
+      "waves",
+      "shader",
+      "effect"
+    ]
+  },
+  {
+    "id": "line-thickness",
+    "aliases": [
+      "lines",
+      "border"
+    ]
+  },
+  {
+    "id": "gas",
+    "aliases": []
+  },
+  {
+    "id": "corner-radius",
+    "aliases": [
+      "border-radius"
+    ]
+  },
+  {
+    "id": "bitcoin",
+    "aliases": []
+  },
+  {
+    "id": "3d",
+    "aliases": [
+      "shaders",
+      "blur"
+    ]
+  },
+  {
+    "id": "ethereum",
+    "aliases": []
+  },
+  {
+    "id": "coins-add",
+    "aliases": [
+      "money"
+    ]
+  },
+  {
+    "id": "settings-slider-hor",
+    "aliases": []
+  },
+  {
+    "id": "liquid-glass",
+    "aliases": [
+      "glass-effect"
+    ]
+  },
+  {
+    "id": "secret-phrase",
+    "aliases": [
+      "code",
+      "private-phrase"
+    ]
+  },
+  {
+    "id": "settings-toggle-2",
+    "aliases": []
+  },
+  {
+    "id": "settings-gear-2",
+    "aliases": [
+      "preferences"
+    ]
+  },
+  {
+    "id": "trading-view-line",
+    "aliases": []
+  },
+  {
+    "id": "settings-gear-1",
+    "aliases": [
+      "preferences"
+    ]
+  },
+  {
+    "id": "settings-slider-ver",
+    "aliases": []
+  },
+  {
+    "id": "coin-stack",
+    "aliases": [
+      "tokens",
+      "data",
+      "money"
+    ]
+  },
+  {
+    "id": "coin-2",
+    "aliases": [
+      "credits"
+    ]
+  },
+  {
+    "id": "settings-gear-3",
+    "aliases": [
+      "preferences"
+    ]
+  },
+  {
+    "id": "coins",
+    "aliases": [
+      "money",
+      "transfer"
+    ]
+  },
+  {
+    "id": "coin-1",
+    "aliases": [
+      "credits",
+      "money"
+    ]
+  },
+  {
+    "id": "toggle",
+    "aliases": [
+      "settings",
+      "control"
+    ]
+  },
+  {
+    "id": "maintenance",
+    "aliases": [
+      "settings",
+      "service"
+    ]
+  },
+  {
+    "id": "settings-toggle-1",
+    "aliases": []
+  },
+  {
+    "id": "cryptopunk",
+    "aliases": [
+      "nft",
+      "pfp",
+      "profile",
+      "avatar"
+    ]
+  },
+  {
+    "id": "trading-view-candles",
+    "aliases": []
+  },
+  {
+    "id": "trading-view-steps",
+    "aliases": []
+  },
+  {
+    "id": "filter-desc",
+    "aliases": []
+  },
+  {
+    "id": "settings-knob",
+    "aliases": []
+  },
+  {
+    "id": "sort-arrow-up-down",
+    "aliases": []
+  },
+  {
+    "id": "filter-ascending",
+    "aliases": [
+      "sort",
+      "az"
+    ]
+  },
+  {
+    "id": "filter-timeline",
+    "aliases": [
+      "sort"
+    ]
+  },
+  {
+    "id": "reorder",
+    "aliases": []
+  },
+  {
+    "id": "gamepad-controls-left",
+    "aliases": [
+      "joystick"
+    ]
+  },
+  {
+    "id": "gamepad-controls",
+    "aliases": [
+      "joystick"
+    ]
+  },
+  {
+    "id": "filter-1",
+    "aliases": [
+      "sort"
+    ]
+  },
+  {
+    "id": "gamepad",
+    "aliases": [
+      "gaming",
+      "joystick"
+    ]
+  },
+  {
+    "id": "old-joystick",
+    "aliases": [
+      "gamepad",
+      "gaming",
+      "control"
+    ]
+  },
+  {
+    "id": "filter-circle",
+    "aliases": [
+      "sort"
+    ]
+  },
+  {
+    "id": "filter-2",
+    "aliases": [
+      "sort"
+    ]
+  },
+  {
+    "id": "block-sort-ascending",
+    "aliases": []
+  },
+  {
+    "id": "gamecontroller",
+    "aliases": [
+      "joystick",
+      "play"
+    ]
+  },
+  {
+    "id": "block-sort-descending",
+    "aliases": []
+  },
+  {
+    "id": "filter-descending",
+    "aliases": [
+      "sort",
+      "za"
+    ]
+  },
+  {
+    "id": "filter-asc",
+    "aliases": []
+  },
+  {
+    "id": "settings-slider-three",
+    "aliases": []
+  },
+  {
+    "id": "gamepad-controls-right",
+    "aliases": [
+      "joystick"
+    ]
+  },
+  {
+    "id": "dice-1",
+    "aliases": [
+      "roll"
+    ]
+  },
+  {
+    "id": "gamepad-controls-round-left",
+    "aliases": []
+  },
+  {
+    "id": "roulette-2",
+    "aliases": [
+      "coincidence",
+      "gambling"
+    ]
+  },
+  {
+    "id": "dice-4",
+    "aliases": [
+      "roll"
+    ]
+  },
+  {
+    "id": "gamepad-controls-round-up",
+    "aliases": []
+  },
+  {
+    "id": "roulette-1",
+    "aliases": [
+      "coincidence",
+      "gambling"
+    ]
+  },
+  {
+    "id": "dices",
+    "aliases": [
+      "random",
+      "roll"
+    ]
+  },
+  {
+    "id": "toilet-paper",
+    "aliases": [
+      "wipe"
+    ]
+  },
+  {
+    "id": "scratch-card",
+    "aliases": []
+  },
+  {
+    "id": "dice-3",
+    "aliases": [
+      "roll"
+    ]
+  },
+  {
+    "id": "gamepad-controls-round",
+    "aliases": [
+      "joystick"
+    ]
+  },
+  {
+    "id": "gamepad-controls-round-down",
+    "aliases": []
+  },
+  {
+    "id": "dice-6",
+    "aliases": [
+      "roll"
+    ]
+  },
+  {
+    "id": "dice-2",
+    "aliases": [
+      "roll"
+    ]
+  },
+  {
+    "id": "dice-5",
+    "aliases": [
+      "roll"
+    ]
+  },
+  {
+    "id": "gamepad-controls-round-right",
+    "aliases": []
+  },
+  {
+    "id": "slots",
+    "aliases": [
+      "slot-mashine",
+      "gambling"
+    ]
+  },
+  {
+    "id": "gamepad-controls-up",
+    "aliases": [
+      "joystick"
+    ]
+  },
+  {
+    "id": "sword",
+    "aliases": [
+      "action",
+      "gaming"
+    ]
+  },
+  {
+    "id": "gamepad-controls-down",
+    "aliases": [
+      "joystick"
+    ]
+  },
+  {
+    "id": "parachute",
+    "aliases": [
+      "airdrop"
+    ]
+  },
+  {
+    "id": "dashboard-low",
+    "aliases": []
+  },
+  {
+    "id": "scissors-1",
+    "aliases": [
+      "cut"
+    ]
+  },
+  {
+    "id": "door-hanger",
+    "aliases": [
+      "sign",
+      "do-not-disdurb"
+    ]
+  },
+  {
+    "id": "circles-three",
+    "aliases": [
+      "bubbles"
+    ]
+  },
+  {
+    "id": "subscription-tick-2",
+    "aliases": [
+      "verify"
+    ]
+  },
+  {
+    "id": "playground",
+    "aliases": [
+      "forms",
+      "shapes",
+      "geo"
+    ]
+  },
+  {
+    "id": "receiption-bell-2",
+    "aliases": [
+      "concierge",
+      "assistant"
+    ]
+  },
+  {
+    "id": "stocks",
+    "aliases": []
+  },
+  {
+    "id": "support",
+    "aliases": []
+  },
+  {
+    "id": "tactics-1",
+    "aliases": [
+      "game-plan",
+      "prototype",
+      "play"
+    ]
+  },
+  {
+    "id": "receiption-bell",
+    "aliases": [
+      "concierge",
+      "assistant"
+    ]
+  },
+  {
+    "id": "tactics-2",
+    "aliases": [
+      "game-plan",
+      "prototype",
+      "play"
+    ]
+  },
+  {
+    "id": "subscription-star",
+    "aliases": [
+      "verify"
+    ]
+  },
+  {
+    "id": "dashboard-middle",
+    "aliases": []
+  },
+  {
+    "id": "subscription-tick-1",
+    "aliases": [
+      "verify"
+    ]
+  },
+  {
+    "id": "limit",
+    "aliases": []
+  },
+  {
+    "id": "rescue-ring",
+    "aliases": [
+      "swim-boyle",
+      "help",
+      "support"
+    ]
+  },
+  {
+    "id": "scissors-2",
+    "aliases": [
+      "cut"
+    ]
+  },
+  {
+    "id": "dashboard-fast",
+    "aliases": []
+  },
+  {
+    "id": "speed-middle",
+    "aliases": [
+      "limit",
+      "speedometer",
+      "level"
+    ]
+  },
+  {
+    "id": "lab",
+    "aliases": []
+  },
+  {
+    "id": "racing-flag",
+    "aliases": [
+      "target"
+    ]
+  },
+  {
+    "id": "diamond-shine",
+    "aliases": [
+      "pop",
+      "polish"
+    ]
+  },
+  {
+    "id": "construction-helmet",
+    "aliases": [
+      "work",
+      "wip"
+    ]
+  },
+  {
+    "id": "flag-2",
+    "aliases": [
+      "priority"
+    ]
+  },
+  {
+    "id": "teddy-bear",
+    "aliases": [
+      "play"
+    ]
+  },
+  {
+    "id": "ticket",
+    "aliases": [
+      "admit",
+      "vip"
+    ]
+  },
+  {
+    "id": "speed-low",
+    "aliases": [
+      "limit",
+      "speedometer",
+      "level"
+    ]
+  },
+  {
+    "id": "piggy-bank",
+    "aliases": [
+      "save-money"
+    ]
+  },
+  {
+    "id": "suitcase",
+    "aliases": [
+      "luggage",
+      "case"
+    ]
+  },
+  {
+    "id": "flag-1",
+    "aliases": [
+      "priority"
+    ]
+  },
+  {
+    "id": "diamond",
+    "aliases": [
+      "pro",
+      "premium"
+    ]
+  },
+  {
+    "id": "fire-2",
+    "aliases": [
+      "flame",
+      "hot",
+      "heat"
+    ]
+  },
+  {
+    "id": "fire-3",
+    "aliases": [
+      "flame",
+      "hot",
+      "heat"
+    ]
+  },
+  {
+    "id": "director-chair",
+    "aliases": [
+      "chair"
+    ]
+  },
+  {
+    "id": "speed-high",
+    "aliases": [
+      "limit",
+      "speedometer",
+      "level"
+    ]
+  },
+  {
+    "id": "reading-list",
+    "aliases": [
+      "glasses",
+      "steve-jobs"
+    ]
+  },
+  {
+    "id": "telescope",
+    "aliases": [
+      "deep-search",
+      "research"
+    ]
+  },
+  {
+    "id": "fire-1",
+    "aliases": [
+      "flame",
+      "hot",
+      "heat"
+    ]
+  },
+  {
+    "id": "space",
+    "aliases": [
+      "star"
+    ]
+  },
+  {
+    "id": "wip",
+    "aliases": [
+      "work",
+      "barrier"
+    ]
+  },
+  {
+    "id": "tag",
+    "aliases": [
+      "sale"
+    ]
+  },
+  {
+    "id": "trophy",
+    "aliases": [
+      "win",
+      "champion"
+    ]
+  },
+  {
+    "id": "silver-medal",
+    "aliases": [
+      "second-place",
+      "runner-up"
+    ]
+  },
+  {
+    "id": "pillow",
+    "aliases": [
+      "sleep",
+      "snooze"
+    ]
+  },
+  {
+    "id": "cap",
+    "aliases": [
+      "fan"
+    ]
+  },
+  {
+    "id": "stamps",
+    "aliases": [
+      "collection"
+    ]
+  },
+  {
+    "id": "black-hole",
+    "aliases": [
+      "galaxy",
+      "delete-forever",
+      "hide"
+    ]
+  },
+  {
+    "id": "gold-medal",
+    "aliases": [
+      "first-place",
+      "win"
+    ]
+  },
+  {
+    "id": "crown",
+    "aliases": [
+      "vip"
+    ]
+  },
+  {
+    "id": "life-vest",
+    "aliases": [
+      "vest"
+    ]
+  },
+  {
+    "id": "sticker",
+    "aliases": [
+      "badge"
+    ]
+  },
+  {
+    "id": "infinity",
+    "aliases": [
+      "loop",
+      "boomerang"
+    ]
+  },
+  {
+    "id": "pillow-zz",
+    "aliases": [
+      "sleep",
+      "snooze"
+    ]
+  },
+  {
+    "id": "shovel",
+    "aliases": [
+      "spade",
+      "pick"
+    ]
+  },
+  {
+    "id": "test-tube-2",
+    "aliases": [
+      "test",
+      "lab",
+      "filter"
+    ]
+  },
+  {
+    "id": "bomb",
+    "aliases": [
+      "boom"
+    ]
+  },
+  {
+    "id": "medal",
+    "aliases": [
+      "trophy",
+      "badge",
+      "winner",
+      "win"
+    ]
+  },
+  {
+    "id": "test-tube",
+    "aliases": []
+  },
+  {
+    "id": "copyright",
+    "aliases": []
+  },
+  {
+    "id": "baymax",
+    "aliases": [
+      "bot",
+      "help"
+    ]
+  },
+  {
+    "id": "plugin-2",
+    "aliases": [
+      "build"
+    ]
+  },
+  {
+    "id": "burst",
+    "aliases": [
+      "pop",
+      "boom"
+    ]
+  },
+  {
+    "id": "thread",
+    "aliases": []
+  },
+  {
+    "id": "stage",
+    "aliases": [
+      "show"
+    ]
+  },
+  {
+    "id": "explosion",
+    "aliases": [
+      "boom",
+      "bang",
+      "pop"
+    ]
+  },
+  {
+    "id": "puzzle",
+    "aliases": [
+      "plugin"
+    ]
+  },
+  {
+    "id": "push-the-button",
+    "aliases": [
+      "hot",
+      "alarm"
+    ]
+  },
+  {
+    "id": "galaxy",
+    "aliases": [
+      "dark-hole"
+    ]
+  },
+  {
+    "id": "nailed-it",
+    "aliases": []
+  },
+  {
+    "id": "live-activity",
+    "aliases": [
+      "fitness"
+    ]
+  },
+  {
+    "id": "balloon",
+    "aliases": [
+      "birthday"
+    ]
+  },
+  {
+    "id": "graduate-cap-2",
+    "aliases": [
+      "study",
+      "education",
+      "academic",
+      "student"
+    ]
+  },
+  {
+    "id": "celebrate",
+    "aliases": [
+      "party",
+      "confetti"
+    ]
+  },
+  {
+    "id": "make-it-pop",
+    "aliases": [
+      "design"
+    ]
+  },
+  {
+    "id": "graduate-cap",
+    "aliases": [
+      "study",
+      "education",
+      "academic",
+      "student"
+    ]
+  },
+  {
+    "id": "plugin-1",
+    "aliases": [
+      "power",
+      "adapter"
+    ]
+  },
+  {
+    "id": "bronce-medal",
+    "aliases": [
+      "third-place"
+    ]
+  },
+  {
+    "id": "organisation",
+    "aliases": [
+      "organimgram"
+    ]
+  },
+  {
+    "id": "books",
+    "aliases": [
+      "library"
+    ]
+  },
+  {
+    "id": "pets",
+    "aliases": [
+      "paw",
+      "animal"
+    ]
+  },
+  {
+    "id": "parasol",
+    "aliases": [
+      "umbrella",
+      "vacation"
+    ]
+  },
+  {
+    "id": "warning-sign",
+    "aliases": [
+      "attention",
+      "coution"
+    ]
+  },
+  {
+    "id": "bag-3",
+    "aliases": [
+      "luggage",
+      "suitcase",
+      "work"
+    ]
+  },
+  {
+    "id": "broom",
+    "aliases": [
+      "brush",
+      "clear",
+      "clean"
+    ]
+  },
+  {
+    "id": "pilone",
+    "aliases": [
+      "maintenance"
+    ]
+  },
+  {
+    "id": "unicorn",
+    "aliases": [
+      "startup",
+      "success"
+    ]
+  },
+  {
+    "id": "deep-dive",
+    "aliases": [
+      "dive-in",
+      "fin"
+    ]
+  },
+  {
+    "id": "dumbell",
+    "aliases": [
+      "fitness",
+      "training"
+    ]
+  },
+  {
+    "id": "goat-head",
+    "aliases": [
+      "goated"
+    ]
+  },
+  {
+    "id": "curtain",
+    "aliases": [
+      "showtime",
+      "theater"
+    ]
+  },
+  {
+    "id": "suitcase-sticker",
+    "aliases": [
+      "vacation",
+      "travel"
+    ]
+  },
+  {
+    "id": "pokeball",
+    "aliases": [
+      "catch"
+    ]
+  },
+  {
+    "id": "wreath",
+    "aliases": [
+      "crown",
+      "laurel-leafs"
+    ]
+  },
+  {
+    "id": "bag",
+    "aliases": [
+      "luggage",
+      "buggage",
+      "work",
+      "suitcase"
+    ]
+  },
+  {
+    "id": "backpack",
+    "aliases": [
+      "travel"
+    ]
+  },
+  {
+    "id": "bag-2",
+    "aliases": [
+      "luggage",
+      "buggage",
+      "work",
+      "suitcase"
+    ]
+  },
+  {
+    "id": "suitcase-work",
+    "aliases": [
+      "workspace"
+    ]
+  },
+  {
+    "id": "bee",
+    "aliases": [
+      "fly"
+    ]
+  },
+  {
+    "id": "mouth",
+    "aliases": [
+      "kiss"
+    ]
+  },
+  {
+    "id": "bean",
+    "aliases": [
+      "java"
+    ]
+  },
+  {
+    "id": "social",
+    "aliases": [
+      "connection"
+    ]
+  },
+  {
+    "id": "medicine-pill",
+    "aliases": []
+  },
+  {
+    "id": "injection",
+    "aliases": []
+  },
+  {
+    "id": "footsteps",
+    "aliases": []
+  },
+  {
+    "id": "for-you",
+    "aliases": [
+      "for-me",
+      "event",
+      "address",
+      "post"
+    ]
+  },
+  {
+    "id": "treasure",
+    "aliases": [
+      "chest"
+    ]
+  },
+  {
+    "id": "medicine-tablett",
+    "aliases": [
+      "pill"
+    ]
+  },
+  {
+    "id": "peace",
+    "aliases": []
+  },
+  {
+    "id": "steering-wheel",
+    "aliases": [
+      "control",
+      "navigate",
+      "boot"
+    ]
+  },
+  {
+    "id": "judge-gavel",
+    "aliases": [
+      "legal",
+      "terms",
+      "law"
+    ]
+  },
+  {
+    "id": "medicine-pill-2",
+    "aliases": [
+      "tablett"
+    ]
+  },
+  {
+    "id": "fashion",
+    "aliases": [
+      "wear",
+      "clothes",
+      "t-shirt"
+    ]
+  },
+  {
+    "id": "thinking-bubble-1",
+    "aliases": [
+      "thoughts"
+    ]
+  },
+  {
+    "id": "waste",
+    "aliases": [
+      "trash-can"
+    ]
+  },
+  {
+    "id": "flashcards",
+    "aliases": [
+      "cards",
+      "pages"
+    ]
+  },
+  {
+    "id": "thinking-bubble-2",
+    "aliases": [
+      "thoughts"
+    ]
+  },
+  {
+    "id": "plan",
+    "aliases": [
+      "process",
+      "connect",
+      "path"
+    ]
+  },
+  {
+    "id": "wreath-simple",
+    "aliases": [
+      "laurel-leafs",
+      "winner"
+    ]
+  },
+  {
+    "id": "rocking-horse",
+    "aliases": [
+      "child",
+      "kids",
+      "toy"
+    ]
+  },
+  {
+    "id": "elements",
+    "aliases": [
+      "materials",
+      "products",
+      "tools",
+      "teams",
+      "skills",
+      "circles"
+    ]
+  },
+  {
+    "id": "building-blocks",
+    "aliases": [
+      "skills",
+      "stack"
+    ]
+  },
+  {
+    "id": "magic-lamp",
+    "aliases": [
+      "wish",
+      "agents",
+      "genie"
+    ]
+  },
+  {
+    "id": "gold",
+    "aliases": [
+      "goldbars"
+    ]
+  },
+  {
+    "id": "apps",
+    "aliases": [
+      "skills",
+      "circles"
+    ]
+  },
+  {
+    "id": "propeller",
+    "aliases": [
+      "flight",
+      "test",
+      "wind"
+    ]
+  },
+  {
+    "id": "desk-lamp",
+    "aliases": [
+      "light",
+      "study"
+    ]
+  },
+  {
+    "id": "anvil",
+    "aliases": [
+      "crafting",
+      "hard",
+      "strong"
+    ]
+  },
+  {
+    "id": "alignment-right",
+    "aliases": []
+  },
+  {
+    "id": "alignment-justify",
+    "aliases": []
+  },
+  {
+    "id": "weight",
+    "aliases": [
+      "scale"
+    ]
+  },
+  {
+    "id": "blocks",
+    "aliases": [
+      "integration",
+      "apps"
+    ]
+  },
+  {
+    "id": "fire-extinguisher",
+    "aliases": [
+      "urgent"
+    ]
+  },
+  {
+    "id": "dino",
+    "aliases": [
+      "age",
+      "old"
+    ]
+  },
+  {
+    "id": "alignment-center",
+    "aliases": []
+  },
+  {
+    "id": "disco-ball",
+    "aliases": [
+      "music",
+      "dance",
+      "party"
+    ]
+  },
+  {
+    "id": "form-pyramide",
+    "aliases": [
+      "prism"
+    ]
+  },
+  {
+    "id": "politics",
+    "aliases": [
+      "speaker",
+      "press-conference",
+      "speech"
+    ]
+  },
+  {
+    "id": "alignment-left",
+    "aliases": []
+  },
+  {
+    "id": "line-height",
+    "aliases": [
+      "spacing",
+      "eleborate"
+    ]
+  },
+  {
+    "id": "vertical-alignment-right",
+    "aliases": []
+  },
+  {
+    "id": "horizontal-alignment-top",
+    "aliases": []
+  },
+  {
+    "id": "alignment-left-bar",
+    "aliases": []
+  },
+  {
+    "id": "text-select",
+    "aliases": [
+      "lollipops"
+    ]
+  },
+  {
+    "id": "underline",
+    "aliases": []
+  },
+  {
+    "id": "italic",
+    "aliases": []
+  },
+  {
+    "id": "horizontal-alignment-bottom",
+    "aliases": []
+  },
+  {
+    "id": "vertical-alignment-left",
+    "aliases": []
+  },
+  {
+    "id": "concise",
+    "aliases": [
+      "text-shorten",
+      "squeeze"
+    ]
+  },
+  {
+    "id": "spacer",
+    "aliases": [
+      "seperator"
+    ]
+  },
+  {
+    "id": "bullet-list",
+    "aliases": []
+  },
+  {
+    "id": "strike-through",
+    "aliases": []
+  },
+  {
+    "id": "divider",
+    "aliases": [
+      "add-line"
+    ]
+  },
+  {
+    "id": "text-motion",
+    "aliases": [
+      "text-animation"
+    ]
+  },
+  {
+    "id": "remove-textstyle",
+    "aliases": []
+  },
+  {
+    "id": "horizontal-alignment-center",
+    "aliases": []
+  },
+  {
+    "id": "vertical-alignment-center",
+    "aliases": []
+  },
+  {
+    "id": "bold",
+    "aliases": []
+  },
+  {
+    "id": "text-select-dashed",
+    "aliases": [
+      "lollipops"
+    ]
+  },
+  {
+    "id": "numbered-list",
+    "aliases": []
+  },
+  {
+    "id": "text-indent-right",
+    "aliases": []
+  },
+  {
+    "id": "number-0-circle",
+    "aliases": []
+  },
+  {
+    "id": "text-block",
+    "aliases": []
+  },
+  {
+    "id": "paragraph",
+    "aliases": []
+  },
+  {
+    "id": "number-5-circle",
+    "aliases": []
+  },
+  {
+    "id": "text-2",
+    "aliases": []
+  },
+  {
+    "id": "text-indicator",
+    "aliases": []
+  },
+  {
+    "id": "number-4-circle",
+    "aliases": []
+  },
+  {
+    "id": "decimal-number-comma",
+    "aliases": []
+  },
+  {
+    "id": "numbers-01",
+    "aliases": []
+  },
+  {
+    "id": "decimal-number-dot",
+    "aliases": []
+  },
+  {
+    "id": "text-indent-left",
+    "aliases": []
+  },
+  {
+    "id": "number-1-circle",
+    "aliases": []
+  },
+  {
+    "id": "text-1",
+    "aliases": []
+  },
+  {
+    "id": "write",
+    "aliases": [
+      "edit-list",
+      "list"
+    ]
+  },
+  {
+    "id": "number-2-circle",
+    "aliases": []
+  },
+  {
+    "id": "numbers-123",
+    "aliases": []
+  },
+  {
+    "id": "text-size",
+    "aliases": []
+  },
+  {
+    "id": "number-3-circle",
+    "aliases": []
+  },
+  {
+    "id": "number-0-square",
+    "aliases": [
+      "key"
+    ]
+  },
+  {
+    "id": "number-6-square",
+    "aliases": [
+      "key"
+    ]
+  },
+  {
+    "id": "number-5-square",
+    "aliases": [
+      "key"
+    ]
+  },
+  {
+    "id": "number-8-circle",
+    "aliases": []
+  },
+  {
+    "id": "letter-a-circle",
+    "aliases": []
+  },
+  {
+    "id": "number-3-square",
+    "aliases": [
+      "key"
+    ]
+  },
+  {
+    "id": "letter-a-square",
+    "aliases": [
+      "key"
+    ]
+  },
+  {
+    "id": "number-1-square",
+    "aliases": [
+      "key"
+    ]
+  },
+  {
+    "id": "text-color",
+    "aliases": []
+  },
+  {
+    "id": "number-9-circle",
+    "aliases": []
+  },
+  {
+    "id": "number-7-circle",
+    "aliases": []
+  },
+  {
+    "id": "number-8-square",
+    "aliases": [
+      "key"
+    ]
+  },
+  {
+    "id": "number-9-square",
+    "aliases": [
+      "key"
+    ]
+  },
+  {
+    "id": "number-4-square",
+    "aliases": [
+      "key"
+    ]
+  },
+  {
+    "id": "number-7-square",
+    "aliases": [
+      "key"
+    ]
+  },
+  {
+    "id": "number-2-square",
+    "aliases": [
+      "key"
+    ]
+  },
+  {
+    "id": "letter-z-circle",
+    "aliases": []
+  },
+  {
+    "id": "letter-z-square",
+    "aliases": [
+      "key"
+    ]
+  },
+  {
+    "id": "font-style",
+    "aliases": [
+      "fonts",
+      "serif"
+    ]
+  },
+  {
+    "id": "number-6-circle",
+    "aliases": []
+  },
+  {
+    "id": "sun",
+    "aliases": [
+      "light-mode",
+      "day",
+      "today"
+    ]
+  },
+  {
+    "id": "beta",
+    "aliases": []
+  },
+  {
+    "id": "linebreak",
+    "aliases": [
+      "next-line"
+    ]
+  },
+  {
+    "id": "close-quote-2",
+    "aliases": [
+      "blockquote"
+    ]
+  },
+  {
+    "id": "auto-correct",
+    "aliases": [
+      "autocheck",
+      "text-correction"
+    ]
+  },
+  {
+    "id": "h1",
+    "aliases": [
+      "heading",
+      "headline"
+    ]
+  },
+  {
+    "id": "open-quote-2",
+    "aliases": [
+      "blockquote"
+    ]
+  },
+  {
+    "id": "alpha",
+    "aliases": []
+  },
+  {
+    "id": "translate",
+    "aliases": [
+      "language"
+    ]
+  },
+  {
+    "id": "moon",
+    "aliases": [
+      "dark-mode",
+      "night"
+    ]
+  },
+  {
+    "id": "subscript",
+    "aliases": []
+  },
+  {
+    "id": "h3",
+    "aliases": [
+      "heading",
+      "headline"
+    ]
+  },
+  {
+    "id": "omega",
+    "aliases": [
+      "special-character"
+    ]
+  },
+  {
+    "id": "open-quote-1",
+    "aliases": [
+      "blockquote"
+    ]
+  },
+  {
+    "id": "sun-low",
+    "aliases": [
+      "light-mode",
+      "day",
+      "today"
+    ]
+  },
+  {
+    "id": "superscript",
+    "aliases": []
+  },
+  {
+    "id": "sun-high",
+    "aliases": [
+      "light-mode",
+      "day",
+      "today"
+    ]
+  },
+  {
+    "id": "close-quote-1",
+    "aliases": [
+      "blockquote"
+    ]
+  },
+  {
+    "id": "h2",
+    "aliases": [
+      "heading",
+      "headline"
+    ]
+  },
+  {
+    "id": "headline",
+    "aliases": [
+      "heading"
+    ]
+  },
+  {
+    "id": "drop",
+    "aliases": [
+      "water",
+      "precipitation",
+      "liquid"
+    ]
+  },
+  {
+    "id": "sunrise",
+    "aliases": []
+  },
+  {
+    "id": "full-moon",
+    "aliases": [
+      "dark-mode",
+      "nasa"
+    ]
+  },
+  {
+    "id": "cloudy",
+    "aliases": [
+      "clouds"
+    ]
+  },
+  {
+    "id": "snow-flakes",
+    "aliases": [
+      "freeze",
+      "frozen"
+    ]
+  },
+  {
+    "id": "sunrise-arrow-up",
+    "aliases": []
+  },
+  {
+    "id": "cloud-weather",
+    "aliases": [
+      "clouds"
+    ]
+  },
+  {
+    "id": "sunset-arrow-down",
+    "aliases": []
+  },
+  {
+    "id": "wind",
+    "aliases": [
+      "windy"
+    ]
+  },
+  {
+    "id": "lightning",
+    "aliases": [
+      "zap",
+      "flash",
+      "thunder"
+    ]
+  },
+  {
+    "id": "cloudy-sun",
+    "aliases": [
+      "clouds"
+    ]
+  },
+  {
+    "id": "thermostat",
+    "aliases": [
+      "temprature"
+    ]
+  },
+  {
+    "id": "train-front-view",
+    "aliases": [
+      "tram"
+    ]
+  },
+  {
+    "id": "rainy",
+    "aliases": [
+      "rain"
+    ]
+  },
+  {
+    "id": "cloud-snow",
+    "aliases": []
+  },
+  {
+    "id": "thunder",
+    "aliases": [
+      "zap",
+      "flash"
+    ]
+  },
+  {
+    "id": "moon-star",
+    "aliases": [
+      "night"
+    ]
+  },
+  {
+    "id": "car-front-view",
+    "aliases": []
+  },
+  {
+    "id": "rainy-light",
+    "aliases": []
+  },
+  {
+    "id": "sunset",
+    "aliases": []
+  },
+  {
+    "id": "airplane",
+    "aliases": [
+      "flight"
+    ]
+  },
+  {
+    "id": "car-10",
+    "aliases": [
+      "truck"
+    ]
+  },
+  {
+    "id": "airplane-down",
+    "aliases": [
+      "landing"
+    ]
+  },
+  {
+    "id": "car-1",
+    "aliases": []
+  },
+  {
+    "id": "car-8",
+    "aliases": [
+      "mini-van"
+    ]
+  },
+  {
+    "id": "roller",
+    "aliases": [
+      "scooter"
+    ]
+  },
+  {
+    "id": "car-8-ev",
+    "aliases": [
+      "mini-van"
+    ]
+  },
+  {
+    "id": "car-1-ev",
+    "aliases": []
+  },
+  {
+    "id": "ufo",
+    "aliases": [
+      "beam"
+    ]
+  },
+  {
+    "id": "mountain-bike",
+    "aliases": []
+  },
+  {
+    "id": "bus",
+    "aliases": [
+      "school-bus"
+    ]
+  },
+  {
+    "id": "car-9",
+    "aliases": [
+      "van"
+    ]
+  },
+  {
+    "id": "car-10-ev",
+    "aliases": [
+      "truck"
+    ]
+  },
+  {
+    "id": "car-7-ev",
+    "aliases": [
+      "pickup"
+    ]
+  },
+  {
+    "id": "bike",
+    "aliases": []
+  },
+  {
+    "id": "rocket",
+    "aliases": [
+      "startup",
+      "launch"
+    ]
+  },
+  {
+    "id": "car-9-ev",
+    "aliases": [
+      "van"
+    ]
+  },
+  {
+    "id": "delivery-bike",
+    "aliases": []
+  },
+  {
+    "id": "car-7",
+    "aliases": [
+      "pickup"
+    ]
+  },
+  {
+    "id": "airplane-up",
+    "aliases": [
+      "takeoff"
+    ]
+  },
+  {
+    "id": "car-2-ev",
+    "aliases": []
+  },
+  {
+    "id": "car-4",
+    "aliases": []
+  },
+  {
+    "id": "email-2",
+    "aliases": [
+      "envelope"
+    ]
+  },
+  {
+    "id": "truck",
+    "aliases": [
+      "delivery"
+    ]
+  },
+  {
+    "id": "car-3",
+    "aliases": []
+  },
+  {
+    "id": "email-settings",
+    "aliases": [
+      "envelope",
+      "gear"
+    ]
+  },
+  {
+    "id": "car-3-ev",
+    "aliases": []
+  },
+  {
+    "id": "car-2",
+    "aliases": []
+  },
+  {
+    "id": "car-6-ev",
+    "aliases": []
+  },
+  {
+    "id": "car-5",
+    "aliases": []
+  },
+  {
+    "id": "email-3",
+    "aliases": [
+      "envelope"
+    ]
+  },
+  {
+    "id": "boat",
+    "aliases": [
+      "ship",
+      "sailing"
+    ]
+  },
+  {
+    "id": "steering-wheel-2",
+    "aliases": [
+      "autopilot",
+      "drive"
+    ]
+  },
+  {
+    "id": "fast-shipping",
+    "aliases": [
+      "truck",
+      "delivery"
+    ]
+  },
+  {
+    "id": "shipping",
+    "aliases": [
+      "truck",
+      "delivery"
+    ]
+  },
+  {
+    "id": "car-5-ev",
+    "aliases": []
+  },
+  {
+    "id": "car-4-ev",
+    "aliases": []
+  },
+  {
+    "id": "email-plus",
+    "aliases": [
+      "envelope",
+      "add",
+      "plus"
+    ]
+  },
+  {
+    "id": "email-1",
+    "aliases": [
+      "envelope"
+    ]
+  },
+  {
+    "id": "car-6",
+    "aliases": []
+  },
+  {
+    "id": "email-notification",
+    "aliases": [
+      "badge",
+      "envelope"
+    ]
+  },
+  {
+    "id": "bubble-annotation-4",
+    "aliases": [
+      "message",
+      "chat"
+    ]
+  },
+  {
+    "id": "bubble-2",
+    "aliases": [
+      "message",
+      "chat"
+    ]
+  },
+  {
+    "id": "postcard-1",
+    "aliases": [
+      "address"
+    ]
+  },
+  {
+    "id": "bubble-5",
+    "aliases": [
+      "message",
+      "chat"
+    ]
+  },
+  {
+    "id": "bubble-text-6",
+    "aliases": [
+      "message",
+      "chat"
+    ]
+  },
+  {
+    "id": "bubble-wide",
+    "aliases": [
+      "message",
+      "chat"
+    ]
+  },
+  {
+    "id": "bubble-annotation-3",
+    "aliases": [
+      "message",
+      "chat"
+    ]
+  },
+  {
+    "id": "bubble-annotation-2",
+    "aliases": [
+      "message",
+      "chat"
+    ]
+  },
+  {
+    "id": "bubble-3",
+    "aliases": [
+      "message",
+      "chat"
+    ]
+  },
+  {
+    "id": "bubble-annotation-6",
+    "aliases": [
+      "message",
+      "chat"
+    ]
+  },
+  {
+    "id": "postcard-2",
+    "aliases": [
+      "address"
+    ]
+  },
+  {
+    "id": "bubble-quotes",
+    "aliases": []
+  },
+  {
+    "id": "bubbles",
+    "aliases": [
+      "messages",
+      "chat",
+      "communicate"
+    ]
+  },
+  {
+    "id": "chat-bubble-7",
+    "aliases": []
+  },
+  {
+    "id": "bubble-4",
+    "aliases": [
+      "message",
+      "chat"
+    ]
+  },
+  {
+    "id": "chat-bubbles",
+    "aliases": []
+  },
+  {
+    "id": "bubble-annotation-5",
+    "aliases": [
+      "message",
+      "chat"
+    ]
+  },
+  {
+    "id": "bubble-6",
+    "aliases": [
+      "message",
+      "chat"
+    ]
+  },
+  {
+    "id": "invite",
+    "aliases": [
+      "briefing"
+    ]
+  },
+  {
+    "id": "call-incoming",
+    "aliases": [
+      "phone"
+    ]
+  },
+  {
+    "id": "voice-and-video",
+    "aliases": [
+      "media"
+    ]
+  },
+  {
+    "id": "bubble-wide-notification",
+    "aliases": [
+      "badge",
+      "message",
+      "chat"
+    ]
+  },
+  {
+    "id": "bubble-alert",
+    "aliases": [
+      "comment",
+      "feedback"
+    ]
+  },
+  {
+    "id": "bubble-crossed",
+    "aliases": [
+      "comment",
+      "feedback"
+    ]
+  },
+  {
+    "id": "paper-plane",
+    "aliases": [
+      "send"
+    ]
+  },
+  {
+    "id": "paper-plane-top-right",
+    "aliases": [
+      "send"
+    ]
+  },
+  {
+    "id": "bubble-heart",
+    "aliases": [
+      "comment",
+      "feedback"
+    ]
+  },
+  {
+    "id": "call-cancel",
+    "aliases": [
+      "phone"
+    ]
+  },
+  {
+    "id": "bubble-check",
+    "aliases": [
+      "comment",
+      "feedback"
+    ]
+  },
+  {
+    "id": "call",
+    "aliases": [
+      "phone"
+    ]
+  },
+  {
+    "id": "telephone",
+    "aliases": [
+      "phone",
+      "contact"
+    ]
+  },
+  {
+    "id": "bubble-wide-annotation",
+    "aliases": [
+      "message",
+      "chat"
+    ]
+  },
+  {
+    "id": "bubble-info",
+    "aliases": [
+      "comment",
+      "feedback"
+    ]
+  },
+  {
+    "id": "bubble-plus",
+    "aliases": [
+      "comment",
+      "feedback"
+    ]
+  },
+  {
+    "id": "bubble-question",
+    "aliases": [
+      "comment",
+      "feedback"
+    ]
+  },
+  {
+    "id": "call-outgoing",
+    "aliases": [
+      "phone"
+    ]
+  },
+  {
+    "id": "bubble-dots",
+    "aliases": [
+      "comment",
+      "feedback"
+    ]
+  },
+  {
+    "id": "bubble-sparkle",
+    "aliases": [
+      "comment",
+      "feedback"
+    ]
+  },
+  {
+    "id": "bubble-text",
+    "aliases": [
+      "comment",
+      "feedback"
+    ]
+  },
+  {
+    "id": "cloud-off-2",
+    "aliases": [
+      "offline"
+    ]
+  },
+  {
+    "id": "cloud-simple-download",
+    "aliases": []
+  },
+  {
+    "id": "cloud-sync",
+    "aliases": []
+  },
+  {
+    "id": "cloud-simple",
+    "aliases": []
+  },
+  {
+    "id": "reference",
+    "aliases": [
+      "books",
+      "study",
+      "library",
+      "knowledge"
+    ]
+  },
+  {
+    "id": "newspaper-3",
+    "aliases": []
+  },
+  {
+    "id": "newspaper-2",
+    "aliases": [
+      "guide",
+      "info",
+      "faq",
+      "book"
+    ]
+  },
+  {
+    "id": "cloud",
+    "aliases": []
+  },
+  {
+    "id": "cloud-download",
+    "aliases": []
+  },
+  {
+    "id": "cloud-api",
+    "aliases": [
+      "cloud-network"
+    ]
+  },
+  {
+    "id": "book",
+    "aliases": [
+      "guide",
+      "info",
+      "faq"
+    ]
+  },
+  {
+    "id": "cloud-upload",
+    "aliases": []
+  },
+  {
+    "id": "newspaper-1",
+    "aliases": [
+      "guide",
+      "info",
+      "faq",
+      "book"
+    ]
+  },
+  {
+    "id": "cloud-check",
+    "aliases": [
+      "save"
+    ]
+  },
+  {
+    "id": "home-round-door",
+    "aliases": []
+  },
+  {
+    "id": "newspaper",
+    "aliases": [
+      "News",
+      "paper"
+    ]
+  },
+  {
+    "id": "cloud-simple-upload",
+    "aliases": []
+  },
+  {
+    "id": "cloud-off",
+    "aliases": [
+      "offline"
+    ]
+  },
+  {
+    "id": "cloud-simple-disconnected",
+    "aliases": []
+  },
+  {
+    "id": "book-simple",
+    "aliases": [
+      "guide",
+      "info",
+      "faq"
+    ]
+  },
+  {
+    "id": "store-2",
+    "aliases": []
+  },
+  {
+    "id": "store-1",
+    "aliases": []
+  },
+  {
+    "id": "mall",
+    "aliases": [
+      "store",
+      "shop",
+      "business"
+    ]
+  },
+  {
+    "id": "home-line",
+    "aliases": []
+  },
+  {
+    "id": "store-4",
+    "aliases": [
+      "shop",
+      "business"
+    ]
+  },
+  {
+    "id": "block",
+    "aliases": [
+      "workspace"
+    ]
+  },
+  {
+    "id": "stores",
+    "aliases": [
+      "shops",
+      "mall"
+    ]
+  },
+  {
+    "id": "home-roof",
+    "aliases": [
+      "house"
+    ]
+  },
+  {
+    "id": "home-door",
+    "aliases": [
+      "house"
+    ]
+  },
+  {
+    "id": "home-circle",
+    "aliases": []
+  },
+  {
+    "id": "home-open",
+    "aliases": [
+      "house"
+    ]
+  },
+  {
+    "id": "government",
+    "aliases": [
+      "bank",
+      "building"
+    ]
+  },
+  {
+    "id": "court",
+    "aliases": [
+      "library",
+      "gov"
+    ]
+  },
+  {
+    "id": "store-3",
+    "aliases": []
+  },
+  {
+    "id": "bank",
+    "aliases": [
+      "library",
+      "gov"
+    ]
+  },
+  {
+    "id": "garage",
+    "aliases": []
+  },
+  {
+    "id": "buildings",
+    "aliases": [
+      "company",
+      "workspace"
+    ]
+  },
+  {
+    "id": "home-personal-feed",
+    "aliases": [
+      "for-you"
+    ]
+  },
+  {
+    "id": "bank-2",
+    "aliases": [
+      "library",
+      "gov"
+    ]
+  },
+  {
+    "id": "home",
+    "aliases": [
+      "house"
+    ]
+  },
+  {
+    "id": "school",
+    "aliases": [
+      "building"
+    ]
+  },
+  {
+    "id": "vision-pro",
+    "aliases": [
+      "goggles"
+    ]
+  },
+  {
+    "id": "door",
+    "aliases": [
+      "login",
+      "logout"
+    ]
+  },
+  {
+    "id": "ar",
+    "aliases": [
+      "augmented-reality",
+      "card-box",
+      "3d",
+      "virtual reality",
+      "VR"
+    ]
+  },
+  {
+    "id": "oculus",
+    "aliases": []
+  },
+  {
+    "id": "3d-sphere",
+    "aliases": []
+  },
+  {
+    "id": "spatial-capture",
+    "aliases": []
+  },
+  {
+    "id": "tower",
+    "aliases": [
+      "terminal"
+    ]
+  },
+  {
+    "id": "cmd",
+    "aliases": [
+      "command",
+      "apple",
+      "key"
+    ]
+  },
+  {
+    "id": "ar-cube-3",
+    "aliases": []
+  },
+  {
+    "id": "golden-gate-bridge",
+    "aliases": [
+      "silicon-valley",
+      "sf"
+    ]
+  },
+  {
+    "id": "panorama-view",
+    "aliases": []
+  },
+  {
+    "id": "vision-pro-app",
+    "aliases": [
+      "window"
+    ]
+  },
+  {
+    "id": "3d-box-bottom",
+    "aliases": [
+      "shaders",
+      "model",
+      "room"
+    ]
+  },
+  {
+    "id": "around",
+    "aliases": [
+      "spatial"
+    ]
+  },
+  {
+    "id": "rotate",
+    "aliases": [
+      "rotation",
+      "x-axis"
+    ]
+  },
+  {
+    "id": "3d-box-top",
+    "aliases": [
+      "shaders",
+      "model",
+      "cube",
+      "ar"
+    ]
+  },
+  {
+    "id": "ar-scan-cube-2",
+    "aliases": []
+  },
+  {
+    "id": "qm3",
+    "aliases": [
+      "room",
+      "transform",
+      "xyz",
+      "3d"
+    ]
+  },
+  {
+    "id": "ar-scan-cube-1",
+    "aliases": []
+  },
+  {
+    "id": "control-key-right",
+    "aliases": []
+  },
+  {
+    "id": "esc",
+    "aliases": [
+      "power"
+    ]
+  },
+  {
+    "id": "opt-alt",
+    "aliases": [
+      "option alt",
+      "key"
+    ]
+  },
+  {
+    "id": "spacebar",
+    "aliases": []
+  },
+  {
+    "id": "hashtag",
+    "aliases": [
+      "#"
+    ]
+  },
+  {
+    "id": "rose",
+    "aliases": [
+      "flower",
+      "romance",
+      "love"
+    ]
+  },
+  {
+    "id": "exposure-2",
+    "aliases": [
+      "macro",
+      "flower"
+    ]
+  },
+  {
+    "id": "tree",
+    "aliases": []
+  },
+  {
+    "id": "blossom",
+    "aliases": [
+      "flower",
+      "growing"
+    ]
+  },
+  {
+    "id": "at",
+    "aliases": [
+      "handle",
+      "@"
+    ]
+  },
+  {
+    "id": "option-key",
+    "aliases": []
+  },
+  {
+    "id": "backward",
+    "aliases": [
+      "delete",
+      "remove",
+      "key"
+    ]
+  },
+  {
+    "id": "park",
+    "aliases": [
+      "tree",
+      "nature"
+    ]
+  },
+  {
+    "id": "shift",
+    "aliases": []
+  },
+  {
+    "id": "control-key-left",
+    "aliases": []
+  },
+  {
+    "id": "cmd-box",
+    "aliases": [
+      "command",
+      "apple",
+      "key"
+    ]
+  },
+  {
+    "id": "shortcut",
+    "aliases": [
+      "hotkey",
+      "powerkey",
+      "skill"
+    ]
+  },
+  {
+    "id": "opt",
+    "aliases": [
+      "option",
+      "key"
+    ]
+  },
+  {
+    "id": "run-shortcut",
+    "aliases": [
+      "slash",
+      "skills"
+    ]
+  },
+  {
+    "id": "growth",
+    "aliases": [
+      "grow",
+      "leafs"
+    ]
+  },
+  {
+    "id": "rainbow",
+    "aliases": []
+  },
+  {
+    "id": "atom",
+    "aliases": []
+  },
+  {
+    "id": "sparkles-three",
+    "aliases": [
+      "ai 3 stars",
+      "sparkles",
+      "✨"
+    ]
+  },
+  {
+    "id": "grass",
+    "aliases": [
+      "logout",
+      "signout"
+    ]
+  },
+  {
+    "id": "imagine",
+    "aliases": [
+      "head",
+      "thinking"
+    ]
+  },
+  {
+    "id": "wind-power",
+    "aliases": [
+      "electric-current",
+      "power",
+      "green-energy"
+    ]
+  },
+  {
+    "id": "drilling-rig",
+    "aliases": [
+      "oil",
+      "gas"
+    ]
+  },
+  {
+    "id": "sparkle-central",
+    "aliases": [
+      "star",
+      "magic",
+      "ai"
+    ]
+  },
+  {
+    "id": "solar",
+    "aliases": []
+  },
+  {
+    "id": "solar-panel",
+    "aliases": [
+      "Photovoltaics",
+      "energy",
+      "electricity"
+    ]
+  },
+  {
+    "id": "green-power",
+    "aliases": [
+      "green-energy"
+    ]
+  },
+  {
+    "id": "imagine-head",
+    "aliases": [
+      "thinking",
+      "ai"
+    ]
+  },
+  {
+    "id": "home-energy-2",
+    "aliases": [
+      "electric-current",
+      "power"
+    ]
+  },
+  {
+    "id": "nuclear-power-plant",
+    "aliases": [
+      "radiation"
+    ]
+  },
+  {
+    "id": "home-energy",
+    "aliases": [
+      "electric current",
+      "power"
+    ]
+  },
+  {
+    "id": "pumpjack",
+    "aliases": [
+      "oil"
+    ]
+  },
+  {
+    "id": "power-plant",
+    "aliases": [
+      "coal",
+      "gas",
+      "factory"
+    ]
+  },
+  {
+    "id": "sparkles-two-2",
+    "aliases": [
+      "ai 2 stars",
+      "sparkles",
+      "✨"
+    ]
+  },
+  {
+    "id": "sparkles-two",
+    "aliases": [
+      "ai 2 stars",
+      "sparkles",
+      "✨"
+    ]
+  },
+  {
+    "id": "charging-station",
+    "aliases": [
+      "electric-current",
+      "power",
+      "e-charge"
+    ]
+  },
+  {
+    "id": "sparkle-hightlight",
+    "aliases": [
+      "special",
+      "ai",
+      "magic"
+    ]
+  },
+  {
+    "id": "star-wand",
+    "aliases": [
+      "magic"
+    ]
+  },
+  {
+    "id": "sparkles-soft",
+    "aliases": []
+  },
+  {
+    "id": "search-intelligence",
+    "aliases": [
+      "search-ai"
+    ]
+  },
+  {
+    "id": "visual-intelligence",
+    "aliases": []
+  },
+  {
+    "id": "eye-sparkle",
+    "aliases": [
+      "magic eyes"
+    ]
+  },
+  {
+    "id": "magic-wand-2",
+    "aliases": [
+      "magic stick",
+      "star"
+    ]
+  },
+  {
+    "id": "magic-wand-3",
+    "aliases": [
+      "magic stick",
+      "star"
+    ]
+  },
+  {
+    "id": "list-sparkle",
+    "aliases": [
+      "ai text",
+      "text generation"
+    ]
+  },
+  {
+    "id": "magic-wand",
+    "aliases": [
+      "magic stick",
+      "star"
+    ]
+  },
+  {
+    "id": "sparkle-3",
+    "aliases": [
+      "ai",
+      "star",
+      "magic"
+    ]
+  },
+  {
+    "id": "sparkle-2",
+    "aliases": [
+      "star",
+      "magic",
+      "ai"
+    ]
+  },
+  {
+    "id": "window-sparkle",
+    "aliases": [
+      "whisper",
+      "api",
+      "app",
+      "software"
+    ]
+  },
+  {
+    "id": "sparkles-3-bold",
+    "aliases": [
+      "ai",
+      "magic"
+    ]
+  },
+  {
+    "id": "image-sparkle",
+    "aliases": [
+      "midjourney",
+      "ai generated",
+      "star"
+    ]
+  },
+  {
+    "id": "sparkle",
+    "aliases": [
+      "star",
+      "ai"
+    ]
+  },
+  {
+    "id": "prompt-2",
+    "aliases": [
+      "scan-text"
+    ]
+  },
+  {
+    "id": "sparkles-2-bold",
+    "aliases": [
+      "ai",
+      "magic"
+    ]
+  },
+  {
+    "id": "imagine-ai",
+    "aliases": [
+      "cube",
+      "room",
+      "3d",
+      "opject",
+      "vector"
+    ]
+  },
+  {
+    "id": "prompt",
+    "aliases": [
+      "vibe-designing",
+      "box-sparkle"
+    ]
+  },
+  {
+    "id": "brain-2",
+    "aliases": [
+      "ai",
+      "thinking",
+      "database",
+      "ki"
+    ]
+  },
+  {
+    "id": "brain-1",
+    "aliases": [
+      "ai",
+      "thinking",
+      "database",
+      "ki"
+    ]
+  },
+  {
+    "id": "magic-book",
+    "aliases": [
+      "magician",
+      "sparkles"
+    ]
+  },
+  {
+    "id": "magic-edit",
+    "aliases": [
+      "magic-writing",
+      "prompts"
+    ]
+  },
+  {
+    "id": "prompt-text-to-video",
+    "aliases": []
+  },
+  {
+    "id": "broom-sparkle",
+    "aliases": [
+      "clean",
+      "brush"
+    ]
+  },
+  {
+    "id": "ai-translate",
+    "aliases": [
+      "language",
+      "auto-translate"
+    ]
+  },
+  {
+    "id": "separate-video-voice",
+    "aliases": [
+      "video-audio"
+    ]
+  },
+  {
+    "id": "voice-circle",
+    "aliases": [
+      "waves"
+    ]
+  },
+  {
+    "id": "image-avatar-sparkle",
+    "aliases": [
+      "generated avatar",
+      "profile ai",
+      "magic avatar"
+    ]
+  },
+  {
+    "id": "voice-sparkle",
+    "aliases": [
+      "ai",
+      "sound"
+    ]
+  },
+  {
+    "id": "text-to-speach",
+    "aliases": [
+      "text-to-voice"
+    ]
+  },
+  {
+    "id": "text-to-image-sparkles",
+    "aliases": []
+  },
+  {
+    "id": "prompt-text-to-image",
+    "aliases": []
+  },
+  {
+    "id": "live-voice-translate",
+    "aliases": []
+  },
+  {
+    "id": "prompt-suggestion",
+    "aliases": [
+      "auto-prompt"
+    ]
+  },
+  {
+    "id": "speach-to-text",
+    "aliases": [
+      "voice-to-text"
+    ]
+  },
+  {
+    "id": "switch-voice",
+    "aliases": [
+      "change-voice"
+    ]
+  },
+  {
+    "id": "pencil-sparkle",
+    "aliases": [
+      "magic pencil",
+      "magic brush"
+    ]
+  },
+  {
+    "id": "voice-2",
+    "aliases": [
+      "siri",
+      "wave"
+    ]
+  },
+  {
+    "id": "fortune-teller-ball",
+    "aliases": [
+      "future"
+    ]
+  },
+  {
+    "id": "apple-intelligence-icon",
+    "aliases": [
+      "ai",
+      "tools"
+    ]
+  },
+  {
+    "id": "clipboard-2-sparkle",
+    "aliases": [
+      "copy",
+      "list",
+      "auto-fill",
+      "form-fill"
+    ]
+  },
+  {
+    "id": "hat-bunny",
+    "aliases": [
+      "surprise",
+      "magic hat"
+    ]
+  },
+  {
+    "id": "images-sparkle",
+    "aliases": [
+      "photos",
+      "pictures",
+      "shot",
+      "generate"
+    ]
+  },
+  {
+    "id": "bag-2-sparkle",
+    "aliases": [
+      "shopping",
+      "add",
+      "plus"
+    ]
+  },
+  {
+    "id": "location-sparkle",
+    "aliases": [
+      "map",
+      "route"
+    ]
+  },
+  {
+    "id": "wizard-hat",
+    "aliases": [
+      "magician",
+      "fantasy"
+    ]
+  },
+  {
+    "id": "cloudy-sparkle",
+    "aliases": [
+      "clouds"
+    ]
+  },
+  {
+    "id": "robot",
+    "aliases": []
+  },
+  {
+    "id": "microphone-sparkle",
+    "aliases": [
+      "mic",
+      "sound",
+      "podcast"
+    ]
+  },
+  {
+    "id": "hat-sparkle",
+    "aliases": [
+      "magic hat"
+    ]
+  },
+  {
+    "id": "cursor-ai",
+    "aliases": [
+      "agent",
+      "magic"
+    ]
+  },
+  {
+    "id": "search-lines-sparkle",
+    "aliases": [
+      "magnifier",
+      "document",
+      "list",
+      "page",
+      "file"
+    ]
+  },
+  {
+    "id": "box-sparkle",
+    "aliases": [
+      "magic box"
+    ]
+  },
+  {
+    "id": "cute-robot",
+    "aliases": []
+  },
+  {
+    "id": "email-1-sparkle",
+    "aliases": [
+      "envelope"
+    ]
+  },
+  {
+    "id": "console-sparkle",
+    "aliases": [
+      "Terminal"
+    ]
+  },
+  {
+    "id": "bubble-wide-sparkle",
+    "aliases": [
+      "message",
+      "chat"
+    ]
+  },
+  {
+    "id": "camera-sparkle",
+    "aliases": [
+      "picture",
+      "image",
+      "cam"
+    ]
+  },
+  {
+    "id": "calender-sparkle",
+    "aliases": [
+      "date",
+      "plan"
+    ]
+  },
+  {
+    "id": "folder-sparkle",
+    "aliases": [
+      "plus"
+    ]
+  },
+  {
+    "id": "ai-tokens",
+    "aliases": [
+      "credits"
+    ]
+  },
+  {
+    "id": "claw",
+    "aliases": [
+      "openclaw",
+      "ai",
+      "qclaw"
+    ]
+  },
+  {
+    "id": "calendar-tear-off",
+    "aliases": [
+      "date"
+    ]
+  },
+  {
+    "id": "scan-text-sparkle",
+    "aliases": [
+      "scan",
+      "arrows-all-sides",
+      "focus",
+      "list"
+    ]
+  },
+  {
+    "id": "file-sparkle",
+    "aliases": [
+      "document",
+      "locked",
+      "password"
+    ]
+  },
+  {
+    "id": "receiption-bell-sparkle",
+    "aliases": [
+      "ai-concierge",
+      "ai-assistant"
+    ]
+  },
+  {
+    "id": "auto-crop",
+    "aliases": [
+      "ai-crop"
+    ]
+  },
+  {
+    "id": "calendar-edit",
+    "aliases": [
+      "date-edit"
+    ]
+  },
+  {
+    "id": "calendar-search",
+    "aliases": [
+      "date-search"
+    ]
+  },
+  {
+    "id": "calendar-check",
+    "aliases": [
+      "date-check"
+    ]
+  },
+  {
+    "id": "calender-remove",
+    "aliases": [
+      "date-remove"
+    ]
+  },
+  {
+    "id": "lightbulb-sparkle",
+    "aliases": [
+      "idea",
+      "reasoning",
+      "think"
+    ]
+  },
+  {
+    "id": "bubble-sparkle-2",
+    "aliases": [
+      "message",
+      "like",
+      "heart"
+    ]
+  },
+  {
+    "id": "calender-add",
+    "aliases": [
+      "date-add"
+    ]
+  },
+  {
+    "id": "calendar-repeat",
+    "aliases": [
+      "date-repeat"
+    ]
+  },
+  {
+    "id": "calendar-2",
+    "aliases": [
+      "date"
+    ]
+  },
+  {
+    "id": "calendar-1",
+    "aliases": [
+      "date"
+    ]
+  },
+  {
+    "id": "script-ai",
+    "aliases": [
+      "paper",
+      "page",
+      "contract",
+      "file",
+      "document",
+      "skills"
+    ]
+  },
+  {
+    "id": "clock-square",
+    "aliases": [
+      "time",
+      "timer"
+    ]
+  },
+  {
+    "id": "calender-5",
+    "aliases": [
+      "date"
+    ]
+  },
+  {
+    "id": "calendar-4",
+    "aliases": [
+      "date"
+    ]
+  },
+  {
+    "id": "calendar-clock",
+    "aliases": [
+      "date-time"
+    ]
+  },
+  {
+    "id": "calender-today",
+    "aliases": []
+  },
+  {
+    "id": "clock-snooze",
+    "aliases": [
+      "timer",
+      "snooze",
+      "zz"
+    ]
+  },
+  {
+    "id": "clock",
+    "aliases": [
+      "time",
+      "timer"
+    ]
+  },
+  {
+    "id": "clock-9-o-clock",
+    "aliases": [
+      "time",
+      "9-00"
+    ]
+  },
+  {
+    "id": "clock-3-o-clock",
+    "aliases": [
+      "time",
+      "3-00"
+    ]
+  },
+  {
+    "id": "calendar-add-4",
+    "aliases": []
+  },
+  {
+    "id": "calender-next-week",
+    "aliases": []
+  },
+  {
+    "id": "calendar-search-4",
+    "aliases": []
+  },
+  {
+    "id": "calendar-3",
+    "aliases": [
+      "date"
+    ]
+  },
+  {
+    "id": "calender-tomorrow",
+    "aliases": []
+  },
+  {
+    "id": "calendar-check-4",
+    "aliases": []
+  },
+  {
+    "id": "history",
+    "aliases": [
+      "back",
+      "timeline"
+    ]
+  },
+  {
+    "id": "calendar-days",
+    "aliases": []
+  },
+  {
+    "id": "clock-alert",
+    "aliases": [
+      "timer"
+    ]
+  },
+  {
+    "id": "calendar-remove-4",
+    "aliases": []
+  },
+  {
+    "id": "calendar-clock-4",
+    "aliases": []
+  },
+  {
+    "id": "stopwatch",
+    "aliases": [
+      "track"
+    ]
+  },
+  {
+    "id": "thumb-up-curved",
+    "aliases": []
+  },
+  {
+    "id": "raising-hand-4-finger",
+    "aliases": [
+      "hey",
+      "hello"
+    ]
+  },
+  {
+    "id": "date-weekly",
+    "aliases": []
+  },
+  {
+    "id": "hand-4-finger",
+    "aliases": [
+      "select"
+    ]
+  },
+  {
+    "id": "sleep",
+    "aliases": [
+      "snooze",
+      "zzz"
+    ]
+  },
+  {
+    "id": "thumb-down-curved",
+    "aliases": []
+  },
+  {
+    "id": "date-weekdays",
+    "aliases": []
+  },
+  {
+    "id": "send-later",
+    "aliases": [
+      "timeslot",
+      "clock"
+    ]
+  },
+  {
+    "id": "date-yearly",
+    "aliases": [
+      "fireworks",
+      "new-year"
+    ]
+  },
+  {
+    "id": "hourglass-2",
+    "aliases": [
+      "time"
+    ]
+  },
+  {
+    "id": "date-monthly",
+    "aliases": []
+  },
+  {
+    "id": "thumbs-up",
+    "aliases": [
+      "thumb",
+      "hand",
+      "yes",
+      "pro"
+    ]
+  },
+  {
+    "id": "date-daily",
+    "aliases": []
+  },
+  {
+    "id": "thumbs-down",
+    "aliases": [
+      "thumb",
+      "hand",
+      "no",
+      "contra"
+    ]
+  },
+  {
+    "id": "hourglass",
+    "aliases": []
+  },
+  {
+    "id": "date-custom",
+    "aliases": []
+  },
+  {
+    "id": "time-flies",
+    "aliases": [
+      "speed"
+    ]
+  },
+  {
+    "id": "blip",
+    "aliases": [
+      "flick",
+      "snip",
+      "snap",
+      "easy",
+      "thanos"
+    ]
+  },
+  {
+    "id": "timeslot",
+    "aliases": [
+      "time",
+      "clock"
+    ]
+  },
+  {
+    "id": "content-container",
+    "aliases": []
+  },
+  {
+    "id": "beceps-left-arm",
+    "aliases": [
+      "strong",
+      "flex",
+      "power"
+    ]
+  },
+  {
+    "id": "raising-hand-5-finger",
+    "aliases": [
+      "hey",
+      "hello",
+      "high-five"
+    ]
+  },
+  {
+    "id": "touch-grass",
+    "aliases": [
+      "nature",
+      "logout"
+    ]
+  },
+  {
+    "id": "touch",
+    "aliases": [
+      "tab",
+      "click"
+    ]
+  },
+  {
+    "id": "shaka-1",
+    "aliases": [
+      "call me",
+      "hang-ten"
+    ]
+  },
+  {
+    "id": "money-hand",
+    "aliases": [
+      "coins",
+      "pay"
+    ]
+  },
+  {
+    "id": "pinch",
+    "aliases": []
+  },
+  {
+    "id": "magic-hands",
+    "aliases": [
+      "rainbow-hands"
+    ]
+  },
+  {
+    "id": "human-mashine",
+    "aliases": [
+      "high-five",
+      "ai",
+      "hands"
+    ]
+  },
+  {
+    "id": "bookmark-check",
+    "aliases": [
+      "add",
+      "check"
+    ]
+  },
+  {
+    "id": "pointer",
+    "aliases": [
+      "hand"
+    ]
+  },
+  {
+    "id": "shaka-2",
+    "aliases": [
+      "call me",
+      "hang-ten"
+    ]
+  },
+  {
+    "id": "hand-5-finger",
+    "aliases": [
+      "select"
+    ]
+  },
+  {
+    "id": "fistbump",
+    "aliases": [
+      "boom",
+      "hands",
+      "friends"
+    ]
+  },
+  {
+    "id": "bookmark-plus",
+    "aliases": [
+      "banner",
+      "flag",
+      "tag"
+    ]
+  },
+  {
+    "id": "beceps-right-arm",
+    "aliases": [
+      "strong",
+      "flex",
+      "power"
+    ]
+  },
+  {
+    "id": "bookmark-remove",
+    "aliases": [
+      "off"
+    ]
+  },
+  {
+    "id": "handshake",
+    "aliases": [
+      "heart"
+    ]
+  },
+  {
+    "id": "bookmark-delete",
+    "aliases": [
+      "remove",
+      "banner",
+      "flag",
+      "tag",
+      "x"
+    ]
+  },
+  {
+    "id": "bell-check",
+    "aliases": [
+      "notification alarm",
+      "activity",
+      "alert"
+    ]
+  },
+  {
+    "id": "hand-bell",
+    "aliases": []
+  },
+  {
+    "id": "box-2-alt-fill",
+    "aliases": [
+      "inbox",
+      "archive",
+      "tray",
+      "shelf"
+    ]
+  },
+  {
+    "id": "search-menu",
+    "aliases": [
+      "list-search"
+    ]
+  },
+  {
+    "id": "bell-off",
+    "aliases": [
+      "notification off",
+      "activity",
+      "alert"
+    ]
+  },
+  {
+    "id": "bell",
+    "aliases": [
+      "notification",
+      "activity",
+      "alert"
+    ]
+  },
+  {
+    "id": "bell-2",
+    "aliases": [
+      "notification",
+      "activity",
+      "alert"
+    ]
+  },
+  {
+    "id": "zoom-in",
+    "aliases": [
+      "search-plus"
+    ]
+  },
+  {
+    "id": "search-options",
+    "aliases": [
+      "settings"
+    ]
+  },
+  {
+    "id": "archive-1",
+    "aliases": [
+      "inbox",
+      "file"
+    ]
+  },
+  {
+    "id": "zoom-out",
+    "aliases": [
+      "search-minus"
+    ]
+  },
+  {
+    "id": "archive-junk",
+    "aliases": []
+  },
+  {
+    "id": "bell-2-snooze",
+    "aliases": [
+      "notification",
+      "activity",
+      "alert"
+    ]
+  },
+  {
+    "id": "box-2",
+    "aliases": [
+      "inbox",
+      "archive",
+      "tray",
+      "shelf"
+    ]
+  },
+  {
+    "id": "deep-search",
+    "aliases": [
+      "deep-research",
+      "focus-search"
+    ]
+  },
+  {
+    "id": "magnifying-glass-2",
+    "aliases": [
+      "search"
+    ]
+  },
+  {
+    "id": "quick-search",
+    "aliases": [
+      "quick-menu",
+      "command-k"
+    ]
+  },
+  {
+    "id": "unarchiv",
+    "aliases": [
+      "unbox"
+    ]
+  },
+  {
+    "id": "preview",
+    "aliases": [
+      "details"
+    ]
+  },
+  {
+    "id": "magnifying-glass",
+    "aliases": [
+      "search"
+    ]
+  },
+  {
+    "id": "square-behind-square-1",
+    "aliases": [
+      "copy 1",
+      "layers",
+      "pages"
+    ]
+  },
+  {
+    "id": "bucket",
+    "aliases": [
+      "trash",
+      "can"
+    ]
+  },
+  {
+    "id": "trash-can-simple",
+    "aliases": [
+      "delete",
+      "remove",
+      "garbage",
+      "waste"
+    ]
+  },
+  {
+    "id": "shredder",
+    "aliases": [
+      "permanently"
+    ]
+  },
+  {
+    "id": "todos",
+    "aliases": [
+      "check",
+      "things",
+      "task"
+    ]
+  },
+  {
+    "id": "square-behind-square-3",
+    "aliases": [
+      "copy 3",
+      "layers",
+      "pages"
+    ]
+  },
+  {
+    "id": "trash-permanently",
+    "aliases": [
+      "remove"
+    ]
+  },
+  {
+    "id": "square-doted-behind-square",
+    "aliases": [
+      "copy",
+      "layers",
+      "pages"
+    ]
+  },
+  {
+    "id": "square-behind-square-2",
+    "aliases": [
+      "copy 2",
+      "layers",
+      "pages"
+    ]
+  },
+  {
+    "id": "untrash",
+    "aliases": []
+  },
+  {
+    "id": "square-behind-square-6",
+    "aliases": [
+      "layers",
+      "copy 6",
+      "pages"
+    ]
+  },
+  {
+    "id": "tasks",
+    "aliases": [
+      "lists",
+      "todos"
+    ]
+  },
+  {
+    "id": "window",
+    "aliases": [
+      "timeline",
+      "feed",
+      "posts"
+    ]
+  },
+  {
+    "id": "trash-paper",
+    "aliases": []
+  },
+  {
+    "id": "square-lines",
+    "aliases": [
+      "note",
+      "card",
+      "text"
+    ]
+  },
+  {
+    "id": "trash-can",
+    "aliases": [
+      "delete",
+      "remove",
+      "garbage",
+      "waste"
+    ]
+  },
+  {
+    "id": "morning-brief",
+    "aliases": [
+      "daily-todo"
+    ]
+  },
+  {
+    "id": "trash-rounded",
+    "aliases": [
+      "delete",
+      "remove"
+    ]
+  },
+  {
+    "id": "square-behind-square-4",
+    "aliases": [
+      "copy 4",
+      "layers",
+      "pages"
+    ]
+  },
+  {
+    "id": "inbox-empty",
+    "aliases": []
+  },
+  {
+    "id": "browser-tabs",
+    "aliases": [
+      "tab-groups"
+    ]
+  },
+  {
+    "id": "star",
+    "aliases": [
+      "favorite",
+      "award"
+    ]
+  },
+  {
+    "id": "window-app",
+    "aliases": [
+      "browser",
+      "app",
+      "desktop"
+    ]
+  },
+  {
+    "id": "review",
+    "aliases": [
+      "star-square"
+    ]
+  },
+  {
+    "id": "checkmark-1-medium",
+    "aliases": []
+  },
+  {
+    "id": "compass-round",
+    "aliases": [
+      "browser",
+      "safari",
+      "web",
+      "internet",
+      "navigation"
+    ]
+  },
+  {
+    "id": "checkmark-1-small",
+    "aliases": []
+  },
+  {
+    "id": "square-circle-top-right",
+    "aliases": [
+      "notifications",
+      "badge"
+    ]
+  },
+  {
+    "id": "feature",
+    "aliases": [
+      "shine"
+    ]
+  },
+  {
+    "id": "check-circle",
+    "aliases": [
+      "done",
+      "confirm",
+      "save",
+      "success"
+    ]
+  },
+  {
+    "id": "checkmark-1",
+    "aliases": []
+  },
+  {
+    "id": "square-check",
+    "aliases": [
+      "checkbox",
+      "check",
+      "checkmark",
+      "confirm"
+    ]
+  },
+  {
+    "id": "check-circle-2-dashed",
+    "aliases": [
+      "progress"
+    ]
+  },
+  {
+    "id": "shapes-plus-x-square-circle",
+    "aliases": [
+      "icon",
+      "icons",
+      "shapes",
+      "games"
+    ]
+  },
+  {
+    "id": "check-circle-dashed",
+    "aliases": [
+      "done",
+      "confirm",
+      "save",
+      "success"
+    ]
+  },
+  {
+    "id": "douple-checkmark-1",
+    "aliases": []
+  },
+  {
+    "id": "window-2",
+    "aliases": [
+      "browser",
+      "app",
+      "desktop"
+    ]
+  },
+  {
+    "id": "compass-square",
+    "aliases": [
+      "browser",
+      "safari",
+      "web",
+      "internet",
+      "navigation"
+    ]
+  },
+  {
+    "id": "star-lines",
+    "aliases": [
+      "features",
+      "favorite",
+      "award",
+      "to the moon",
+      "rising"
+    ]
+  },
+  {
+    "id": "check-circle-2",
+    "aliases": [
+      "done",
+      "confirm",
+      "save",
+      "success"
+    ]
+  },
+  {
+    "id": "checklist",
+    "aliases": [
+      "list"
+    ]
+  },
+  {
+    "id": "planning",
+    "aliases": [
+      "list",
+      "checklist"
+    ]
+  },
+  {
+    "id": "share-os",
+    "aliases": []
+  },
+  {
+    "id": "inbox-checked",
+    "aliases": [
+      "saved"
+    ]
+  },
+  {
+    "id": "douple-checkmark-2-small",
+    "aliases": []
+  },
+  {
+    "id": "pin-2",
+    "aliases": []
+  },
+  {
+    "id": "circle-arrow-down",
+    "aliases": [
+      "download square",
+      "save"
+    ]
+  },
+  {
+    "id": "checkmark-2-medium",
+    "aliases": []
+  },
+  {
+    "id": "arrow-inbox",
+    "aliases": [
+      "download",
+      "file",
+      "down",
+      "save"
+    ]
+  },
+  {
+    "id": "unpin-2",
+    "aliases": []
+  },
+  {
+    "id": "pin",
+    "aliases": []
+  },
+  {
+    "id": "douple-check",
+    "aliases": []
+  },
+  {
+    "id": "checkmark-2",
+    "aliases": []
+  },
+  {
+    "id": "arrow-box-right",
+    "aliases": [
+      "login",
+      "enter",
+      "door"
+    ]
+  },
+  {
+    "id": "checkmark-2-small",
+    "aliases": []
+  },
+  {
+    "id": "thumbtack",
+    "aliases": [
+      "pin",
+      "location",
+      "bookmark"
+    ]
+  },
+  {
+    "id": "square-arrow-down",
+    "aliases": [
+      "download square",
+      "save"
+    ]
+  },
+  {
+    "id": "share-android",
+    "aliases": []
+  },
+  {
+    "id": "unpin",
+    "aliases": []
+  },
+  {
+    "id": "douple-checkmark-1-small",
+    "aliases": []
+  },
+  {
+    "id": "exclamation-triangle",
+    "aliases": [
+      "error",
+      "warning",
+      "alert"
+    ]
+  },
+  {
+    "id": "info-simple",
+    "aliases": [
+      "tooltip",
+      "information"
+    ]
+  },
+  {
+    "id": "arrow-out-of-box",
+    "aliases": [
+      "upload",
+      "share"
+    ]
+  },
+  {
+    "id": "circle-ban-sign",
+    "aliases": [
+      "circle",
+      "block",
+      "ads"
+    ]
+  },
+  {
+    "id": "circle-questionmark",
+    "aliases": [
+      "faq",
+      "help",
+      "questionaire"
+    ]
+  },
+  {
+    "id": "chain-link-1",
+    "aliases": [
+      "url"
+    ]
+  },
+  {
+    "id": "arrow-box-left",
+    "aliases": [
+      "logout",
+      "leave",
+      "door"
+    ]
+  },
+  {
+    "id": "exclamation-circle-bold",
+    "aliases": [
+      "info",
+      "warning"
+    ]
+  },
+  {
+    "id": "sidebar",
+    "aliases": [
+      "menu",
+      "list",
+      "window"
+    ]
+  },
+  {
+    "id": "chain-link-3",
+    "aliases": [
+      "url"
+    ]
+  },
+  {
+    "id": "import",
+    "aliases": [
+      "download",
+      "save"
+    ]
+  },
+  {
+    "id": "arrow-rounded",
+    "aliases": [
+      "share",
+      "arrow",
+      "login"
+    ]
+  },
+  {
+    "id": "broken-chain-link-3",
+    "aliases": [
+      "unlink"
+    ]
+  },
+  {
+    "id": "circle-info",
+    "aliases": [
+      "info circle",
+      "tooltip",
+      "information"
+    ]
+  },
+  {
+    "id": "import-2",
+    "aliases": [
+      "download",
+      "save"
+    ]
+  },
+  {
+    "id": "broken-chain-link-1",
+    "aliases": [
+      "unlink"
+    ]
+  },
+  {
+    "id": "chain-link-2",
+    "aliases": [
+      "url"
+    ]
+  },
+  {
+    "id": "broken-chain-link-2",
+    "aliases": [
+      "unlink"
+    ]
+  },
+  {
+    "id": "exclamation-circle",
+    "aliases": [
+      "info",
+      "warning"
+    ]
+  },
+  {
+    "id": "square-info",
+    "aliases": [
+      "information",
+      "tooltip"
+    ]
+  },
+  {
+    "id": "progress-100",
+    "aliases": [
+      "ideas",
+      "open",
+      "status",
+      "task"
+    ]
+  },
+  {
+    "id": "circle-placeholder-off",
+    "aliases": []
+  },
+  {
+    "id": "progress-75",
+    "aliases": [
+      "ideas",
+      "open",
+      "status",
+      "tas"
+    ]
+  },
+  {
+    "id": "square-placeholder-dashed",
+    "aliases": []
+  },
+  {
+    "id": "square-x",
+    "aliases": [
+      "close",
+      "x",
+      "checkbox",
+      "remove"
+    ]
+  },
+  {
+    "id": "circle-plus",
+    "aliases": [
+      "add"
+    ]
+  },
+  {
+    "id": "circle-placeholder-on",
+    "aliases": []
+  },
+  {
+    "id": "close-circle-dashed",
+    "aliases": [
+      "close",
+      "checkbox",
+      "remove"
+    ]
+  },
+  {
+    "id": "square-minus",
+    "aliases": [
+      "remove",
+      "delete"
+    ]
+  },
+  {
+    "id": "circle-dotted",
+    "aliases": []
+  },
+  {
+    "id": "circle-minus",
+    "aliases": [
+      "remove"
+    ]
+  },
+  {
+    "id": "square-placeholder",
+    "aliases": []
+  },
+  {
+    "id": "square-plus",
+    "aliases": [
+      "add"
+    ]
+  },
+  {
+    "id": "arrow-left-x",
+    "aliases": [
+      "delete",
+      "remove",
+      "backspace"
+    ]
+  },
+  {
+    "id": "progress-25",
+    "aliases": [
+      "ideas",
+      "open",
+      "status",
+      "task"
+    ]
+  },
+  {
+    "id": "circle-dashed",
+    "aliases": [
+      "progress",
+      "bugs"
+    ]
+  },
+  {
+    "id": "progress-50",
+    "aliases": [
+      "ideas",
+      "open",
+      "status",
+      "tas"
+    ]
+  },
+  {
+    "id": "chain-link-4",
+    "aliases": []
+  },
+  {
+    "id": "progress-arc",
+    "aliases": [
+      "progress-dynamic",
+      "ideas",
+      "open",
+      "status",
+      "task"
+    ]
+  },
+  {
+    "id": "circle-x",
+    "aliases": [
+      "close",
+      "checkbox",
+      "remove",
+      "failed"
+    ]
+  },
+  {
+    "id": "target",
+    "aliases": [
+      "focus",
+      "do-not-disdurb",
+      "darts"
+    ]
+  },
+  {
+    "id": "clipboard-2",
+    "aliases": [
+      "copy",
+      "list"
+    ]
+  },
+  {
+    "id": "electrocardiogram",
+    "aliases": [
+      "activity",
+      "notification",
+      "pulse",
+      "heartbeat",
+      "beat"
+    ]
+  },
+  {
+    "id": "trial",
+    "aliases": [
+      "try",
+      "money-back",
+      "test-phase"
+    ]
+  },
+  {
+    "id": "circle-dots-center-2",
+    "aliases": [
+      "menu 1",
+      "grid",
+      "circle"
+    ]
+  },
+  {
+    "id": "target-arrow",
+    "aliases": [
+      "goal",
+      "aim",
+      "focus",
+      "do-not-disdurb"
+    ]
+  },
+  {
+    "id": "heart",
+    "aliases": [
+      "like",
+      "health",
+      "life",
+      "favorite"
+    ]
+  },
+  {
+    "id": "paperclip-2",
+    "aliases": [
+      "attachment"
+    ]
+  },
+  {
+    "id": "heart-beat",
+    "aliases": [
+      "heart rate",
+      "pulse"
+    ]
+  },
+  {
+    "id": "clipboard",
+    "aliases": [
+      "copy",
+      "list"
+    ]
+  },
+  {
+    "id": "target-1",
+    "aliases": [
+      "zoom",
+      "crosshair"
+    ]
+  },
+  {
+    "id": "paperclip-1",
+    "aliases": [
+      "attachment"
+    ]
+  },
+  {
+    "id": "heart-donation",
+    "aliases": [
+      "dollar"
+    ]
+  },
+  {
+    "id": "heart-2",
+    "aliases": [
+      "like",
+      "health",
+      "life",
+      "fav"
+    ]
+  },
+  {
+    "id": "anchor-1",
+    "aliases": [
+      "link"
+    ]
+  },
+  {
+    "id": "circle-dots-center-1",
+    "aliases": [
+      "menu 1",
+      "grid",
+      "circle"
+    ]
+  },
+  {
+    "id": "anchor-2",
+    "aliases": [
+      "link"
+    ]
+  },
+  {
+    "id": "target-2",
+    "aliases": [
+      "zoom",
+      "crosshair"
+    ]
+  },
+  {
+    "id": "broken-heart",
+    "aliases": [
+      "delete-account"
+    ]
+  },
+  {
+    "id": "paperclip-3",
+    "aliases": [
+      "attachment"
+    ]
+  },
+  {
+    "id": "arrows-all-sides",
+    "aliases": [
+      "move",
+      "focus"
+    ]
+  },
+  {
+    "id": "window-cursor",
+    "aliases": [
+      "visit page",
+      "open app"
+    ]
+  },
+  {
+    "id": "appearance-light-mode",
+    "aliases": [
+      "switch"
+    ]
+  },
+  {
+    "id": "cross-medium",
+    "aliases": [
+      "crossed medium",
+      "close"
+    ]
+  },
+  {
+    "id": "gauge",
+    "aliases": [
+      "tachometer",
+      "performance",
+      "speed",
+      "scale"
+    ]
+  },
+  {
+    "id": "qr-code",
+    "aliases": [
+      "barcode",
+      "scan"
+    ]
+  },
+  {
+    "id": "lightbulb",
+    "aliases": [
+      "idea",
+      "light",
+      "reasoning",
+      "think"
+    ]
+  },
+  {
+    "id": "barcode",
+    "aliases": [
+      "qr code",
+      "scan"
+    ]
+  },
+  {
+    "id": "scan-code",
+    "aliases": [
+      "barcode"
+    ]
+  },
+  {
+    "id": "cross-large",
+    "aliases": [
+      "crossed large",
+      "close"
+    ]
+  },
+  {
+    "id": "square-grid-magnifying-glass",
+    "aliases": [
+      "layout",
+      "grid",
+      "list",
+      "search",
+      "find",
+      "magnifier"
+    ]
+  },
+  {
+    "id": "appearance-dark-mode",
+    "aliases": [
+      "switch"
+    ]
+  },
+  {
+    "id": "lightbulb-glow",
+    "aliases": [
+      "idea",
+      "reasoning",
+      "think"
+    ]
+  },
+  {
+    "id": "cross-small",
+    "aliases": [
+      "crossed small",
+      "delete",
+      "remove",
+      "close"
+    ]
+  },
+  {
+    "id": "arrows-all-sides-2",
+    "aliases": [
+      "scan",
+      "move",
+      "focus"
+    ]
+  },
+  {
+    "id": "bars-two-2",
+    "aliases": [
+      "menu",
+      "nav"
+    ]
+  },
+  {
+    "id": "bars-two",
+    "aliases": [
+      "menu simple",
+      "nav simple"
+    ]
+  },
+  {
+    "id": "square-grid-circle",
+    "aliases": [
+      "layout",
+      "grid",
+      "list",
+      "category",
+      "categories"
+    ]
+  },
+  {
+    "id": "arrows-all-sides-2-2",
+    "aliases": [
+      "scan-text",
+      "text",
+      "focus",
+      "list"
+    ]
+  },
+  {
+    "id": "lightbulb-simple",
+    "aliases": [
+      "idea",
+      "reasoning",
+      "thinkl"
+    ]
+  },
+  {
+    "id": "dot-grid-1x3-horizontal-tight",
+    "aliases": [
+      "menu",
+      "drag",
+      "grab"
+    ]
+  },
+  {
+    "id": "minus-large",
+    "aliases": [
+      "remove",
+      "delete"
+    ]
+  },
+  {
+    "id": "bars-three",
+    "aliases": [
+      "menu",
+      "list",
+      "hamburger"
+    ]
+  },
+  {
+    "id": "loading-circle",
+    "aliases": [
+      "quarter",
+      "spinner"
+    ]
+  },
+  {
+    "id": "math-equals-circle",
+    "aliases": []
+  },
+  {
+    "id": "dot-grid-1x3-vertical-tight",
+    "aliases": [
+      "menu",
+      "drag",
+      "grab"
+    ]
+  },
+  {
+    "id": "plus-large",
+    "aliases": [
+      "add large"
+    ]
+  },
+  {
+    "id": "dot-grid-1x3-vertical",
+    "aliases": [
+      "menu",
+      "drag",
+      "grab"
+    ]
+  },
+  {
+    "id": "dot-grid-2x3",
+    "aliases": [
+      "menu",
+      "drag",
+      "grab"
+    ]
+  },
+  {
+    "id": "minus-small",
+    "aliases": [
+      "remove",
+      "delete"
+    ]
+  },
+  {
+    "id": "bars-three-2",
+    "aliases": [
+      "menu",
+      "list",
+      "hamburger"
+    ]
+  },
+  {
+    "id": "plus-small",
+    "aliases": [
+      "add small"
+    ]
+  },
+  {
+    "id": "dot-grid-3x3",
+    "aliases": [
+      "menu",
+      "drag",
+      "grab"
+    ]
+  },
+  {
+    "id": "loader",
+    "aliases": [
+      "spinner"
+    ]
+  },
+  {
+    "id": "list-bullets",
+    "aliases": []
+  },
+  {
+    "id": "dot-grid-1x3-horizontal",
+    "aliases": [
+      "menu",
+      "drag",
+      "grab"
+    ]
+  },
+  {
+    "id": "plus-medium",
+    "aliases": [
+      "add medium"
+    ]
+  },
+  {
+    "id": "list-add",
+    "aliases": [
+      "list-plus",
+      "new-list"
+    ]
+  },
+  {
+    "id": "bars-three-3",
+    "aliases": [
+      "menu",
+      "list",
+      "hamburger"
+    ]
+  },
+  {
+    "id": "minus-medium",
+    "aliases": [
+      "remove",
+      "delete"
+    ]
+  },
+  {
+    "id": "math-greater-than",
+    "aliases": [
+      ">"
+    ]
+  },
+  {
+    "id": "eye-slash",
+    "aliases": [
+      "hide",
+      "eye off",
+      "see",
+      "look",
+      "not visible"
+    ]
+  },
+  {
+    "id": "math-less-than",
+    "aliases": [
+      "<"
+    ]
+  },
+  {
+    "id": "eye-open",
+    "aliases": [
+      "show",
+      "see",
+      "reveal",
+      "look",
+      "visible"
+    ]
+  },
+  {
+    "id": "circle-person",
+    "aliases": [
+      "accessibility",
+      "a11y"
+    ]
+  },
+  {
+    "id": "math-notes",
+    "aliases": [
+      "function"
+    ]
+  },
+  {
+    "id": "square-checklist-bell",
+    "aliases": [
+      "checklist box",
+      "check",
+      "list",
+      "search"
+    ]
+  },
+  {
+    "id": "math-greater-than-circle",
+    "aliases": [
+      ">"
+    ]
+  },
+  {
+    "id": "circle-half-fill",
+    "aliases": [
+      "contrast"
+    ]
+  },
+  {
+    "id": "math-less-than-circle",
+    "aliases": [
+      "<"
+    ]
+  },
+  {
+    "id": "eye-closed",
+    "aliases": [
+      "see",
+      "hidden"
+    ]
+  },
+  {
+    "id": "math-scientific",
+    "aliases": [
+      "function"
+    ]
+  },
+  {
+    "id": "square-checklist-magnifying-glass",
+    "aliases": [
+      "checklist box",
+      "check",
+      "list",
+      "search"
+    ]
+  },
+  {
+    "id": "math-equals",
+    "aliases": [
+      "="
+    ]
+  },
+  {
+    "id": "square-checklist",
+    "aliases": [
+      "checklist box",
+      "check",
+      "list"
+    ]
+  },
+  {
+    "id": "ear",
+    "aliases": [
+      "hearing",
+      "loud"
+    ]
+  },
+  {
+    "id": "eye-slash-2",
+    "aliases": [
+      "accessibility eye",
+      "a11y"
+    ]
+  },
+  {
+    "id": "textarea-drag",
+    "aliases": []
+  },
+  {
+    "id": "math-basic",
+    "aliases": [
+      "calc"
+    ]
+  },
+  {
+    "id": "math-multiplication",
+    "aliases": []
+  },
+  {
+    "id": "square-lines-bottom",
+    "aliases": [
+      "transcription"
+    ]
+  },
+  {
+    "id": "emoji-add-reaction",
+    "aliases": [
+      "emoji-plus"
+    ]
+  },
+  {
+    "id": "emoji-wink",
+    "aliases": []
+  },
+  {
+    "id": "emoji-star-struck",
+    "aliases": [
+      "star-eyes"
+    ]
+  },
+  {
+    "id": "image-alt-text",
+    "aliases": []
+  },
+  {
+    "id": "emoji-sad",
+    "aliases": [
+      "unhappy"
+    ]
+  },
+  {
+    "id": "emoji-angry",
+    "aliases": []
+  },
+  {
+    "id": "emoji-astonished",
+    "aliases": []
+  },
+  {
+    "id": "emoji-smile",
+    "aliases": []
+  },
+  {
+    "id": "emoji-profile",
+    "aliases": []
+  },
+  {
+    "id": "emoji-grinning",
+    "aliases": []
+  },
+  {
+    "id": "emoji-lol",
+    "aliases": [
+      "laugh",
+      "comedy",
+      "joke"
+    ]
+  },
+  {
+    "id": "emoji-smirking",
+    "aliases": []
+  },
+  {
+    "id": "emoji-neutral",
+    "aliases": []
+  },
+  {
+    "id": "emoji-sad-tear",
+    "aliases": []
+  },
+  {
+    "id": "emoji-alien",
+    "aliases": []
+  },
+  {
+    "id": "emoji-smiling-face",
+    "aliases": [
+      "heart-eyes"
+    ]
+  },
+  {
+    "id": "emoji-sleep",
+    "aliases": [
+      "snooze"
+    ]
+  },
+  {
+    "id": "emoji-mouthless",
+    "aliases": []
+  },
+  {
+    "id": "emoji-smiley",
+    "aliases": [
+      "face",
+      "smile"
+    ]
+  },
+  {
+    "id": "garlic",
+    "aliases": []
+  },
+  {
+    "id": "steak",
+    "aliases": [
+      "t-bone",
+      "raw"
+    ]
+  },
+  {
+    "id": "burger",
+    "aliases": [
+      "hamburger",
+      "sandwich"
+    ]
+  },
+  {
+    "id": "drink",
+    "aliases": [
+      "cup",
+      "straw",
+      "mug"
+    ]
+  },
+  {
+    "id": "strawberry",
+    "aliases": [
+      "ai",
+      "dessert"
+    ]
+  },
+  {
+    "id": "cup",
+    "aliases": [
+      "tea",
+      "coffee",
+      "mug"
+    ]
+  },
+  {
+    "id": "pancakes",
+    "aliases": [
+      "maple-syrup",
+      "breakfast"
+    ]
+  },
+  {
+    "id": "cheeseburger",
+    "aliases": [
+      "hamburger",
+      "sandwich"
+    ]
+  },
+  {
+    "id": "cup-hot",
+    "aliases": [
+      "coffee",
+      "tea",
+      "milk",
+      "mug"
+    ]
+  },
+  {
+    "id": "birthday-cake",
+    "aliases": []
+  },
+  {
+    "id": "beer",
+    "aliases": [
+      "cheers"
+    ]
+  },
+  {
+    "id": "cookies",
+    "aliases": []
+  },
+  {
+    "id": "hot-drink-cup",
+    "aliases": [
+      "coffee-mug",
+      "dup"
+    ]
+  },
+  {
+    "id": "steak-steam-lines",
+    "aliases": [
+      "t-bone"
+    ]
+  },
+  {
+    "id": "sushi",
+    "aliases": [
+      "nigiri",
+      "sashime",
+      "maki"
+    ]
+  },
+  {
+    "id": "tapas",
+    "aliases": [
+      "canabes"
+    ]
+  },
+  {
+    "id": "glass-water",
+    "aliases": [
+      "drink"
+    ]
+  },
+  {
+    "id": "emoji-poop",
+    "aliases": [
+      "spam"
+    ]
+  },
+  {
+    "id": "emoji-mask",
+    "aliases": [
+      "theatre"
+    ]
+  },
+  {
+    "id": "tea",
+    "aliases": [
+      "cafe",
+      "coffee",
+      "vibe",
+      "mug"
+    ]
+  },
+  {
+    "id": "apples",
+    "aliases": [
+      "fruit"
+    ]
+  },
+  {
+    "id": "breakfast",
+    "aliases": [
+      "fried-egg"
+    ]
+  },
+  {
+    "id": "cereals",
+    "aliases": [
+      "wheat",
+      "gluten",
+      "corn",
+      "grain"
+    ]
+  },
+  {
+    "id": "donut",
+    "aliases": []
+  },
+  {
+    "id": "apple-newton",
+    "aliases": [
+      "low-hanging-fruits",
+      "fall"
+    ]
+  },
+  {
+    "id": "popsicle-2",
+    "aliases": [
+      "ice-cream",
+      "sweets"
+    ]
+  },
+  {
+    "id": "bananas",
+    "aliases": [
+      "fruits"
+    ]
+  },
+  {
+    "id": "cherry",
+    "aliases": []
+  },
+  {
+    "id": "donut-glaze",
+    "aliases": []
+  },
+  {
+    "id": "banana",
+    "aliases": [
+      "fruit"
+    ]
+  },
+  {
+    "id": "avocado",
+    "aliases": []
+  },
+  {
+    "id": "toast",
+    "aliases": [
+      "breakfest"
+    ]
+  },
+  {
+    "id": "cocktail",
+    "aliases": [
+      "drink"
+    ]
+  },
+  {
+    "id": "candy",
+    "aliases": [
+      "sweet"
+    ]
+  },
+  {
+    "id": "popsicle-1",
+    "aliases": [
+      "ice-cream",
+      "sweets"
+    ]
+  },
+  {
+    "id": "popcorn",
+    "aliases": [
+      "movies",
+      "series"
+    ]
+  },
+  {
+    "id": "cherry-on-top",
+    "aliases": [
+      "cake",
+      "birthday"
+    ]
+  },
+  {
+    "id": "pizza",
+    "aliases": []
+  },
+  {
+    "id": "orange",
+    "aliases": []
+  },
+  {
+    "id": "bottle",
+    "aliases": [
+      "wine",
+      "campaign"
+    ]
+  },
+  {
+    "id": "baking",
+    "aliases": [
+      "cooking"
+    ]
+  },
+  {
+    "id": "drawer-3",
+    "aliases": []
+  },
+  {
+    "id": "icebowl",
+    "aliases": [
+      "cooling",
+      "vibe"
+    ]
+  },
+  {
+    "id": "chair",
+    "aliases": [
+      "seat"
+    ]
+  },
+  {
+    "id": "dresser",
+    "aliases": [
+      "drawer"
+    ]
+  },
+  {
+    "id": "toque",
+    "aliases": [
+      "chefs-cap",
+      "cook"
+    ]
+  },
+  {
+    "id": "drawer-1",
+    "aliases": []
+  },
+  {
+    "id": "armchair",
+    "aliases": [
+      "seat",
+      "chill"
+    ]
+  },
+  {
+    "id": "cabinet",
+    "aliases": []
+  },
+  {
+    "id": "fork-knife",
+    "aliases": [
+      "cable",
+      "restaurant",
+      "cutlery"
+    ]
+  },
+  {
+    "id": "drawer-2",
+    "aliases": []
+  },
+  {
+    "id": "food-experiences",
+    "aliases": [
+      "plate"
+    ]
+  },
+  {
+    "id": "food-bell",
+    "aliases": [
+      "serving-bell",
+      "glosche",
+      "serve"
+    ]
+  },
+  {
+    "id": "fork-spoon",
+    "aliases": [
+      "cable",
+      "restaurant",
+      "cutlery"
+    ]
+  },
+  {
+    "id": "chair-modern",
+    "aliases": [
+      "seat"
+    ]
+  },
+  {
+    "id": "fork",
+    "aliases": [
+      "caple",
+      "food",
+      "restaurant"
+    ]
+  },
+  {
+    "id": "drawer-4",
+    "aliases": []
+  },
+  {
+    "id": "sofa",
+    "aliases": [
+      "couch",
+      "chill"
+    ]
+  },
+  {
+    "id": "pan",
+    "aliases": [
+      "cooking",
+      "skills"
+    ]
+  },
+  {
+    "id": "cooking",
+    "aliases": [
+      "stirring"
+    ]
+  },
+  {
+    "id": "fridge",
+    "aliases": []
+  },
+  {
+    "id": "desk-office-2",
+    "aliases": []
+  },
+  {
+    "id": "form-square",
+    "aliases": []
+  },
+  {
+    "id": "form-rectangle",
+    "aliases": []
+  },
+  {
+    "id": "form-oval",
+    "aliases": []
+  },
+  {
+    "id": "form-hexagon",
+    "aliases": []
+  },
+  {
+    "id": "form-pentagon",
+    "aliases": []
+  },
+  {
+    "id": "form-seal",
+    "aliases": [
+      "badge"
+    ]
+  },
+  {
+    "id": "form-circle",
+    "aliases": []
+  },
+  {
+    "id": "bed",
+    "aliases": []
+  },
+  {
+    "id": "form-diamond",
+    "aliases": [
+      "square-45-degrees"
+    ]
+  },
+  {
+    "id": "form-flower",
+    "aliases": []
+  },
+  {
+    "id": "wardrobe",
+    "aliases": []
+  },
+  {
+    "id": "forms-circle-square",
+    "aliases": [
+      "shapes",
+      "designs",
+      "templates"
+    ]
+  },
+  {
+    "id": "form-octagon-rotate",
+    "aliases": []
+  },
+  {
+    "id": "washing-machine",
+    "aliases": [
+      "laundry",
+      "clean"
+    ]
+  },
+  {
+    "id": "desk-office",
+    "aliases": []
+  },
+  {
+    "id": "dishwasher",
+    "aliases": [
+      "clean"
+    ]
+  },
+  {
+    "id": "form-octagon",
+    "aliases": []
+  },
+  {
+    "id": "form-capsule",
+    "aliases": [
+      "button"
+    ]
+  },
+  {
+    "id": "layout-topbar",
+    "aliases": [
+      "grid",
+      "window"
+    ]
+  },
+  {
+    "id": "layout-half",
+    "aliases": []
+  },
+  {
+    "id": "columns-3-wide",
+    "aliases": [
+      "layout",
+      "third"
+    ]
+  },
+  {
+    "id": "board",
+    "aliases": [
+      "moodboard",
+      "layout",
+      "template"
+    ]
+  },
+  {
+    "id": "layout-right",
+    "aliases": [
+      "grid",
+      "window"
+    ]
+  },
+  {
+    "id": "layout-top",
+    "aliases": [
+      "grid",
+      "window"
+    ]
+  },
+  {
+    "id": "layout-sidebar",
+    "aliases": [
+      "grid",
+      "window"
+    ]
+  },
+  {
+    "id": "layout-window",
+    "aliases": [
+      "grid",
+      "window"
+    ]
+  },
+  {
+    "id": "layout-third",
+    "aliases": []
+  },
+  {
+    "id": "layout-column",
+    "aliases": [
+      "grid",
+      "column"
+    ]
+  },
+  {
+    "id": "layout-bottom",
+    "aliases": [
+      "grid",
+      "window"
+    ]
+  },
+  {
+    "id": "layout-align-left",
+    "aliases": []
+  },
+  {
+    "id": "layout-left",
+    "aliases": [
+      "grid",
+      "window"
+    ]
+  },
+  {
+    "id": "columns-3",
+    "aliases": [
+      "layout",
+      "third"
+    ]
+  },
+  {
+    "id": "layout-grid-2",
+    "aliases": [
+      "grid"
+    ]
+  },
+  {
+    "id": "layout-align-right",
+    "aliases": []
+  },
+  {
+    "id": "flower-shape",
+    "aliases": []
+  },
+  {
+    "id": "align-horizontal-center",
+    "aliases": [
+      "alignment"
+    ]
+  },
+  {
+    "id": "layout-grid-1",
+    "aliases": [
+      "grid",
+      "window"
+    ]
+  },
+  {
+    "id": "layout-dashboard",
+    "aliases": [
+      "grid",
+      "window"
+    ]
+  },
+  {
+    "id": "layout-align-top",
+    "aliases": []
+  },
+  {
+    "id": "align-vertical-center",
+    "aliases": [
+      "alignment"
+    ]
+  },
+  {
+    "id": "slides-wide-add",
+    "aliases": []
+  },
+  {
+    "id": "layers-two",
+    "aliases": [
+      "stack"
+    ]
+  },
+  {
+    "id": "column-wide",
+    "aliases": [
+      "colums"
+    ]
+  },
+  {
+    "id": "column-wide-add",
+    "aliases": []
+  },
+  {
+    "id": "slide-tall-add",
+    "aliases": []
+  },
+  {
+    "id": "slide-wide-add",
+    "aliases": []
+  },
+  {
+    "id": "slides-tall-add",
+    "aliases": []
+  },
+  {
+    "id": "slides-tall",
+    "aliases": []
+  },
+  {
+    "id": "layout-align-bottom",
+    "aliases": []
+  },
+  {
+    "id": "column-wide-half-add",
+    "aliases": []
+  },
+  {
+    "id": "column-wide-half",
+    "aliases": []
+  },
+  {
+    "id": "column-wide-half-remove",
+    "aliases": []
+  },
+  {
+    "id": "column-wide-remove",
+    "aliases": []
+  },
+  {
+    "id": "slide-add",
+    "aliases": []
+  },
+  {
+    "id": "layers-three",
+    "aliases": [
+      "stack"
+    ]
+  },
+  {
+    "id": "layers-behind",
+    "aliases": [
+      "slides",
+      "pages"
+    ]
+  },
+  {
+    "id": "slides-wide",
+    "aliases": []
+  },
+  {
+    "id": "projects",
+    "aliases": [
+      "stack",
+      "templates",
+      "timeline"
+    ]
+  },
+  {
+    "id": "sidebar-simple-right-square",
+    "aliases": []
+  },
+  {
+    "id": "sidebar-hidden-left-wide",
+    "aliases": []
+  },
+  {
+    "id": "sidebar-hidden-right-wide",
+    "aliases": []
+  },
+  {
+    "id": "sidebar-floating",
+    "aliases": [
+      "floating-window"
+    ]
+  },
+  {
+    "id": "canvas-grid",
+    "aliases": [
+      "design",
+      "app-icon",
+      "blueprint"
+    ]
+  },
+  {
+    "id": "sidebar-simple-left-wide",
+    "aliases": []
+  },
+  {
+    "id": "sidebar-left-arrow",
+    "aliases": []
+  },
+  {
+    "id": "bento",
+    "aliases": [
+      "layout",
+      "grid",
+      "flex"
+    ]
+  },
+  {
+    "id": "sidebar-wide-left-arrow",
+    "aliases": []
+  },
+  {
+    "id": "carussel",
+    "aliases": [
+      "slides"
+    ]
+  },
+  {
+    "id": "kanban-view",
+    "aliases": [
+      "columns"
+    ]
+  },
+  {
+    "id": "placeholder",
+    "aliases": [
+      "generate"
+    ]
+  },
+  {
+    "id": "sidebar-simple-left-square",
+    "aliases": []
+  },
+  {
+    "id": "sidebar-simple-right-wide",
+    "aliases": []
+  }
+]

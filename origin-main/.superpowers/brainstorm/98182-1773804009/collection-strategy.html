@@ -1,0 +1,86 @@
+<h2>How should Origin organize Figma variable collections?</h2>
+<p class="subtitle">Collections are the top-level containers for variables in Figma. This decision affects how designers browse, how the plugin syncs, and how primitives vs semantics are separated.</p>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>One collection per foundation</h3>
+      <p>Separate collections for Color, Typography, Spacing, Radius. Each contains both primitives and semantics. Primitives hidden from publishing.</p>
+      <div style="margin-top: 12px; padding: 16px; background: #f5f5f5; border-radius: 8px; font-family: monospace; font-size: 13px; line-height: 1.8;">
+        <div style="font-weight: 600; margin-bottom: 8px;">📦 Collections:</div>
+        <div>├── <strong>Color</strong></div>
+        <div>│&nbsp;&nbsp;&nbsp;├── <span style="opacity:0.5">primitives/ (hidden)</span></div>
+        <div>│&nbsp;&nbsp;&nbsp;└── semantic/</div>
+        <div>├── <strong>Typography</strong></div>
+        <div>│&nbsp;&nbsp;&nbsp;├── <span style="opacity:0.5">primitives/ (hidden)</span></div>
+        <div>│&nbsp;&nbsp;&nbsp;└── semantic/</div>
+        <div>├── <strong>Spacing</strong></div>
+        <div>│&nbsp;&nbsp;&nbsp;├── <span style="opacity:0.5">primitives/ (hidden)</span></div>
+        <div>│&nbsp;&nbsp;&nbsp;└── semantic/</div>
+        <div>└── <strong>Radius</strong></div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;├── <span style="opacity:0.5">primitives/ (hidden)</span></div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;└── semantic/</div>
+      </div>
+      <div class="pros-cons" style="margin-top: 12px;">
+        <div class="pros"><h4>Pros</h4><ul><li>Clean separation by domain</li><li>Each foundation evolves independently</li><li>Mirrors repo structure</li></ul></div>
+        <div class="cons"><h4>Cons</h4><ul><li>4+ collections to manage</li><li>Cross-collection aliases needed for semantic → primitive references</li></ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Two collections: Primitives + Semantics</h3>
+      <p>All primitive values (color, type sizes, spacing, radius) in one collection. All semantic tokens in another. Primitives collection hidden from publishing.</p>
+      <div style="margin-top: 12px; padding: 16px; background: #f5f5f5; border-radius: 8px; font-family: monospace; font-size: 13px; line-height: 1.8;">
+        <div style="font-weight: 600; margin-bottom: 8px;">📦 Collections:</div>
+        <div>├── <strong>Primitives</strong> <span style="opacity:0.5">(hidden from publishing)</span></div>
+        <div>│&nbsp;&nbsp;&nbsp;├── color/</div>
+        <div>│&nbsp;&nbsp;&nbsp;├── typography/</div>
+        <div>│&nbsp;&nbsp;&nbsp;├── spacing/</div>
+        <div>│&nbsp;&nbsp;&nbsp;└── radius/</div>
+        <div>└── <strong>Semantics</strong></div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;├── color/</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;├── typography/ <span style="opacity:0.5">(+ text styles)</span></div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;├── spacing/</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;└── radius/</div>
+      </div>
+      <div class="pros-cons" style="margin-top: 12px;">
+        <div class="pros"><h4>Pros</h4><ul><li>Only 2 collections total</li><li>Clear primitive/semantic boundary</li><li>One hide-from-publishing toggle</li></ul></div>
+        <div class="cons"><h4>Cons</h4><ul><li>Large collections as system grows</li><li>Different foundations mixed in same container</li></ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>Three collections: Primitives + Semantic Color + Semantic Layout</h3>
+      <p>Primitives together (hidden). Semantic color separate (has light/dark modes). Semantic typography + spacing + radius together (no modes).</p>
+      <div style="margin-top: 12px; padding: 16px; background: #f5f5f5; border-radius: 8px; font-family: monospace; font-size: 13px; line-height: 1.8;">
+        <div style="font-weight: 600; margin-bottom: 8px;">📦 Collections:</div>
+        <div>├── <strong>Primitives</strong> <span style="opacity:0.5">(hidden from publishing)</span></div>
+        <div>│&nbsp;&nbsp;&nbsp;├── color/</div>
+        <div>│&nbsp;&nbsp;&nbsp;├── typography/</div>
+        <div>│&nbsp;&nbsp;&nbsp;├── spacing/</div>
+        <div>│&nbsp;&nbsp;&nbsp;└── radius/</div>
+        <div>├── <strong>Color</strong> <span style="opacity:0.5">(modes: light / dark)</span></div>
+        <div>│&nbsp;&nbsp;&nbsp;├── surface/</div>
+        <div>│&nbsp;&nbsp;&nbsp;├── on-surface/</div>
+        <div>│&nbsp;&nbsp;&nbsp;└── ...</div>
+        <div>└── <strong>Layout</strong></div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;├── typography/ <span style="opacity:0.5">(+ text styles)</span></div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;├── spacing/</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;└── radius/</div>
+      </div>
+      <div class="pros-cons" style="margin-top: 12px;">
+        <div class="pros"><h4>Pros</h4><ul><li>Color gets its own modes (light/dark)</li><li>Non-modal foundations grouped logically</li><li>Scales well when dark mode lands</li></ul></div>
+        <div class="cons"><h4>Cons</h4><ul><li>3 collections — middle ground complexity</li><li>"Layout" naming is debatable</li></ul></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p class="subtitle" style="margin-top: 32px;">Note: Typography text styles are separate from variables (Figma limitation). The plugin creates both: variables for primitive values, text styles for semantic composites.</p>

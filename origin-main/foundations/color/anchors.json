@@ -1,0 +1,13 @@
+{
+  "neutral": { "hex": "#680D0D", "isNeutral": true, "neutralChromaMax": 0.012 },
+  "maroon":  { "hex": "#680D0D", "step": 800 },
+  "crimson": { "hex": "#B33056", "step": 600 },
+  "peach":   { "hex": "#FFAE92", "step": 300 },
+  "gold":    { "hex": "#FAA810", "step": 400 },
+  "lime":    { "hex": "#AFEA6A", "step": 300 },
+  "teal":    { "hex": "#097E8D", "step": 600 },
+  "blue":    { "hex": "#4E68F4", "step": 600 },
+  "red":     { "hex": "#DC2626", "step": 600 },
+  "green":   { "hex": "#16A34A", "step": 500 },
+  "yellow":  { "hex": "#EAB308", "step": 400 }
+}

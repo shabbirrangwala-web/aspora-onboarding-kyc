@@ -1,0 +1,27 @@
+name: Notify consumers of token changes
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'foundations/**'
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dispatch to Brand Lab
+        env:
+          GH_TOKEN: ${{ secrets.BRAND_LAB_DISPATCH_TOKEN }}
+        run: |
+          gh api repos/Vance-Club/aspora-brand-lab/dispatches \
+            -f event_type=origin-tokens-updated \
+            -f "client_payload[triggered_by]=${{ github.sha }}"
+
+      - name: Dispatch to aspora-site-new
+        env:
+          GH_TOKEN: ${{ secrets.SITE_DISPATCH_TOKEN }}
+        run: |
+          gh api repos/Vance-Club/aspora-site-new/dispatches \
+            -f event_type=origin-tokens-updated \
+            -f "client_payload[triggered_by]=${{ github.sha }}"

@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.DS_Store
+.claude/
+*.local.json
+.mcp.json
+
+# Icon staging — intermediate SVGs from Figma export (not committed)
+lab/pipelines/icons/staging/outlined/
+lab/pipelines/icons/staging/filled/
+lab/pipelines/icons/staging/*.svg
