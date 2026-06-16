@@ -16,7 +16,7 @@ const STEPS = [
 
 export default function KYCWelcome() {
   const router = useRouter();
-  const { reset } = useKYC();
+  const { state, reset, update } = useKYC();
 
   return (
     <main className="mx-auto flex min-h-dvh w-full max-w-[430px] flex-col bg-surface-primary">
@@ -56,7 +56,9 @@ export default function KYCWelcome() {
       <div className="px-16 pb-8 pt-12">
         <StandardButton
           onClick={() => {
+            const scenario = state.scenario;
             reset();
+            update({ scenario });
             router.push("/kyc/country");
           }}
         >
