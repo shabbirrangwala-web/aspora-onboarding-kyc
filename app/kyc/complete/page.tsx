@@ -95,9 +95,9 @@ export default function KYCComplete() {
         {state.scenario && (
           <StandardButton
             hierarchy="primary"
-            onClick={() => router.push(`/cip/${state.scenario}`)}
+            onClick={() => router.push(`/cip/flow/${state.scenario}`)}
           >
-            View CIP report →
+            View CIP journey →
           </StandardButton>
         )}
         <StandardButton hierarchy="secondary" onClick={() => router.push("/")}>
